@@ -386,7 +386,8 @@ if __name__ == "__main__":
 
     flows = {}
     for fname in glob.glob(args.filename):
-        print(f"generating for {fname}")
+        if args.verbose:
+            print(f"generating for {fname}")
         # ex: "data_sources/gamma.py"
         with open(fname) as f:
             tree = ast.parse(f.read())
@@ -397,3 +398,5 @@ if __name__ == "__main__":
         print(f"writing database info to {args.output}")
         with open(args.output, "w") as f:
             json.dump(flows, f, indent=2)
+    else:
+        print(json.dumps(flows, indent=2))
