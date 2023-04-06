@@ -28,4 +28,6 @@ Flags:
 ```
 -v          Verbose mode: print every state node visited and its ancestors.
 -o path     Output: write the analysis (a json file), or otherwise print output.
+-e path     ER Output: write the FLOWER diagram json to the path.
+-d          Derived: Include derived/intermediate entities from flow nodes in the diagram json.
 ```

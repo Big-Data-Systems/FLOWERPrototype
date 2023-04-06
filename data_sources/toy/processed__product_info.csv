@@ -1,0 +1,5 @@
+item_id,name,cost,type_id_fk,serial_num,type_id,type_name,cat_id_fk,cat_id,cat_name
+1,Bread,2.0,1,12345678,1,Food,1,1,Grocery
+2,Spatula,3.0,2,28495834,2,Household Goods,2,2,Lifestyle
+3,Cheese,4.0,1,92839475,1,Food,1,1,Grocery
+5,T-Shirt,10.0,3,26093849,3,Apparel,2,2,Lifestyle

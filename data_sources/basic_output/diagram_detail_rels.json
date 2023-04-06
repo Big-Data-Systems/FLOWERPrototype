@@ -1,0 +1,600 @@
+[
+  {
+    "from": "t2.csv",
+    "to": "data_sources/basic/agg.py",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "t1.csv",
+    "to": "data_sources/basic/agg.py",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "/Users/tahsin/Documents/Python_programs/Phe2_05_values_spikes.csv",
+    "to": "data_sources/basic/gamma.py",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "/Users/tahsin/Documents/Python_programs/Phe2_02_values_spikes_windowsresults_tranposed.csv",
+    "to": "data_sources/basic/gamma.py",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "data_sources/basic/agg.py",
+    "to": "t_ka.csv",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "data_sources/basic/agg.py",
+    "to": "tjp_out.csv",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "data_sources/basic/gamma.py",
+    "to": "/Users/tahsin/Documents/Python_programs/Phe2_02_values_spikes_windowsresults_reducted.csv",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "data_sources/basic/gamma.py",
+    "to": "/Users/tahsin/Documents/Python_programs/u_05.csv",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "5e487290-61d6-471c-a02f-04bc25b6eb7e",
+    "to": "t_ka.csv",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "1baa1e29-f5da-42c0-8ad3-092b102cb217",
+    "to": "5e487290-61d6-471c-a02f-04bc25b6eb7e",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "1baa1e29-f5da-42c0-8ad3-092b102cb217",
+    "to": "5bef9d90-5718-45ce-97cb-cf276f27a492",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "1baa1e29-f5da-42c0-8ad3-092b102cb217",
+    "to": "df8815a7-07ad-4298-8fa0-7fc09a3f1a93",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "1baa1e29-f5da-42c0-8ad3-092b102cb217",
+    "to": "ada88709-2544-4a53-9e1f-fad5d5fba6b1",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "1baa1e29-f5da-42c0-8ad3-092b102cb217",
+    "to": "f915ec23-7c66-4f6a-8677-3f96da73845f",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "f915ec23-7c66-4f6a-8677-3f96da73845f",
+    "to": "tjp_out.csv",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "0fe0ee33-b839-4d60-ac06-e55ab09c0f53",
+    "to": "5bef9d90-5718-45ce-97cb-cf276f27a492",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "0fe0ee33-b839-4d60-ac06-e55ab09c0f53",
+    "to": "df8815a7-07ad-4298-8fa0-7fc09a3f1a93",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "0fe0ee33-b839-4d60-ac06-e55ab09c0f53",
+    "to": "ada88709-2544-4a53-9e1f-fad5d5fba6b1",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "0fe0ee33-b839-4d60-ac06-e55ab09c0f53",
+    "to": "f915ec23-7c66-4f6a-8677-3f96da73845f",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "049aa0fd-671d-4a02-87f0-cdc292c43721",
+    "to": "/Users/tahsin/Documents/Python_programs/u_05.csv",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "8741bd60-6643-416b-8ecc-d8da7dc415ac",
+    "to": "049aa0fd-671d-4a02-87f0-cdc292c43721",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "d170a440-8d5e-43eb-96aa-e19f5ec2fb27",
+    "to": "8741bd60-6643-416b-8ecc-d8da7dc415ac",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "d170a440-8d5e-43eb-96aa-e19f5ec2fb27",
+    "to": "07264e03-f43c-46bc-83cd-999de136fbbd",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "d170a440-8d5e-43eb-96aa-e19f5ec2fb27",
+    "to": "ecadccc0-ec17-4445-adef-c5bc388adebf",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "fa3511c3-0d9c-4a45-b84f-632a9c5e2b38",
+    "to": "d170a440-8d5e-43eb-96aa-e19f5ec2fb27",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "fa3511c3-0d9c-4a45-b84f-632a9c5e2b38",
+    "to": "82539804-7480-4483-b85e-1c6afa29c49a",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "4b5c970b-5786-40bb-9faf-5ed876902760",
+    "to": "fa3511c3-0d9c-4a45-b84f-632a9c5e2b38",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "cd54b6dd-0419-4e26-8eb6-253a2b82d662",
+    "to": "7f3efe27-d4c4-4707-bd58-7f0231ca571a",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "cd54b6dd-0419-4e26-8eb6-253a2b82d662",
+    "to": "4b5c970b-5786-40bb-9faf-5ed876902760",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "cd54b6dd-0419-4e26-8eb6-253a2b82d662",
+    "to": "11c5b56f-86cf-41d2-aca8-8680ec3b0b7a",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "cd54b6dd-0419-4e26-8eb6-253a2b82d662",
+    "to": "bcf7eea7-8850-4990-8937-7155b9847d68",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "cd54b6dd-0419-4e26-8eb6-253a2b82d662",
+    "to": "6879e728-825b-450b-914c-0a8294cadad8",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "cd54b6dd-0419-4e26-8eb6-253a2b82d662",
+    "to": "44b63e6f-260e-4e08-ae3e-2f50225120c0",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "cd54b6dd-0419-4e26-8eb6-253a2b82d662",
+    "to": "fcc54b87-410e-4ff6-aaf2-87b02b13abff",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "cd54b6dd-0419-4e26-8eb6-253a2b82d662",
+    "to": "9190bfec-e9d3-40af-969e-5aedefc31822",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "f20d6cf2-f2dc-4400-90af-cce088578ffa",
+    "to": "cd54b6dd-0419-4e26-8eb6-253a2b82d662",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "16cb5030-d2a9-4652-af8d-37ef591ca485",
+    "to": "f9cb1ef9-d209-436f-823d-ae80c603d3f6",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "16cb5030-d2a9-4652-af8d-37ef591ca485",
+    "to": "/Users/tahsin/Documents/Python_programs/Phe2_02_values_spikes_windowsresults_reducted.csv",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "a7f449d0-a603-4e95-a91c-ebee7702d3d7",
+    "to": "16cb5030-d2a9-4652-af8d-37ef591ca485",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "e126bc19-48de-499d-9049-7b87b4f972b8",
+    "to": "a7f449d0-a603-4e95-a91c-ebee7702d3d7",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "ecadccc0-ec17-4445-adef-c5bc388adebf",
+    "to": "e126bc19-48de-499d-9049-7b87b4f972b8",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "c75c6eab-1d9a-44eb-af16-44f1b5f6372a",
+    "to": "a7f449d0-a603-4e95-a91c-ebee7702d3d7",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "t1.csv",
+    "to": "1baa1e29-f5da-42c0-8ad3-092b102cb217",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "t2.csv",
+    "to": "0fe0ee33-b839-4d60-ac06-e55ab09c0f53",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "/Users/tahsin/Documents/Python_programs/Phe2_05_values_spikes.csv",
+    "to": "f20d6cf2-f2dc-4400-90af-cce088578ffa",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "/Users/tahsin/Documents/Python_programs/Phe2_02_values_spikes_windowsresults_tranposed.csv",
+    "to": "c75c6eab-1d9a-44eb-af16-44f1b5f6372a",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  }
+]

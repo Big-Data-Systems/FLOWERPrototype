@@ -1,0 +1,295 @@
+{
+  "data_sources/basic/agg.py": {
+    "inputs": [
+      "t2.csv",
+      "t1.csv"
+    ],
+    "outputs": [
+      "t_ka.csv",
+      "tjp_out.csv"
+    ],
+    "nodes": {
+      "5e487290-61d6-471c-a02f-04bc25b6eb7e": {
+        "id": "5e487290-61d6-471c-a02f-04bc25b6eb7e",
+        "name": "t_ka",
+        "ancestors": [
+          "1baa1e29-f5da-42c0-8ad3-092b102cb217"
+        ],
+        "descendants": [],
+        "ops": [
+          "transform: [t1[]]"
+        ],
+        "writes": [
+          "t_ka.csv"
+        ],
+        "reads": []
+      },
+      "1baa1e29-f5da-42c0-8ad3-092b102cb217": {
+        "id": "1baa1e29-f5da-42c0-8ad3-092b102cb217",
+        "name": "t1",
+        "ancestors": [],
+        "descendants": [
+          "5e487290-61d6-471c-a02f-04bc25b6eb7e",
+          "5bef9d90-5718-45ce-97cb-cf276f27a492",
+          "df8815a7-07ad-4298-8fa0-7fc09a3f1a93",
+          "ada88709-2544-4a53-9e1f-fad5d5fba6b1",
+          "f915ec23-7c66-4f6a-8677-3f96da73845f"
+        ],
+        "ops": [
+          "read: [t1.csv]"
+        ],
+        "writes": [],
+        "reads": [
+          "t1.csv"
+        ]
+      },
+      "f915ec23-7c66-4f6a-8677-3f96da73845f": {
+        "id": "f915ec23-7c66-4f6a-8677-3f96da73845f",
+        "name": "tjp",
+        "ancestors": [
+          "1baa1e29-f5da-42c0-8ad3-092b102cb217",
+          "0fe0ee33-b839-4d60-ac06-e55ab09c0f53"
+        ],
+        "descendants": [],
+        "ops": [
+          "transform: [sum]"
+        ],
+        "writes": [
+          "tjp_out.csv"
+        ],
+        "reads": []
+      },
+      "0fe0ee33-b839-4d60-ac06-e55ab09c0f53": {
+        "id": "0fe0ee33-b839-4d60-ac06-e55ab09c0f53",
+        "name": "t2",
+        "ancestors": [],
+        "descendants": [
+          "5bef9d90-5718-45ce-97cb-cf276f27a492",
+          "df8815a7-07ad-4298-8fa0-7fc09a3f1a93",
+          "ada88709-2544-4a53-9e1f-fad5d5fba6b1",
+          "f915ec23-7c66-4f6a-8677-3f96da73845f"
+        ],
+        "ops": [
+          "read: [t2.csv]"
+        ],
+        "writes": [],
+        "reads": [
+          "t2.csv"
+        ]
+      }
+    }
+  },
+  "data_sources/basic/gamma.py": {
+    "inputs": [
+      "/Users/tahsin/Documents/Python_programs/Phe2_05_values_spikes.csv",
+      "/Users/tahsin/Documents/Python_programs/Phe2_02_values_spikes_windowsresults_tranposed.csv"
+    ],
+    "outputs": [
+      "/Users/tahsin/Documents/Python_programs/Phe2_02_values_spikes_windowsresults_reducted.csv",
+      "/Users/tahsin/Documents/Python_programs/u_05.csv"
+    ],
+    "nodes": {
+      "049aa0fd-671d-4a02-87f0-cdc292c43721": {
+        "id": "049aa0fd-671d-4a02-87f0-cdc292c43721",
+        "name": "df_u",
+        "ancestors": [
+          "d170a440-8d5e-43eb-96aa-e19f5ec2fb27"
+        ],
+        "descendants": [],
+        "ops": [
+          "transform: [pca_model[]]",
+          "transform: [DataFrame]"
+        ],
+        "writes": [
+          "/Users/tahsin/Documents/Python_programs/u_05.csv"
+        ],
+        "reads": []
+      },
+      "8741bd60-6643-416b-8ecc-d8da7dc415ac": {
+        "id": "8741bd60-6643-416b-8ecc-d8da7dc415ac",
+        "name": "u",
+        "ancestors": [
+          "d170a440-8d5e-43eb-96aa-e19f5ec2fb27"
+        ],
+        "descendants": [
+          "049aa0fd-671d-4a02-87f0-cdc292c43721"
+        ],
+        "ops": [
+          "transform: [pca_model[]]"
+        ],
+        "writes": [],
+        "reads": []
+      },
+      "d170a440-8d5e-43eb-96aa-e19f5ec2fb27": {
+        "id": "d170a440-8d5e-43eb-96aa-e19f5ec2fb27",
+        "name": "pca_model",
+        "ancestors": [
+          "fa3511c3-0d9c-4a45-b84f-632a9c5e2b38"
+        ],
+        "descendants": [
+          "8741bd60-6643-416b-8ecc-d8da7dc415ac",
+          "07264e03-f43c-46bc-83cd-999de136fbbd",
+          "ecadccc0-ec17-4445-adef-c5bc388adebf"
+        ],
+        "ops": [
+          "transform: [compute_PCA]"
+        ],
+        "writes": [],
+        "reads": []
+      },
+      "fa3511c3-0d9c-4a45-b84f-632a9c5e2b38": {
+        "id": "fa3511c3-0d9c-4a45-b84f-632a9c5e2b38",
+        "name": "gamma",
+        "ancestors": [
+          "cd54b6dd-0419-4e26-8eb6-253a2b82d662"
+        ],
+        "descendants": [
+          "d170a440-8d5e-43eb-96aa-e19f5ec2fb27",
+          "82539804-7480-4483-b85e-1c6afa29c49a"
+        ],
+        "ops": [
+          "transform: [compute_gamma]",
+          "transform: [partial_gamma]"
+        ],
+        "writes": [],
+        "reads": []
+      },
+      "4b5c970b-5786-40bb-9faf-5ed876902760": {
+        "id": "4b5c970b-5786-40bb-9faf-5ed876902760",
+        "name": "partial_gamma",
+        "ancestors": [
+          "cd54b6dd-0419-4e26-8eb6-253a2b82d662"
+        ],
+        "descendants": [
+          "fa3511c3-0d9c-4a45-b84f-632a9c5e2b38"
+        ],
+        "ops": [
+          "transform: [compute_gamma]"
+        ],
+        "writes": [],
+        "reads": []
+      },
+      "cd54b6dd-0419-4e26-8eb6-253a2b82d662": {
+        "id": "cd54b6dd-0419-4e26-8eb6-253a2b82d662",
+        "name": "X",
+        "ancestors": [
+          "f20d6cf2-f2dc-4400-90af-cce088578ffa"
+        ],
+        "descendants": [
+          "7f3efe27-d4c4-4707-bd58-7f0231ca571a",
+          "4b5c970b-5786-40bb-9faf-5ed876902760",
+          "11c5b56f-86cf-41d2-aca8-8680ec3b0b7a",
+          "bcf7eea7-8850-4990-8937-7155b9847d68",
+          "6879e728-825b-450b-914c-0a8294cadad8",
+          "44b63e6f-260e-4e08-ae3e-2f50225120c0",
+          "fcc54b87-410e-4ff6-aaf2-87b02b13abff",
+          "9190bfec-e9d3-40af-969e-5aedefc31822"
+        ],
+        "ops": [
+          "transform: [to_numpy]"
+        ],
+        "writes": [],
+        "reads": []
+      },
+      "f20d6cf2-f2dc-4400-90af-cce088578ffa": {
+        "id": "f20d6cf2-f2dc-4400-90af-cce088578ffa",
+        "name": "df",
+        "ancestors": [],
+        "descendants": [
+          "cd54b6dd-0419-4e26-8eb6-253a2b82d662"
+        ],
+        "ops": [
+          "read: [/Users/tahsin/Documents/Python_programs/Phe2_05_values_spikes.csv]"
+        ],
+        "writes": [],
+        "reads": [
+          "/Users/tahsin/Documents/Python_programs/Phe2_05_values_spikes.csv"
+        ]
+      },
+      "16cb5030-d2a9-4652-af8d-37ef591ca485": {
+        "id": "16cb5030-d2a9-4652-af8d-37ef591ca485",
+        "name": "df_k",
+        "ancestors": [
+          "a7f449d0-a603-4e95-a91c-ebee7702d3d7"
+        ],
+        "descendants": [
+          "f9cb1ef9-d209-436f-823d-ae80c603d3f6"
+        ],
+        "ops": [
+          "transform: [DataFrame]"
+        ],
+        "writes": [
+          "/Users/tahsin/Documents/Python_programs/Phe2_02_values_spikes_windowsresults_reducted.csv"
+        ],
+        "reads": []
+      },
+      "a7f449d0-a603-4e95-a91c-ebee7702d3d7": {
+        "id": "a7f449d0-a603-4e95-a91c-ebee7702d3d7",
+        "name": "X_k",
+        "ancestors": [
+          "e126bc19-48de-499d-9049-7b87b4f972b8",
+          "c75c6eab-1d9a-44eb-af16-44f1b5f6372a"
+        ],
+        "descendants": [
+          "16cb5030-d2a9-4652-af8d-37ef591ca485"
+        ],
+        "ops": [
+          "transform: [dot]"
+        ],
+        "writes": [],
+        "reads": []
+      },
+      "e126bc19-48de-499d-9049-7b87b4f972b8": {
+        "id": "e126bc19-48de-499d-9049-7b87b4f972b8",
+        "name": "vh_k",
+        "ancestors": [
+          "d170a440-8d5e-43eb-96aa-e19f5ec2fb27"
+        ],
+        "descendants": [
+          "a7f449d0-a603-4e95-a91c-ebee7702d3d7"
+        ],
+        "ops": [
+          "transform: [pca_model[]]",
+          "transform: [vh[]]"
+        ],
+        "writes": [],
+        "reads": []
+      },
+      "ecadccc0-ec17-4445-adef-c5bc388adebf": {
+        "id": "ecadccc0-ec17-4445-adef-c5bc388adebf",
+        "name": "vh",
+        "ancestors": [
+          "d170a440-8d5e-43eb-96aa-e19f5ec2fb27"
+        ],
+        "descendants": [
+          "e126bc19-48de-499d-9049-7b87b4f972b8"
+        ],
+        "ops": [
+          "transform: [pca_model[]]"
+        ],
+        "writes": [],
+        "reads": []
+      },
+      "c75c6eab-1d9a-44eb-af16-44f1b5f6372a": {
+        "id": "c75c6eab-1d9a-44eb-af16-44f1b5f6372a",
+        "name": "df_original",
+        "ancestors": [],
+        "descendants": [
+          "a7f449d0-a603-4e95-a91c-ebee7702d3d7"
+        ],
+        "ops": [
+          "read: [/Users/tahsin/Documents/Python_programs/Phe2_02_values_spikes_windowsresults_tranposed.csv]"
+        ],
+        "writes": [],
+        "reads": [
+          "/Users/tahsin/Documents/Python_programs/Phe2_02_values_spikes_windowsresults_tranposed.csv"
+        ]
+      }
+    }
+  },
+  "data_sources/basic/mini_gradient.py": {
+    "inputs": [],
+    "outputs": [],
+    "nodes": {}
+  }
+}

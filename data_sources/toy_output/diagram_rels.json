@@ -1,0 +1,67 @@
+[
+  {
+    "from": "products.csv",
+    "to": "data_sources/toy/cat_costs.py",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "product_categories.csv",
+    "to": "data_sources/toy/cat_costs.py",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "product_types.csv",
+    "to": "data_sources/toy/cat_costs.py",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "data_sources/toy/cat_costs.py",
+    "to": "processed__product_info.csv",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "data_sources/toy/cat_costs.py",
+    "to": "processed__category_inventory.csv",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  }
+]

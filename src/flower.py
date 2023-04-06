@@ -3,9 +3,9 @@ import argparse
 from dataclasses import dataclass
 import glob
 import json
-from typing import Optional, Tuple
+import pathlib
+from typing import Iterable, Optional, Tuple
 from uuid import uuid4 as uuid
-from itertools import chain
 
 
 """
@@ -24,7 +24,7 @@ for line in flow:
     if state created:
         flow.add(state)
     elif state modified from [states]:
-        flow[state] = state.mod(...states)
+        flow[state] = state.newfrom(...states)
 """
 
 
@@ -105,13 +105,13 @@ class StateVisitor(ast.NodeVisitor):
         return self.visit(node.left) + self.visit(node.right)
 
     def visit_BoolOp(self, node: ast.BoolOp):
-        return list(chain.from_iterable(self.visit(vs) for vs in node.values))
+        return [v for vs in node.values for v in self.visit(vs)]
 
     def visit_Call(self, node: ast.Call):
         return (
-            self.visit(node.func)  # potentially a chain of call
-            + list(chain.from_iterable(self.visit(vs) for vs in node.args))
-            + list(chain.from_iterable(self.visit(vs.value) for vs in node.keywords))
+            self.visit(node.func)  # potentially a chain of calls
+            + [v for vs in node.args for v in self.visit(vs)]
+            + [v for vs in node.keywords for v in self.visit(vs.value)]
         )
 
     def visit_Name(self, node: ast.Name):
@@ -138,7 +138,7 @@ class StateOp:
     args: Tuple[str]
 
     def __str__(self) -> str:
-        return f"({self.name}: [{self.args}])"
+        return f"{self.name}: [{self.args}]"
 
 
 class State:
@@ -148,7 +148,11 @@ class State:
         self.ancestors: list[State] = list(ancestors or [])
         self.descendants: list[State] = list(descendants or [])
         self.writes = []
+        self.reads = []
         self.uuid = str(uuid())
+
+        if op.name == "read":
+            self.reads.append(op.args)
 
     def add_write(self, resource):
         self.writes.append(resource)
@@ -161,6 +165,7 @@ class State:
             "descendants": [des.uuid for des in self.nearest_interesting_descendants()],
             "ops": [str(op) for op in self.summarize_ops()],
             "writes": [str(w) for w in self.writes],
+            "reads": [str(r) for r in self.reads],
         }
 
     def interesting(self) -> bool:
@@ -219,7 +224,7 @@ class State:
         if len(self.ancestors) < 1:
             return [self.op]
         else:
-            return list(chain.from_iterable(anc.get_inputs() for anc in self.ancestors))
+            return [inp for anc in self.ancestors for inp in anc.get_inputs()]
 
 
 def interpret_v(node: ast.AST):
@@ -373,14 +378,130 @@ class Flow:
         }
 
 
+def make_rel(
+    frm: str,
+    to: str,
+    *,
+    color="black",
+    dash=[3, 2],
+    arr="Standard",
+    width="1",
+    text="",
+    toText="",
+):
+    return {
+        "from": frm,
+        "to": to,
+        "color": color,
+        "dash": dash,
+        "arr": arr,
+        "width": width,
+        "text": text,
+        "toText": toText,
+    }
+
+
+def gen_rels(flows: dict, detailed=False) -> list[dict]:
+    rels = [
+        make_rel(resource, name)
+        for name, flow in flows.items()
+        for resource in flow["inputs"]
+    ] + [
+        make_rel(name, resource)
+        for name, flow in flows.items()
+        for resource in flow["outputs"]
+    ]
+    if detailed:
+        return (
+            rels
+            + [  # node -> node and node -> files relations
+                make_rel(nid, to)
+                for flow in flows.values()
+                for nid, node in flow["nodes"].items()
+                for k in ["descendants", "writes"]
+                for to in node[k]
+            ]
+            + [  # file -> node relations
+                make_rel(frm, nid)
+                for flow in flows.values()
+                for nid, node in flow["nodes"].items()
+                for frm in node["reads"]
+            ]
+        )
+    return rels
+
+
+def make_ent(
+    name: str,
+    pks: Iterable[str] = [],
+    fks: Iterable[str] = [],
+    attrs: Iterable[str] = [],
+    *,
+    items=[],
+    color=None,
+    derived=False,
+    **kw,
+):
+    color = color if color is not None else "#82E0AA" if derived else "#fff9ff"
+    return {
+        "key": name,
+        "items": [
+            {
+                "name": k,
+                "iskey": k in pks,
+                "figure": "Decision",
+                "color": "red" if k in pks else "green" if k in fks else "white",
+            }
+            for k in {*pks, *fks, *attrs}
+        ]
+        + items,
+        "colorate": color,
+        **kw,
+    }
+
+
+def gen_ents(flows: dict, detailed=False) -> list[dict]:
+    ents = [make_ent(name) for name in flows] + [
+        make_ent(resource)
+        for resource in {
+            r for node in flows.values() for k in ("inputs", "outputs") for r in node[k]
+        }
+    ]
+    if detailed:
+        return ents + [
+            make_ent(
+                nid,
+                ops=node["ops"],
+                parent_flow=fname,
+                derived=True,
+                node_name=node["name"],
+            )
+            for fname, flow in flows.items()
+            for nid, node in flow["nodes"].items()
+        ]
+    return ents
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("-v", "--verbose", action="store_true")
     parser.add_argument("-o", "--output", type=str)
     parser.add_argument(
+        "-e",
+        "--erdiag",
+        type=str,
+        help="Output FLOWER diagram json files. Will be appended with _ents.json and _rels.json.",
+    )
+    parser.add_argument(
+        "-d",
+        "--derived",
+        action="store_true",
+        help="Also include derived entities (internal state nodes like dataframes) in ER output.",
+    )
+    parser.add_argument(
         "filename",
         type=str,
-        help="relative or absolute path to file(s) to parse. supports glob.",
+        help="Relative or absolute path to file(s) to parse. Supports glob.",
     )
     args = parser.parse_args()
 
@@ -395,8 +516,16 @@ if __name__ == "__main__":
         flows[fname] = flo.write_out()
 
     if args.output:
+        fname = args.output if args.output.endswith(".json") else args.output + ".json"
         print(f"writing database info to {args.output}")
         with open(args.output, "w") as f:
             json.dump(flows, f, indent=2)
     else:
         print(json.dumps(flows, indent=2))
+
+    if args.erdiag:
+        for ending, func in (("_ents.json", gen_ents), ("_rels.json", gen_rels)):
+            fname = args.erdiag + ending
+            print(f"writing FLOWER info to {fname}")
+            with open(fname, "w") as f:
+                json.dump(func(flows, args.derived), f, indent=2)

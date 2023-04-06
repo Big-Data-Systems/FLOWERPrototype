@@ -1,0 +1,5 @@
+item_id,name,cost,type_id_fk,serial_num
+1,"Bread",2.00,1,12345678
+2,"Spatula",3.00,2,28495834
+3,"Cheese",4.00,1,92839475
+5,"T-Shirt",10.00,3,26093849

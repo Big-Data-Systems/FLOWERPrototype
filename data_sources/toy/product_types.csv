@@ -1,0 +1,4 @@
+type_id,type_name,cat_id_fk
+1,"Food",1
+2,"Household Goods",2
+3,"Apparel",2

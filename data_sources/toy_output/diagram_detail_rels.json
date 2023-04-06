@@ -1,0 +1,210 @@
+[
+  {
+    "from": "product_types.csv",
+    "to": "data_sources/toy/cat_costs.py",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "product_categories.csv",
+    "to": "data_sources/toy/cat_costs.py",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "products.csv",
+    "to": "data_sources/toy/cat_costs.py",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "data_sources/toy/cat_costs.py",
+    "to": "processed__product_info.csv",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "data_sources/toy/cat_costs.py",
+    "to": "processed__category_inventory.csv",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "5a53f7c6-1d2c-4516-b391-21922785089b",
+    "to": "8cd0d260-ff85-43b5-a247-d1fe379e0901",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "5a53f7c6-1d2c-4516-b391-21922785089b",
+    "to": "a52612fb-c776-47c5-90d5-5169b61c8dc2",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "5a53f7c6-1d2c-4516-b391-21922785089b",
+    "to": "processed__product_info.csv",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "57bed712-a15a-4f1c-83cf-8f2ba1dd79c0",
+    "to": "5a53f7c6-1d2c-4516-b391-21922785089b",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "7af6daac-41de-4176-981f-05567e665a94",
+    "to": "5a53f7c6-1d2c-4516-b391-21922785089b",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "e51e4891-e01d-475d-8b02-13bad606c998",
+    "to": "7af6daac-41de-4176-981f-05567e665a94",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "b9edacfa-95fc-473f-b7af-17b72f631bf9",
+    "to": "7af6daac-41de-4176-981f-05567e665a94",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "8cd0d260-ff85-43b5-a247-d1fe379e0901",
+    "to": "processed__category_inventory.csv",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "product_categories.csv",
+    "to": "57bed712-a15a-4f1c-83cf-8f2ba1dd79c0",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "product_types.csv",
+    "to": "e51e4891-e01d-475d-8b02-13bad606c998",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "products.csv",
+    "to": "b9edacfa-95fc-473f-b7af-17b72f631bf9",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  }
+]

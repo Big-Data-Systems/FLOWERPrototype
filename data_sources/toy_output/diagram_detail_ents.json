@@ -1,0 +1,92 @@
+[
+  {
+    "key": "data_sources/toy/cat_costs.py",
+    "items": [],
+    "colorate": "#fff9ff"
+  },
+  {
+    "key": "processed__product_info.csv",
+    "items": [],
+    "colorate": "#fff9ff"
+  },
+  {
+    "key": "product_categories.csv",
+    "items": [],
+    "colorate": "#fff9ff"
+  },
+  {
+    "key": "processed__category_inventory.csv",
+    "items": [],
+    "colorate": "#fff9ff"
+  },
+  {
+    "key": "products.csv",
+    "items": [],
+    "colorate": "#fff9ff"
+  },
+  {
+    "key": "product_types.csv",
+    "items": [],
+    "colorate": "#fff9ff"
+  },
+  {
+    "key": "5a53f7c6-1d2c-4516-b391-21922785089b",
+    "items": [],
+    "colorate": "#82E0AA",
+    "ops": [
+      "transform: [merge]"
+    ],
+    "parent_flow": "data_sources/toy/cat_costs.py",
+    "node_name": "prods_with_cats"
+  },
+  {
+    "key": "57bed712-a15a-4f1c-83cf-8f2ba1dd79c0",
+    "items": [],
+    "colorate": "#82E0AA",
+    "ops": [
+      "read: [product_categories.csv]"
+    ],
+    "parent_flow": "data_sources/toy/cat_costs.py",
+    "node_name": "cats"
+  },
+  {
+    "key": "7af6daac-41de-4176-981f-05567e665a94",
+    "items": [],
+    "colorate": "#82E0AA",
+    "ops": [
+      "transform: [merge]"
+    ],
+    "parent_flow": "data_sources/toy/cat_costs.py",
+    "node_name": "prods_with_type_info"
+  },
+  {
+    "key": "e51e4891-e01d-475d-8b02-13bad606c998",
+    "items": [],
+    "colorate": "#82E0AA",
+    "ops": [
+      "read: [product_types.csv]"
+    ],
+    "parent_flow": "data_sources/toy/cat_costs.py",
+    "node_name": "product_types"
+  },
+  {
+    "key": "b9edacfa-95fc-473f-b7af-17b72f631bf9",
+    "items": [],
+    "colorate": "#82E0AA",
+    "ops": [
+      "read: [products.csv]"
+    ],
+    "parent_flow": "data_sources/toy/cat_costs.py",
+    "node_name": "products"
+  },
+  {
+    "key": "8cd0d260-ff85-43b5-a247-d1fe379e0901",
+    "items": [],
+    "colorate": "#82E0AA",
+    "ops": [
+      "transform: [agg]"
+    ],
+    "parent_flow": "data_sources/toy/cat_costs.py",
+    "node_name": "cat_costs"
+  }
+]

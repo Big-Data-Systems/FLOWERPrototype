@@ -1,0 +1,110 @@
+{
+  "data_sources/toy/cat_costs.py": {
+    "inputs": [
+      "product_types.csv",
+      "product_categories.csv",
+      "products.csv"
+    ],
+    "outputs": [
+      "processed__product_info.csv",
+      "processed__category_inventory.csv"
+    ],
+    "nodes": {
+      "5a53f7c6-1d2c-4516-b391-21922785089b": {
+        "id": "5a53f7c6-1d2c-4516-b391-21922785089b",
+        "name": "prods_with_cats",
+        "ancestors": [
+          "57bed712-a15a-4f1c-83cf-8f2ba1dd79c0",
+          "7af6daac-41de-4176-981f-05567e665a94"
+        ],
+        "descendants": [
+          "8cd0d260-ff85-43b5-a247-d1fe379e0901",
+          "a52612fb-c776-47c5-90d5-5169b61c8dc2"
+        ],
+        "ops": [
+          "transform: [merge]"
+        ],
+        "writes": [
+          "processed__product_info.csv"
+        ],
+        "reads": []
+      },
+      "57bed712-a15a-4f1c-83cf-8f2ba1dd79c0": {
+        "id": "57bed712-a15a-4f1c-83cf-8f2ba1dd79c0",
+        "name": "cats",
+        "ancestors": [],
+        "descendants": [
+          "5a53f7c6-1d2c-4516-b391-21922785089b"
+        ],
+        "ops": [
+          "read: [product_categories.csv]"
+        ],
+        "writes": [],
+        "reads": [
+          "product_categories.csv"
+        ]
+      },
+      "7af6daac-41de-4176-981f-05567e665a94": {
+        "id": "7af6daac-41de-4176-981f-05567e665a94",
+        "name": "prods_with_type_info",
+        "ancestors": [
+          "e51e4891-e01d-475d-8b02-13bad606c998",
+          "b9edacfa-95fc-473f-b7af-17b72f631bf9"
+        ],
+        "descendants": [
+          "5a53f7c6-1d2c-4516-b391-21922785089b"
+        ],
+        "ops": [
+          "transform: [merge]"
+        ],
+        "writes": [],
+        "reads": []
+      },
+      "e51e4891-e01d-475d-8b02-13bad606c998": {
+        "id": "e51e4891-e01d-475d-8b02-13bad606c998",
+        "name": "product_types",
+        "ancestors": [],
+        "descendants": [
+          "7af6daac-41de-4176-981f-05567e665a94"
+        ],
+        "ops": [
+          "read: [product_types.csv]"
+        ],
+        "writes": [],
+        "reads": [
+          "product_types.csv"
+        ]
+      },
+      "b9edacfa-95fc-473f-b7af-17b72f631bf9": {
+        "id": "b9edacfa-95fc-473f-b7af-17b72f631bf9",
+        "name": "products",
+        "ancestors": [],
+        "descendants": [
+          "7af6daac-41de-4176-981f-05567e665a94"
+        ],
+        "ops": [
+          "read: [products.csv]"
+        ],
+        "writes": [],
+        "reads": [
+          "products.csv"
+        ]
+      },
+      "8cd0d260-ff85-43b5-a247-d1fe379e0901": {
+        "id": "8cd0d260-ff85-43b5-a247-d1fe379e0901",
+        "name": "cat_costs",
+        "ancestors": [
+          "5a53f7c6-1d2c-4516-b391-21922785089b"
+        ],
+        "descendants": [],
+        "ops": [
+          "transform: [agg]"
+        ],
+        "writes": [
+          "processed__category_inventory.csv"
+        ],
+        "reads": []
+      }
+    }
+  }
+}

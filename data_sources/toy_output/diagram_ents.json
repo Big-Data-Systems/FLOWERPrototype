@@ -1,0 +1,32 @@
+[
+  {
+    "key": "data_sources/toy/cat_costs.py",
+    "items": [],
+    "colorate": "#fff9ff"
+  },
+  {
+    "key": "products.csv",
+    "items": [],
+    "colorate": "#fff9ff"
+  },
+  {
+    "key": "product_types.csv",
+    "items": [],
+    "colorate": "#fff9ff"
+  },
+  {
+    "key": "processed__category_inventory.csv",
+    "items": [],
+    "colorate": "#fff9ff"
+  },
+  {
+    "key": "processed__product_info.csv",
+    "items": [],
+    "colorate": "#fff9ff"
+  },
+  {
+    "key": "product_categories.csv",
+    "items": [],
+    "colorate": "#fff9ff"
+  }
+]

@@ -1,0 +1,220 @@
+[
+  {
+    "key": "data_sources/basic/agg.py",
+    "items": [],
+    "colorate": "#fff9ff"
+  },
+  {
+    "key": "data_sources/basic/gamma.py",
+    "items": [],
+    "colorate": "#fff9ff"
+  },
+  {
+    "key": "data_sources/basic/mini_gradient.py",
+    "items": [],
+    "colorate": "#fff9ff"
+  },
+  {
+    "key": "t2.csv",
+    "items": [],
+    "colorate": "#fff9ff"
+  },
+  {
+    "key": "/Users/tahsin/Documents/Python_programs/Phe2_05_values_spikes.csv",
+    "items": [],
+    "colorate": "#fff9ff"
+  },
+  {
+    "key": "t1.csv",
+    "items": [],
+    "colorate": "#fff9ff"
+  },
+  {
+    "key": "/Users/tahsin/Documents/Python_programs/Phe2_02_values_spikes_windowsresults_reducted.csv",
+    "items": [],
+    "colorate": "#fff9ff"
+  },
+  {
+    "key": "/Users/tahsin/Documents/Python_programs/Phe2_02_values_spikes_windowsresults_tranposed.csv",
+    "items": [],
+    "colorate": "#fff9ff"
+  },
+  {
+    "key": "t_ka.csv",
+    "items": [],
+    "colorate": "#fff9ff"
+  },
+  {
+    "key": "/Users/tahsin/Documents/Python_programs/u_05.csv",
+    "items": [],
+    "colorate": "#fff9ff"
+  },
+  {
+    "key": "tjp_out.csv",
+    "items": [],
+    "colorate": "#fff9ff"
+  },
+  {
+    "key": "5e487290-61d6-471c-a02f-04bc25b6eb7e",
+    "items": [],
+    "colorate": "#82E0AA",
+    "ops": [
+      "transform: [t1[]]"
+    ],
+    "parent_flow": "data_sources/basic/agg.py",
+    "node_name": "t_ka"
+  },
+  {
+    "key": "1baa1e29-f5da-42c0-8ad3-092b102cb217",
+    "items": [],
+    "colorate": "#82E0AA",
+    "ops": [
+      "read: [t1.csv]"
+    ],
+    "parent_flow": "data_sources/basic/agg.py",
+    "node_name": "t1"
+  },
+  {
+    "key": "f915ec23-7c66-4f6a-8677-3f96da73845f",
+    "items": [],
+    "colorate": "#82E0AA",
+    "ops": [
+      "transform: [sum]"
+    ],
+    "parent_flow": "data_sources/basic/agg.py",
+    "node_name": "tjp"
+  },
+  {
+    "key": "0fe0ee33-b839-4d60-ac06-e55ab09c0f53",
+    "items": [],
+    "colorate": "#82E0AA",
+    "ops": [
+      "read: [t2.csv]"
+    ],
+    "parent_flow": "data_sources/basic/agg.py",
+    "node_name": "t2"
+  },
+  {
+    "key": "049aa0fd-671d-4a02-87f0-cdc292c43721",
+    "items": [],
+    "colorate": "#82E0AA",
+    "ops": [
+      "transform: [pca_model[]]",
+      "transform: [DataFrame]"
+    ],
+    "parent_flow": "data_sources/basic/gamma.py",
+    "node_name": "df_u"
+  },
+  {
+    "key": "8741bd60-6643-416b-8ecc-d8da7dc415ac",
+    "items": [],
+    "colorate": "#82E0AA",
+    "ops": [
+      "transform: [pca_model[]]"
+    ],
+    "parent_flow": "data_sources/basic/gamma.py",
+    "node_name": "u"
+  },
+  {
+    "key": "d170a440-8d5e-43eb-96aa-e19f5ec2fb27",
+    "items": [],
+    "colorate": "#82E0AA",
+    "ops": [
+      "transform: [compute_PCA]"
+    ],
+    "parent_flow": "data_sources/basic/gamma.py",
+    "node_name": "pca_model"
+  },
+  {
+    "key": "fa3511c3-0d9c-4a45-b84f-632a9c5e2b38",
+    "items": [],
+    "colorate": "#82E0AA",
+    "ops": [
+      "transform: [compute_gamma]",
+      "transform: [partial_gamma]"
+    ],
+    "parent_flow": "data_sources/basic/gamma.py",
+    "node_name": "gamma"
+  },
+  {
+    "key": "4b5c970b-5786-40bb-9faf-5ed876902760",
+    "items": [],
+    "colorate": "#82E0AA",
+    "ops": [
+      "transform: [compute_gamma]"
+    ],
+    "parent_flow": "data_sources/basic/gamma.py",
+    "node_name": "partial_gamma"
+  },
+  {
+    "key": "cd54b6dd-0419-4e26-8eb6-253a2b82d662",
+    "items": [],
+    "colorate": "#82E0AA",
+    "ops": [
+      "transform: [to_numpy]"
+    ],
+    "parent_flow": "data_sources/basic/gamma.py",
+    "node_name": "X"
+  },
+  {
+    "key": "f20d6cf2-f2dc-4400-90af-cce088578ffa",
+    "items": [],
+    "colorate": "#82E0AA",
+    "ops": [
+      "read: [/Users/tahsin/Documents/Python_programs/Phe2_05_values_spikes.csv]"
+    ],
+    "parent_flow": "data_sources/basic/gamma.py",
+    "node_name": "df"
+  },
+  {
+    "key": "16cb5030-d2a9-4652-af8d-37ef591ca485",
+    "items": [],
+    "colorate": "#82E0AA",
+    "ops": [
+      "transform: [DataFrame]"
+    ],
+    "parent_flow": "data_sources/basic/gamma.py",
+    "node_name": "df_k"
+  },
+  {
+    "key": "a7f449d0-a603-4e95-a91c-ebee7702d3d7",
+    "items": [],
+    "colorate": "#82E0AA",
+    "ops": [
+      "transform: [dot]"
+    ],
+    "parent_flow": "data_sources/basic/gamma.py",
+    "node_name": "X_k"
+  },
+  {
+    "key": "e126bc19-48de-499d-9049-7b87b4f972b8",
+    "items": [],
+    "colorate": "#82E0AA",
+    "ops": [
+      "transform: [pca_model[]]",
+      "transform: [vh[]]"
+    ],
+    "parent_flow": "data_sources/basic/gamma.py",
+    "node_name": "vh_k"
+  },
+  {
+    "key": "ecadccc0-ec17-4445-adef-c5bc388adebf",
+    "items": [],
+    "colorate": "#82E0AA",
+    "ops": [
+      "transform: [pca_model[]]"
+    ],
+    "parent_flow": "data_sources/basic/gamma.py",
+    "node_name": "vh"
+  },
+  {
+    "key": "c75c6eab-1d9a-44eb-af16-44f1b5f6372a",
+    "items": [],
+    "colorate": "#82E0AA",
+    "ops": [
+      "read: [/Users/tahsin/Documents/Python_programs/Phe2_02_values_spikes_windowsresults_tranposed.csv]"
+    ],
+    "parent_flow": "data_sources/basic/gamma.py",
+    "node_name": "df_original"
+  }
+]
