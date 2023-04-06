@@ -16,18 +16,18 @@ an analysis of the inputs, outputs and relationships between these through the p
 
 This project uses python 3.10 -- no external libraries are required.
 
-To run, use
-
 ```
-python src/flower.py path
-```
+usage: flower.py [-h] [-v] [-o OUTPUT] [-e ERDIAG] [-d] filename
 
-Where `path` is an absolute or relative path (supporting glob syntax) to one or more files.
+positional arguments:
+  filename              Relative or absolute path to file(s) to parse. Supports glob.
 
-Flags:
-```
--v          Verbose mode: print every state node visited and its ancestors.
--o path     Output: write the analysis (a json file), or otherwise print output.
--e path     ER Output: write the FLOWER diagram json to the path.
--d          Derived: Include derived/intermediate entities from flow nodes in the diagram json.
+options:
+  -h, --help            show this help message and exit
+  -v, --verbose
+  -o OUTPUT, --output OUTPUT
+                        Write the analysis (a json file). If unset, prints output directly.
+  -e ERDIAG, --erdiag ERDIAG
+                        Output FLOWER diagram json files. Will be appended with _ents.json and _rels.json.
+  -d, --derived         Also include derived entities (internal state nodes like dataframes) in ER output.
 ```

@@ -485,7 +485,12 @@ def gen_ents(flows: dict, detailed=False) -> list[dict]:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("-v", "--verbose", action="store_true")
-    parser.add_argument("-o", "--output", type=str)
+    parser.add_argument(
+        "-o",
+        "--output",
+        type=str,
+        help="Write the analysis (a json file). If unset, prints output directly.",
+    )
     parser.add_argument(
         "-e",
         "--erdiag",
