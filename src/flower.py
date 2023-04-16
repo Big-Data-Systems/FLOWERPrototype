@@ -11,6 +11,10 @@ from uuid import uuid4 as uuid
 """
 Important to note that this will only apply to static (non-interactive)
 pipelines, so changing file names can generally not be inferred.
+
+A more advanced tool would use a set of inference techniques
+outside the scope of this prototype to better guess file names,
+keys, attributes and relationships.
 """
 
 """ flow algorithm
