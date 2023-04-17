@@ -5,12 +5,12 @@
     "colorate": "#fff9ff"
   },
   {
-    "key": "products.csv",
+    "key": "data_sources/toy/cat_sales.py",
     "items": [],
     "colorate": "#fff9ff"
   },
   {
-    "key": "product_types.csv",
+    "key": "data_sources/toy/recommend_categories.py",
     "items": [],
     "colorate": "#fff9ff"
   },
@@ -20,12 +20,37 @@
     "colorate": "#fff9ff"
   },
   {
+    "key": "product_categories.csv",
+    "items": [],
+    "colorate": "#fff9ff"
+  },
+  {
+    "key": "processed__category_recs.csv",
+    "items": [],
+    "colorate": "#fff9ff"
+  },
+  {
+    "key": "processed__category_sales.csv",
+    "items": [],
+    "colorate": "#fff9ff"
+  },
+  {
+    "key": "product_types.csv",
+    "items": [],
+    "colorate": "#fff9ff"
+  },
+  {
+    "key": "sales.csv",
+    "items": [],
+    "colorate": "#fff9ff"
+  },
+  {
     "key": "processed__product_info.csv",
     "items": [],
     "colorate": "#fff9ff"
   },
   {
-    "key": "product_categories.csv",
+    "key": "products.csv",
     "items": [],
     "colorate": "#fff9ff"
   }

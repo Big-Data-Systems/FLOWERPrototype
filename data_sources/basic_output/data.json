@@ -1,19 +1,19 @@
 {
   "data_sources/basic/agg.py": {
     "inputs": [
-      "t2.csv",
-      "t1.csv"
+      "t1.csv",
+      "t2.csv"
     ],
     "outputs": [
-      "t_ka.csv",
-      "tjp_out.csv"
+      "tjp_out.csv",
+      "t_ka.csv"
     ],
     "nodes": {
-      "5e487290-61d6-471c-a02f-04bc25b6eb7e": {
-        "id": "5e487290-61d6-471c-a02f-04bc25b6eb7e",
+      "96d8ed43-50e7-4784-aefa-5cedb4ed0a1f": {
+        "id": "96d8ed43-50e7-4784-aefa-5cedb4ed0a1f",
         "name": "t_ka",
         "ancestors": [
-          "1baa1e29-f5da-42c0-8ad3-092b102cb217"
+          "53f24833-4106-4788-8617-a76e369f123e"
         ],
         "descendants": [],
         "ops": [
@@ -24,16 +24,16 @@
         ],
         "reads": []
       },
-      "1baa1e29-f5da-42c0-8ad3-092b102cb217": {
-        "id": "1baa1e29-f5da-42c0-8ad3-092b102cb217",
+      "53f24833-4106-4788-8617-a76e369f123e": {
+        "id": "53f24833-4106-4788-8617-a76e369f123e",
         "name": "t1",
         "ancestors": [],
         "descendants": [
-          "5e487290-61d6-471c-a02f-04bc25b6eb7e",
-          "5bef9d90-5718-45ce-97cb-cf276f27a492",
-          "df8815a7-07ad-4298-8fa0-7fc09a3f1a93",
-          "ada88709-2544-4a53-9e1f-fad5d5fba6b1",
-          "f915ec23-7c66-4f6a-8677-3f96da73845f"
+          "96d8ed43-50e7-4784-aefa-5cedb4ed0a1f",
+          "92b68d29-1b28-4174-a769-64469c4614ab",
+          "03c543e8-03e0-478d-8ea7-f417658c91cc",
+          "e3b15c98-1785-443b-af8d-481122997253",
+          "c868cc1f-e7b1-4f1c-a364-997fdbb6bea5"
         ],
         "ops": [
           "read: [t1.csv]"
@@ -43,12 +43,12 @@
           "t1.csv"
         ]
       },
-      "f915ec23-7c66-4f6a-8677-3f96da73845f": {
-        "id": "f915ec23-7c66-4f6a-8677-3f96da73845f",
+      "c868cc1f-e7b1-4f1c-a364-997fdbb6bea5": {
+        "id": "c868cc1f-e7b1-4f1c-a364-997fdbb6bea5",
         "name": "tjp",
         "ancestors": [
-          "1baa1e29-f5da-42c0-8ad3-092b102cb217",
-          "0fe0ee33-b839-4d60-ac06-e55ab09c0f53"
+          "53f24833-4106-4788-8617-a76e369f123e",
+          "3dc97a6a-5942-401d-8756-06a59a8fc18d"
         ],
         "descendants": [],
         "ops": [
@@ -59,15 +59,15 @@
         ],
         "reads": []
       },
-      "0fe0ee33-b839-4d60-ac06-e55ab09c0f53": {
-        "id": "0fe0ee33-b839-4d60-ac06-e55ab09c0f53",
+      "3dc97a6a-5942-401d-8756-06a59a8fc18d": {
+        "id": "3dc97a6a-5942-401d-8756-06a59a8fc18d",
         "name": "t2",
         "ancestors": [],
         "descendants": [
-          "5bef9d90-5718-45ce-97cb-cf276f27a492",
-          "df8815a7-07ad-4298-8fa0-7fc09a3f1a93",
-          "ada88709-2544-4a53-9e1f-fad5d5fba6b1",
-          "f915ec23-7c66-4f6a-8677-3f96da73845f"
+          "92b68d29-1b28-4174-a769-64469c4614ab",
+          "03c543e8-03e0-478d-8ea7-f417658c91cc",
+          "e3b15c98-1785-443b-af8d-481122997253",
+          "c868cc1f-e7b1-4f1c-a364-997fdbb6bea5"
         ],
         "ops": [
           "read: [t2.csv]"
@@ -89,11 +89,11 @@
       "/Users/tahsin/Documents/Python_programs/u_05.csv"
     ],
     "nodes": {
-      "049aa0fd-671d-4a02-87f0-cdc292c43721": {
-        "id": "049aa0fd-671d-4a02-87f0-cdc292c43721",
+      "732f750e-cb0e-4396-b3ff-6bb958500483": {
+        "id": "732f750e-cb0e-4396-b3ff-6bb958500483",
         "name": "df_u",
         "ancestors": [
-          "d170a440-8d5e-43eb-96aa-e19f5ec2fb27"
+          "17f7e986-1699-4773-bb16-8d4fc9ee5475"
         ],
         "descendants": [],
         "ops": [
@@ -105,14 +105,14 @@
         ],
         "reads": []
       },
-      "8741bd60-6643-416b-8ecc-d8da7dc415ac": {
-        "id": "8741bd60-6643-416b-8ecc-d8da7dc415ac",
+      "1b623037-9cac-45fa-9e2a-cb63561340a3": {
+        "id": "1b623037-9cac-45fa-9e2a-cb63561340a3",
         "name": "u",
         "ancestors": [
-          "d170a440-8d5e-43eb-96aa-e19f5ec2fb27"
+          "17f7e986-1699-4773-bb16-8d4fc9ee5475"
         ],
         "descendants": [
-          "049aa0fd-671d-4a02-87f0-cdc292c43721"
+          "732f750e-cb0e-4396-b3ff-6bb958500483"
         ],
         "ops": [
           "transform: [pca_model[]]"
@@ -120,16 +120,16 @@
         "writes": [],
         "reads": []
       },
-      "d170a440-8d5e-43eb-96aa-e19f5ec2fb27": {
-        "id": "d170a440-8d5e-43eb-96aa-e19f5ec2fb27",
+      "17f7e986-1699-4773-bb16-8d4fc9ee5475": {
+        "id": "17f7e986-1699-4773-bb16-8d4fc9ee5475",
         "name": "pca_model",
         "ancestors": [
-          "fa3511c3-0d9c-4a45-b84f-632a9c5e2b38"
+          "5d241aec-c3ec-4398-a0dc-7613914c8d76"
         ],
         "descendants": [
-          "8741bd60-6643-416b-8ecc-d8da7dc415ac",
-          "07264e03-f43c-46bc-83cd-999de136fbbd",
-          "ecadccc0-ec17-4445-adef-c5bc388adebf"
+          "1b623037-9cac-45fa-9e2a-cb63561340a3",
+          "916e983b-95ef-4e78-b4f0-4e08f366d985",
+          "9a0cce3a-0695-4a95-ab4b-b4c5c2114c07"
         ],
         "ops": [
           "transform: [compute_PCA]"
@@ -137,15 +137,15 @@
         "writes": [],
         "reads": []
       },
-      "fa3511c3-0d9c-4a45-b84f-632a9c5e2b38": {
-        "id": "fa3511c3-0d9c-4a45-b84f-632a9c5e2b38",
+      "5d241aec-c3ec-4398-a0dc-7613914c8d76": {
+        "id": "5d241aec-c3ec-4398-a0dc-7613914c8d76",
         "name": "gamma",
         "ancestors": [
-          "cd54b6dd-0419-4e26-8eb6-253a2b82d662"
+          "96cefba1-1349-4f85-8478-34549771a9ee"
         ],
         "descendants": [
-          "d170a440-8d5e-43eb-96aa-e19f5ec2fb27",
-          "82539804-7480-4483-b85e-1c6afa29c49a"
+          "17f7e986-1699-4773-bb16-8d4fc9ee5475",
+          "a6afbf2a-e1f6-4aa2-8f57-8eb6a845881c"
         ],
         "ops": [
           "transform: [compute_gamma]",
@@ -154,14 +154,14 @@
         "writes": [],
         "reads": []
       },
-      "4b5c970b-5786-40bb-9faf-5ed876902760": {
-        "id": "4b5c970b-5786-40bb-9faf-5ed876902760",
+      "87c1ece0-66ba-47f9-98c7-08be1ebfbcdd": {
+        "id": "87c1ece0-66ba-47f9-98c7-08be1ebfbcdd",
         "name": "partial_gamma",
         "ancestors": [
-          "cd54b6dd-0419-4e26-8eb6-253a2b82d662"
+          "96cefba1-1349-4f85-8478-34549771a9ee"
         ],
         "descendants": [
-          "fa3511c3-0d9c-4a45-b84f-632a9c5e2b38"
+          "5d241aec-c3ec-4398-a0dc-7613914c8d76"
         ],
         "ops": [
           "transform: [compute_gamma]"
@@ -169,21 +169,21 @@
         "writes": [],
         "reads": []
       },
-      "cd54b6dd-0419-4e26-8eb6-253a2b82d662": {
-        "id": "cd54b6dd-0419-4e26-8eb6-253a2b82d662",
+      "96cefba1-1349-4f85-8478-34549771a9ee": {
+        "id": "96cefba1-1349-4f85-8478-34549771a9ee",
         "name": "X",
         "ancestors": [
-          "f20d6cf2-f2dc-4400-90af-cce088578ffa"
+          "64e9646f-0efc-4231-a674-da238a23a294"
         ],
         "descendants": [
-          "7f3efe27-d4c4-4707-bd58-7f0231ca571a",
-          "4b5c970b-5786-40bb-9faf-5ed876902760",
-          "11c5b56f-86cf-41d2-aca8-8680ec3b0b7a",
-          "bcf7eea7-8850-4990-8937-7155b9847d68",
-          "6879e728-825b-450b-914c-0a8294cadad8",
-          "44b63e6f-260e-4e08-ae3e-2f50225120c0",
-          "fcc54b87-410e-4ff6-aaf2-87b02b13abff",
-          "9190bfec-e9d3-40af-969e-5aedefc31822"
+          "6d368f7d-0c77-4dc5-b72b-4967062d1a9f",
+          "87c1ece0-66ba-47f9-98c7-08be1ebfbcdd",
+          "63463ae5-d039-4279-96cf-481cced2f5e8",
+          "0a8f86bc-8fc7-48a4-8736-8b4a1d678997",
+          "38c63e36-cc38-48be-89d8-5f24ed7c5eca",
+          "a89f4b17-9417-4137-98cb-ba2a285ea8e3",
+          "4794611f-09ff-4913-931e-ed82918108de",
+          "30ceb9ce-5bfc-4054-9378-7fb1ef3d6d48"
         ],
         "ops": [
           "transform: [to_numpy]"
@@ -191,12 +191,12 @@
         "writes": [],
         "reads": []
       },
-      "f20d6cf2-f2dc-4400-90af-cce088578ffa": {
-        "id": "f20d6cf2-f2dc-4400-90af-cce088578ffa",
+      "64e9646f-0efc-4231-a674-da238a23a294": {
+        "id": "64e9646f-0efc-4231-a674-da238a23a294",
         "name": "df",
         "ancestors": [],
         "descendants": [
-          "cd54b6dd-0419-4e26-8eb6-253a2b82d662"
+          "96cefba1-1349-4f85-8478-34549771a9ee"
         ],
         "ops": [
           "read: [/Users/tahsin/Documents/Python_programs/Phe2_05_values_spikes.csv]"
@@ -206,14 +206,14 @@
           "/Users/tahsin/Documents/Python_programs/Phe2_05_values_spikes.csv"
         ]
       },
-      "16cb5030-d2a9-4652-af8d-37ef591ca485": {
-        "id": "16cb5030-d2a9-4652-af8d-37ef591ca485",
+      "26285cdc-fbd2-4ac2-b8af-c48e0b6d5f95": {
+        "id": "26285cdc-fbd2-4ac2-b8af-c48e0b6d5f95",
         "name": "df_k",
         "ancestors": [
-          "a7f449d0-a603-4e95-a91c-ebee7702d3d7"
+          "ccd31f02-4924-4fcb-95a8-2dcd13747ff9"
         ],
         "descendants": [
-          "f9cb1ef9-d209-436f-823d-ae80c603d3f6"
+          "79425b9d-1be9-4dad-ad2a-89b77cca5878"
         ],
         "ops": [
           "transform: [DataFrame]"
@@ -223,15 +223,15 @@
         ],
         "reads": []
       },
-      "a7f449d0-a603-4e95-a91c-ebee7702d3d7": {
-        "id": "a7f449d0-a603-4e95-a91c-ebee7702d3d7",
+      "ccd31f02-4924-4fcb-95a8-2dcd13747ff9": {
+        "id": "ccd31f02-4924-4fcb-95a8-2dcd13747ff9",
         "name": "X_k",
         "ancestors": [
-          "e126bc19-48de-499d-9049-7b87b4f972b8",
-          "c75c6eab-1d9a-44eb-af16-44f1b5f6372a"
+          "ac531d5a-98e0-4767-9556-90efbd392d86",
+          "bb73f3d9-6380-448c-bf7e-5aa2c6cd98cf"
         ],
         "descendants": [
-          "16cb5030-d2a9-4652-af8d-37ef591ca485"
+          "26285cdc-fbd2-4ac2-b8af-c48e0b6d5f95"
         ],
         "ops": [
           "transform: [dot]"
@@ -239,30 +239,30 @@
         "writes": [],
         "reads": []
       },
-      "e126bc19-48de-499d-9049-7b87b4f972b8": {
-        "id": "e126bc19-48de-499d-9049-7b87b4f972b8",
+      "ac531d5a-98e0-4767-9556-90efbd392d86": {
+        "id": "ac531d5a-98e0-4767-9556-90efbd392d86",
         "name": "vh_k",
         "ancestors": [
-          "d170a440-8d5e-43eb-96aa-e19f5ec2fb27"
+          "9a0cce3a-0695-4a95-ab4b-b4c5c2114c07",
+          "92629c96-9089-4ab1-ab35-6b9219b0fe9e"
         ],
         "descendants": [
-          "a7f449d0-a603-4e95-a91c-ebee7702d3d7"
+          "ccd31f02-4924-4fcb-95a8-2dcd13747ff9"
         ],
         "ops": [
-          "transform: [pca_model[]]",
           "transform: [vh[]]"
         ],
         "writes": [],
         "reads": []
       },
-      "ecadccc0-ec17-4445-adef-c5bc388adebf": {
-        "id": "ecadccc0-ec17-4445-adef-c5bc388adebf",
+      "9a0cce3a-0695-4a95-ab4b-b4c5c2114c07": {
+        "id": "9a0cce3a-0695-4a95-ab4b-b4c5c2114c07",
         "name": "vh",
         "ancestors": [
-          "d170a440-8d5e-43eb-96aa-e19f5ec2fb27"
+          "17f7e986-1699-4773-bb16-8d4fc9ee5475"
         ],
         "descendants": [
-          "e126bc19-48de-499d-9049-7b87b4f972b8"
+          "ac531d5a-98e0-4767-9556-90efbd392d86"
         ],
         "ops": [
           "transform: [pca_model[]]"
@@ -270,12 +270,70 @@
         "writes": [],
         "reads": []
       },
-      "c75c6eab-1d9a-44eb-af16-44f1b5f6372a": {
-        "id": "c75c6eab-1d9a-44eb-af16-44f1b5f6372a",
+      "92629c96-9089-4ab1-ab35-6b9219b0fe9e": {
+        "id": "92629c96-9089-4ab1-ab35-6b9219b0fe9e",
+        "name": "k",
+        "ancestors": [
+          "8d55a72c-a23c-4b6f-b1ad-8ef611680fac"
+        ],
+        "descendants": [
+          "ac531d5a-98e0-4767-9556-90efbd392d86",
+          "bb2d9c70-e0c3-4013-9c55-638263b50f91",
+          "5a7fbe40-288f-4f2a-82ce-903422904c64",
+          "0e0655bb-bff1-4740-a409-19f369778a4d",
+          "b049d417-8420-4e98-bd10-4f7c6dc708ef",
+          "5de518c4-20d6-4f04-82cc-1095ad5a4915",
+          "2967491b-3d5c-4d0c-90ce-216cd2a42b15",
+          "f25a810f-a2d1-4144-9f78-160ea7e0aabf",
+          "e316f8a4-2cb1-41d0-a086-65abf36938b1",
+          "baf40d9c-3882-45e6-96b9-eb3c458d7621",
+          "6642443b-3804-4698-a398-dac0ecb72f7e",
+          "d8463662-e7f2-42f7-9910-8d7d42ab063c"
+        ],
+        "ops": [
+          "transform: [i]"
+        ],
+        "writes": [],
+        "reads": []
+      },
+      "8d55a72c-a23c-4b6f-b1ad-8ef611680fac": {
+        "id": "8d55a72c-a23c-4b6f-b1ad-8ef611680fac",
+        "name": "i",
+        "ancestors": [
+          "17f7e986-1699-4773-bb16-8d4fc9ee5475"
+        ],
+        "descendants": [
+          "92629c96-9089-4ab1-ab35-6b9219b0fe9e",
+          "976b2033-8fb4-4d74-9ae2-c8f1cebb06db"
+        ],
+        "ops": [
+          "transform: [pca_model[]]",
+          "transform: [range]"
+        ],
+        "writes": [],
+        "reads": []
+      },
+      "916e983b-95ef-4e78-b4f0-4e08f366d985": {
+        "id": "916e983b-95ef-4e78-b4f0-4e08f366d985",
+        "name": "s",
+        "ancestors": [
+          "17f7e986-1699-4773-bb16-8d4fc9ee5475"
+        ],
+        "descendants": [
+          "8d55a72c-a23c-4b6f-b1ad-8ef611680fac"
+        ],
+        "ops": [
+          "transform: [pca_model[]]"
+        ],
+        "writes": [],
+        "reads": []
+      },
+      "bb73f3d9-6380-448c-bf7e-5aa2c6cd98cf": {
+        "id": "bb73f3d9-6380-448c-bf7e-5aa2c6cd98cf",
         "name": "df_original",
         "ancestors": [],
         "descendants": [
-          "a7f449d0-a603-4e95-a91c-ebee7702d3d7"
+          "ccd31f02-4924-4fcb-95a8-2dcd13747ff9"
         ],
         "ops": [
           "read: [/Users/tahsin/Documents/Python_programs/Phe2_02_values_spikes_windowsresults_tranposed.csv]"
@@ -288,8 +346,239 @@
     }
   },
   "data_sources/basic/mini_gradient.py": {
-    "inputs": [],
-    "outputs": [],
-    "nodes": {}
+    "inputs": [
+      "variable: ds"
+    ],
+    "outputs": [
+      "gammasgdresults_3.csv"
+    ],
+    "nodes": {
+      "410148aa-8e32-41a4-b9a3-709e57345f51": {
+        "id": "410148aa-8e32-41a4-b9a3-709e57345f51",
+        "name": "out",
+        "ancestors": [
+          "2eef94c6-63b6-4977-a5c8-b9f839bc6363"
+        ],
+        "descendants": [],
+        "ops": [
+          "transform: [list()]",
+          "transform: [DataFrame]"
+        ],
+        "writes": [
+          "gammasgdresults_3.csv"
+        ],
+        "reads": []
+      },
+      "ab82153f-c7c2-499f-9e1f-b7ccbabe2a2a": {
+        "id": "ab82153f-c7c2-499f-9e1f-b7ccbabe2a2a",
+        "name": "out",
+        "ancestors": [
+          "2eef94c6-63b6-4977-a5c8-b9f839bc6363"
+        ],
+        "descendants": [
+          "410148aa-8e32-41a4-b9a3-709e57345f51"
+        ],
+        "ops": [
+          "transform: [list()]"
+        ],
+        "writes": [],
+        "reads": []
+      },
+      "2eef94c6-63b6-4977-a5c8-b9f839bc6363": {
+        "id": "2eef94c6-63b6-4977-a5c8-b9f839bc6363",
+        "name": "r2",
+        "ancestors": [
+          "f44b30f2-e796-43c5-a662-7eead17806e6",
+          "314821a4-fac8-4e8c-8617-7983fc5eed8d",
+          "a24ec3af-92fd-4306-a53c-f92cfdb5852e",
+          "62d12c44-7502-422c-afde-d416fdec6bbf"
+        ],
+        "descendants": [
+          "410148aa-8e32-41a4-b9a3-709e57345f51"
+        ],
+        "ops": [
+          "transform: [R2]"
+        ],
+        "writes": [],
+        "reads": []
+      },
+      "f44b30f2-e796-43c5-a662-7eead17806e6": {
+        "id": "f44b30f2-e796-43c5-a662-7eead17806e6",
+        "name": "w",
+        "ancestors": [
+          "395eb62e-f449-406b-8886-46817d04bca1"
+        ],
+        "descendants": [
+          "2eef94c6-63b6-4977-a5c8-b9f839bc6363"
+        ],
+        "ops": [
+          "transform: [Sub]"
+        ],
+        "writes": [],
+        "reads": []
+      },
+      "395eb62e-f449-406b-8886-46817d04bca1": {
+        "id": "395eb62e-f449-406b-8886-46817d04bca1",
+        "name": "w_grad",
+        "ancestors": [
+          "e407d711-aad1-49c9-b633-686ff08aae59",
+          "13e0ca67-ec66-4d09-8190-89deac48d8a1",
+          "291765a9-61a0-4d45-84f4-3355ed3ccaf0"
+        ],
+        "descendants": [
+          "f44b30f2-e796-43c5-a662-7eead17806e6"
+        ],
+        "ops": [
+          "transform: [Mult]"
+        ],
+        "writes": [],
+        "reads": []
+      },
+      "e407d711-aad1-49c9-b633-686ff08aae59": {
+        "id": "e407d711-aad1-49c9-b633-686ff08aae59",
+        "name": "Xj",
+        "ancestors": [
+          "858c669a-f92e-4ec8-8eda-60cc3dc792b2"
+        ],
+        "descendants": [
+          "291765a9-61a0-4d45-84f4-3355ed3ccaf0",
+          "395eb62e-f449-406b-8886-46817d04bca1",
+          "e42e433d-e603-44b9-b10e-4f60850fc968"
+        ],
+        "ops": [
+          "transform: [array]"
+        ],
+        "writes": [],
+        "reads": []
+      },
+      "858c669a-f92e-4ec8-8eda-60cc3dc792b2": {
+        "id": "858c669a-f92e-4ec8-8eda-60cc3dc792b2",
+        "name": "df",
+        "ancestors": [],
+        "descendants": [
+          "e407d711-aad1-49c9-b633-686ff08aae59",
+          "13e0ca67-ec66-4d09-8190-89deac48d8a1"
+        ],
+        "ops": [
+          "read: [variable: ds]"
+        ],
+        "writes": [],
+        "reads": [
+          "variable: ds"
+        ]
+      },
+      "13e0ca67-ec66-4d09-8190-89deac48d8a1": {
+        "id": "13e0ca67-ec66-4d09-8190-89deac48d8a1",
+        "name": "yj",
+        "ancestors": [
+          "858c669a-f92e-4ec8-8eda-60cc3dc792b2"
+        ],
+        "descendants": [
+          "395eb62e-f449-406b-8886-46817d04bca1",
+          "e42e433d-e603-44b9-b10e-4f60850fc968",
+          "41e22c3d-398a-4462-9051-b48f1336e04c"
+        ],
+        "ops": [
+          "transform: [array]"
+        ],
+        "writes": [],
+        "reads": []
+      },
+      "291765a9-61a0-4d45-84f4-3355ed3ccaf0": {
+        "id": "291765a9-61a0-4d45-84f4-3355ed3ccaf0",
+        "name": "y_predicted",
+        "ancestors": [
+          "e407d711-aad1-49c9-b633-686ff08aae59"
+        ],
+        "descendants": [
+          "395eb62e-f449-406b-8886-46817d04bca1",
+          "e42e433d-e603-44b9-b10e-4f60850fc968",
+          "41e22c3d-398a-4462-9051-b48f1336e04c"
+        ],
+        "ops": [
+          "transform: [Add]"
+        ],
+        "writes": [],
+        "reads": []
+      },
+      "314821a4-fac8-4e8c-8617-7983fc5eed8d": {
+        "id": "314821a4-fac8-4e8c-8617-7983fc5eed8d",
+        "name": "b",
+        "ancestors": [
+          "e42e433d-e603-44b9-b10e-4f60850fc968"
+        ],
+        "descendants": [
+          "2eef94c6-63b6-4977-a5c8-b9f839bc6363"
+        ],
+        "ops": [
+          "transform: [Sub]"
+        ],
+        "writes": [],
+        "reads": []
+      },
+      "e42e433d-e603-44b9-b10e-4f60850fc968": {
+        "id": "e42e433d-e603-44b9-b10e-4f60850fc968",
+        "name": "b_grad",
+        "ancestors": [
+          "e407d711-aad1-49c9-b633-686ff08aae59",
+          "13e0ca67-ec66-4d09-8190-89deac48d8a1",
+          "291765a9-61a0-4d45-84f4-3355ed3ccaf0"
+        ],
+        "descendants": [
+          "314821a4-fac8-4e8c-8617-7983fc5eed8d"
+        ],
+        "ops": [
+          "transform: [Mult]"
+        ],
+        "writes": [],
+        "reads": []
+      },
+      "a24ec3af-92fd-4306-a53c-f92cfdb5852e": {
+        "id": "a24ec3af-92fd-4306-a53c-f92cfdb5852e",
+        "name": "scaled_y",
+        "ancestors": [
+          "dddf9d46-28ce-4ce9-af4c-e0bb9bc75898"
+        ],
+        "descendants": [
+          "2eef94c6-63b6-4977-a5c8-b9f839bc6363"
+        ],
+        "ops": [
+          "transform: [array]"
+        ],
+        "writes": [],
+        "reads": []
+      },
+      "dddf9d46-28ce-4ce9-af4c-e0bb9bc75898": {
+        "id": "dddf9d46-28ce-4ce9-af4c-e0bb9bc75898",
+        "name": "df",
+        "ancestors": [],
+        "descendants": [
+          "a24ec3af-92fd-4306-a53c-f92cfdb5852e",
+          "62d12c44-7502-422c-afde-d416fdec6bbf"
+        ],
+        "ops": [
+          "read: [variable: ds]"
+        ],
+        "writes": [],
+        "reads": [
+          "variable: ds"
+        ]
+      },
+      "62d12c44-7502-422c-afde-d416fdec6bbf": {
+        "id": "62d12c44-7502-422c-afde-d416fdec6bbf",
+        "name": "scaled_X",
+        "ancestors": [
+          "dddf9d46-28ce-4ce9-af4c-e0bb9bc75898"
+        ],
+        "descendants": [
+          "2eef94c6-63b6-4977-a5c8-b9f839bc6363"
+        ],
+        "ops": [
+          "transform: [array]"
+        ],
+        "writes": [],
+        "reads": []
+      }
+    }
   }
 }

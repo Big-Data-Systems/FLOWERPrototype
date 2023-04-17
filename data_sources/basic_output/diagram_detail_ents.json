@@ -15,17 +15,12 @@
     "colorate": "#fff9ff"
   },
   {
-    "key": "t2.csv",
+    "key": "tjp_out.csv",
     "items": [],
     "colorate": "#fff9ff"
   },
   {
-    "key": "/Users/tahsin/Documents/Python_programs/Phe2_05_values_spikes.csv",
-    "items": [],
-    "colorate": "#fff9ff"
-  },
-  {
-    "key": "t1.csv",
+    "key": "variable: ds",
     "items": [],
     "colorate": "#fff9ff"
   },
@@ -35,7 +30,22 @@
     "colorate": "#fff9ff"
   },
   {
+    "key": "/Users/tahsin/Documents/Python_programs/u_05.csv",
+    "items": [],
+    "colorate": "#fff9ff"
+  },
+  {
+    "key": "gammasgdresults_3.csv",
+    "items": [],
+    "colorate": "#fff9ff"
+  },
+  {
     "key": "/Users/tahsin/Documents/Python_programs/Phe2_02_values_spikes_windowsresults_tranposed.csv",
+    "items": [],
+    "colorate": "#fff9ff"
+  },
+  {
+    "key": "t2.csv",
     "items": [],
     "colorate": "#fff9ff"
   },
@@ -45,17 +55,17 @@
     "colorate": "#fff9ff"
   },
   {
-    "key": "/Users/tahsin/Documents/Python_programs/u_05.csv",
+    "key": "t1.csv",
     "items": [],
     "colorate": "#fff9ff"
   },
   {
-    "key": "tjp_out.csv",
+    "key": "/Users/tahsin/Documents/Python_programs/Phe2_05_values_spikes.csv",
     "items": [],
     "colorate": "#fff9ff"
   },
   {
-    "key": "5e487290-61d6-471c-a02f-04bc25b6eb7e",
+    "key": "96d8ed43-50e7-4784-aefa-5cedb4ed0a1f",
     "items": [],
     "colorate": "#82E0AA",
     "ops": [
@@ -65,7 +75,7 @@
     "node_name": "t_ka"
   },
   {
-    "key": "1baa1e29-f5da-42c0-8ad3-092b102cb217",
+    "key": "53f24833-4106-4788-8617-a76e369f123e",
     "items": [],
     "colorate": "#82E0AA",
     "ops": [
@@ -75,7 +85,7 @@
     "node_name": "t1"
   },
   {
-    "key": "f915ec23-7c66-4f6a-8677-3f96da73845f",
+    "key": "c868cc1f-e7b1-4f1c-a364-997fdbb6bea5",
     "items": [],
     "colorate": "#82E0AA",
     "ops": [
@@ -85,7 +95,7 @@
     "node_name": "tjp"
   },
   {
-    "key": "0fe0ee33-b839-4d60-ac06-e55ab09c0f53",
+    "key": "3dc97a6a-5942-401d-8756-06a59a8fc18d",
     "items": [],
     "colorate": "#82E0AA",
     "ops": [
@@ -95,7 +105,7 @@
     "node_name": "t2"
   },
   {
-    "key": "049aa0fd-671d-4a02-87f0-cdc292c43721",
+    "key": "732f750e-cb0e-4396-b3ff-6bb958500483",
     "items": [],
     "colorate": "#82E0AA",
     "ops": [
@@ -106,7 +116,7 @@
     "node_name": "df_u"
   },
   {
-    "key": "8741bd60-6643-416b-8ecc-d8da7dc415ac",
+    "key": "1b623037-9cac-45fa-9e2a-cb63561340a3",
     "items": [],
     "colorate": "#82E0AA",
     "ops": [
@@ -116,7 +126,7 @@
     "node_name": "u"
   },
   {
-    "key": "d170a440-8d5e-43eb-96aa-e19f5ec2fb27",
+    "key": "17f7e986-1699-4773-bb16-8d4fc9ee5475",
     "items": [],
     "colorate": "#82E0AA",
     "ops": [
@@ -126,7 +136,7 @@
     "node_name": "pca_model"
   },
   {
-    "key": "fa3511c3-0d9c-4a45-b84f-632a9c5e2b38",
+    "key": "5d241aec-c3ec-4398-a0dc-7613914c8d76",
     "items": [],
     "colorate": "#82E0AA",
     "ops": [
@@ -137,7 +147,7 @@
     "node_name": "gamma"
   },
   {
-    "key": "4b5c970b-5786-40bb-9faf-5ed876902760",
+    "key": "87c1ece0-66ba-47f9-98c7-08be1ebfbcdd",
     "items": [],
     "colorate": "#82E0AA",
     "ops": [
@@ -147,7 +157,7 @@
     "node_name": "partial_gamma"
   },
   {
-    "key": "cd54b6dd-0419-4e26-8eb6-253a2b82d662",
+    "key": "96cefba1-1349-4f85-8478-34549771a9ee",
     "items": [],
     "colorate": "#82E0AA",
     "ops": [
@@ -157,7 +167,7 @@
     "node_name": "X"
   },
   {
-    "key": "f20d6cf2-f2dc-4400-90af-cce088578ffa",
+    "key": "64e9646f-0efc-4231-a674-da238a23a294",
     "items": [],
     "colorate": "#82E0AA",
     "ops": [
@@ -167,7 +177,7 @@
     "node_name": "df"
   },
   {
-    "key": "16cb5030-d2a9-4652-af8d-37ef591ca485",
+    "key": "26285cdc-fbd2-4ac2-b8af-c48e0b6d5f95",
     "items": [],
     "colorate": "#82E0AA",
     "ops": [
@@ -177,7 +187,7 @@
     "node_name": "df_k"
   },
   {
-    "key": "a7f449d0-a603-4e95-a91c-ebee7702d3d7",
+    "key": "ccd31f02-4924-4fcb-95a8-2dcd13747ff9",
     "items": [],
     "colorate": "#82E0AA",
     "ops": [
@@ -187,18 +197,17 @@
     "node_name": "X_k"
   },
   {
-    "key": "e126bc19-48de-499d-9049-7b87b4f972b8",
+    "key": "ac531d5a-98e0-4767-9556-90efbd392d86",
     "items": [],
     "colorate": "#82E0AA",
     "ops": [
-      "transform: [pca_model[]]",
       "transform: [vh[]]"
     ],
     "parent_flow": "data_sources/basic/gamma.py",
     "node_name": "vh_k"
   },
   {
-    "key": "ecadccc0-ec17-4445-adef-c5bc388adebf",
+    "key": "9a0cce3a-0695-4a95-ab4b-b4c5c2114c07",
     "items": [],
     "colorate": "#82E0AA",
     "ops": [
@@ -208,7 +217,38 @@
     "node_name": "vh"
   },
   {
-    "key": "c75c6eab-1d9a-44eb-af16-44f1b5f6372a",
+    "key": "92629c96-9089-4ab1-ab35-6b9219b0fe9e",
+    "items": [],
+    "colorate": "#82E0AA",
+    "ops": [
+      "transform: [i]"
+    ],
+    "parent_flow": "data_sources/basic/gamma.py",
+    "node_name": "k"
+  },
+  {
+    "key": "8d55a72c-a23c-4b6f-b1ad-8ef611680fac",
+    "items": [],
+    "colorate": "#82E0AA",
+    "ops": [
+      "transform: [pca_model[]]",
+      "transform: [range]"
+    ],
+    "parent_flow": "data_sources/basic/gamma.py",
+    "node_name": "i"
+  },
+  {
+    "key": "916e983b-95ef-4e78-b4f0-4e08f366d985",
+    "items": [],
+    "colorate": "#82E0AA",
+    "ops": [
+      "transform: [pca_model[]]"
+    ],
+    "parent_flow": "data_sources/basic/gamma.py",
+    "node_name": "s"
+  },
+  {
+    "key": "bb73f3d9-6380-448c-bf7e-5aa2c6cd98cf",
     "items": [],
     "colorate": "#82E0AA",
     "ops": [
@@ -216,5 +256,146 @@
     ],
     "parent_flow": "data_sources/basic/gamma.py",
     "node_name": "df_original"
+  },
+  {
+    "key": "410148aa-8e32-41a4-b9a3-709e57345f51",
+    "items": [],
+    "colorate": "#82E0AA",
+    "ops": [
+      "transform: [list()]",
+      "transform: [DataFrame]"
+    ],
+    "parent_flow": "data_sources/basic/mini_gradient.py",
+    "node_name": "out"
+  },
+  {
+    "key": "ab82153f-c7c2-499f-9e1f-b7ccbabe2a2a",
+    "items": [],
+    "colorate": "#82E0AA",
+    "ops": [
+      "transform: [list()]"
+    ],
+    "parent_flow": "data_sources/basic/mini_gradient.py",
+    "node_name": "out"
+  },
+  {
+    "key": "2eef94c6-63b6-4977-a5c8-b9f839bc6363",
+    "items": [],
+    "colorate": "#82E0AA",
+    "ops": [
+      "transform: [R2]"
+    ],
+    "parent_flow": "data_sources/basic/mini_gradient.py",
+    "node_name": "r2"
+  },
+  {
+    "key": "f44b30f2-e796-43c5-a662-7eead17806e6",
+    "items": [],
+    "colorate": "#82E0AA",
+    "ops": [
+      "transform: [Sub]"
+    ],
+    "parent_flow": "data_sources/basic/mini_gradient.py",
+    "node_name": "w"
+  },
+  {
+    "key": "395eb62e-f449-406b-8886-46817d04bca1",
+    "items": [],
+    "colorate": "#82E0AA",
+    "ops": [
+      "transform: [Mult]"
+    ],
+    "parent_flow": "data_sources/basic/mini_gradient.py",
+    "node_name": "w_grad"
+  },
+  {
+    "key": "e407d711-aad1-49c9-b633-686ff08aae59",
+    "items": [],
+    "colorate": "#82E0AA",
+    "ops": [
+      "transform: [array]"
+    ],
+    "parent_flow": "data_sources/basic/mini_gradient.py",
+    "node_name": "Xj"
+  },
+  {
+    "key": "858c669a-f92e-4ec8-8eda-60cc3dc792b2",
+    "items": [],
+    "colorate": "#82E0AA",
+    "ops": [
+      "read: [variable: ds]"
+    ],
+    "parent_flow": "data_sources/basic/mini_gradient.py",
+    "node_name": "df"
+  },
+  {
+    "key": "13e0ca67-ec66-4d09-8190-89deac48d8a1",
+    "items": [],
+    "colorate": "#82E0AA",
+    "ops": [
+      "transform: [array]"
+    ],
+    "parent_flow": "data_sources/basic/mini_gradient.py",
+    "node_name": "yj"
+  },
+  {
+    "key": "291765a9-61a0-4d45-84f4-3355ed3ccaf0",
+    "items": [],
+    "colorate": "#82E0AA",
+    "ops": [
+      "transform: [Add]"
+    ],
+    "parent_flow": "data_sources/basic/mini_gradient.py",
+    "node_name": "y_predicted"
+  },
+  {
+    "key": "314821a4-fac8-4e8c-8617-7983fc5eed8d",
+    "items": [],
+    "colorate": "#82E0AA",
+    "ops": [
+      "transform: [Sub]"
+    ],
+    "parent_flow": "data_sources/basic/mini_gradient.py",
+    "node_name": "b"
+  },
+  {
+    "key": "e42e433d-e603-44b9-b10e-4f60850fc968",
+    "items": [],
+    "colorate": "#82E0AA",
+    "ops": [
+      "transform: [Mult]"
+    ],
+    "parent_flow": "data_sources/basic/mini_gradient.py",
+    "node_name": "b_grad"
+  },
+  {
+    "key": "a24ec3af-92fd-4306-a53c-f92cfdb5852e",
+    "items": [],
+    "colorate": "#82E0AA",
+    "ops": [
+      "transform: [array]"
+    ],
+    "parent_flow": "data_sources/basic/mini_gradient.py",
+    "node_name": "scaled_y"
+  },
+  {
+    "key": "dddf9d46-28ce-4ce9-af4c-e0bb9bc75898",
+    "items": [],
+    "colorate": "#82E0AA",
+    "ops": [
+      "read: [variable: ds]"
+    ],
+    "parent_flow": "data_sources/basic/mini_gradient.py",
+    "node_name": "df"
+  },
+  {
+    "key": "62d12c44-7502-422c-afde-d416fdec6bbf",
+    "items": [],
+    "colorate": "#82E0AA",
+    "ops": [
+      "transform: [array]"
+    ],
+    "parent_flow": "data_sources/basic/mini_gradient.py",
+    "node_name": "scaled_X"
   }
 ]

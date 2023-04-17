@@ -1,6 +1,6 @@
 [
   {
-    "from": "products.csv",
+    "from": "product_categories.csv",
     "to": "data_sources/toy/cat_costs.py",
     "color": "black",
     "dash": [
@@ -13,7 +13,7 @@
     "toText": ""
   },
   {
-    "from": "product_categories.csv",
+    "from": "products.csv",
     "to": "data_sources/toy/cat_costs.py",
     "color": "black",
     "dash": [
@@ -28,6 +28,58 @@
   {
     "from": "product_types.csv",
     "to": "data_sources/toy/cat_costs.py",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "processed__product_info.csv",
+    "to": "data_sources/toy/cat_sales.py",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "sales.csv",
+    "to": "data_sources/toy/cat_sales.py",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "processed__category_inventory.csv",
+    "to": "data_sources/toy/recommend_categories.py",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "processed__category_sales.csv",
+    "to": "data_sources/toy/recommend_categories.py",
     "color": "black",
     "dash": [
       3,
@@ -54,6 +106,32 @@
   {
     "from": "data_sources/toy/cat_costs.py",
     "to": "processed__category_inventory.csv",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "data_sources/toy/cat_sales.py",
+    "to": "processed__category_sales.csv",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "data_sources/toy/recommend_categories.py",
+    "to": "processed__category_recs.csv",
     "color": "black",
     "dash": [
       3,

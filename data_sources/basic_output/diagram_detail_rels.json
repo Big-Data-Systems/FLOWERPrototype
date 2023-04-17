@@ -1,6 +1,6 @@
 [
   {
-    "from": "t2.csv",
+    "from": "t1.csv",
     "to": "data_sources/basic/agg.py",
     "color": "black",
     "dash": [
@@ -13,7 +13,7 @@
     "toText": ""
   },
   {
-    "from": "t1.csv",
+    "from": "t2.csv",
     "to": "data_sources/basic/agg.py",
     "color": "black",
     "dash": [
@@ -52,8 +52,8 @@
     "toText": ""
   },
   {
-    "from": "data_sources/basic/agg.py",
-    "to": "t_ka.csv",
+    "from": "variable: ds",
+    "to": "data_sources/basic/mini_gradient.py",
     "color": "black",
     "dash": [
       3,
@@ -67,6 +67,19 @@
   {
     "from": "data_sources/basic/agg.py",
     "to": "tjp_out.csv",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "data_sources/basic/agg.py",
+    "to": "t_ka.csv",
     "color": "black",
     "dash": [
       3,
@@ -104,7 +117,20 @@
     "toText": ""
   },
   {
-    "from": "5e487290-61d6-471c-a02f-04bc25b6eb7e",
+    "from": "data_sources/basic/mini_gradient.py",
+    "to": "gammasgdresults_3.csv",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "96d8ed43-50e7-4784-aefa-5cedb4ed0a1f",
     "to": "t_ka.csv",
     "color": "black",
     "dash": [
@@ -117,8 +143,8 @@
     "toText": ""
   },
   {
-    "from": "1baa1e29-f5da-42c0-8ad3-092b102cb217",
-    "to": "5e487290-61d6-471c-a02f-04bc25b6eb7e",
+    "from": "53f24833-4106-4788-8617-a76e369f123e",
+    "to": "96d8ed43-50e7-4784-aefa-5cedb4ed0a1f",
     "color": "black",
     "dash": [
       3,
@@ -130,8 +156,8 @@
     "toText": ""
   },
   {
-    "from": "1baa1e29-f5da-42c0-8ad3-092b102cb217",
-    "to": "5bef9d90-5718-45ce-97cb-cf276f27a492",
+    "from": "53f24833-4106-4788-8617-a76e369f123e",
+    "to": "92b68d29-1b28-4174-a769-64469c4614ab",
     "color": "black",
     "dash": [
       3,
@@ -143,8 +169,8 @@
     "toText": ""
   },
   {
-    "from": "1baa1e29-f5da-42c0-8ad3-092b102cb217",
-    "to": "df8815a7-07ad-4298-8fa0-7fc09a3f1a93",
+    "from": "53f24833-4106-4788-8617-a76e369f123e",
+    "to": "03c543e8-03e0-478d-8ea7-f417658c91cc",
     "color": "black",
     "dash": [
       3,
@@ -156,8 +182,8 @@
     "toText": ""
   },
   {
-    "from": "1baa1e29-f5da-42c0-8ad3-092b102cb217",
-    "to": "ada88709-2544-4a53-9e1f-fad5d5fba6b1",
+    "from": "53f24833-4106-4788-8617-a76e369f123e",
+    "to": "e3b15c98-1785-443b-af8d-481122997253",
     "color": "black",
     "dash": [
       3,
@@ -169,8 +195,8 @@
     "toText": ""
   },
   {
-    "from": "1baa1e29-f5da-42c0-8ad3-092b102cb217",
-    "to": "f915ec23-7c66-4f6a-8677-3f96da73845f",
+    "from": "53f24833-4106-4788-8617-a76e369f123e",
+    "to": "c868cc1f-e7b1-4f1c-a364-997fdbb6bea5",
     "color": "black",
     "dash": [
       3,
@@ -182,7 +208,7 @@
     "toText": ""
   },
   {
-    "from": "f915ec23-7c66-4f6a-8677-3f96da73845f",
+    "from": "c868cc1f-e7b1-4f1c-a364-997fdbb6bea5",
     "to": "tjp_out.csv",
     "color": "black",
     "dash": [
@@ -195,8 +221,8 @@
     "toText": ""
   },
   {
-    "from": "0fe0ee33-b839-4d60-ac06-e55ab09c0f53",
-    "to": "5bef9d90-5718-45ce-97cb-cf276f27a492",
+    "from": "3dc97a6a-5942-401d-8756-06a59a8fc18d",
+    "to": "92b68d29-1b28-4174-a769-64469c4614ab",
     "color": "black",
     "dash": [
       3,
@@ -208,8 +234,8 @@
     "toText": ""
   },
   {
-    "from": "0fe0ee33-b839-4d60-ac06-e55ab09c0f53",
-    "to": "df8815a7-07ad-4298-8fa0-7fc09a3f1a93",
+    "from": "3dc97a6a-5942-401d-8756-06a59a8fc18d",
+    "to": "03c543e8-03e0-478d-8ea7-f417658c91cc",
     "color": "black",
     "dash": [
       3,
@@ -221,8 +247,8 @@
     "toText": ""
   },
   {
-    "from": "0fe0ee33-b839-4d60-ac06-e55ab09c0f53",
-    "to": "ada88709-2544-4a53-9e1f-fad5d5fba6b1",
+    "from": "3dc97a6a-5942-401d-8756-06a59a8fc18d",
+    "to": "e3b15c98-1785-443b-af8d-481122997253",
     "color": "black",
     "dash": [
       3,
@@ -234,8 +260,8 @@
     "toText": ""
   },
   {
-    "from": "0fe0ee33-b839-4d60-ac06-e55ab09c0f53",
-    "to": "f915ec23-7c66-4f6a-8677-3f96da73845f",
+    "from": "3dc97a6a-5942-401d-8756-06a59a8fc18d",
+    "to": "c868cc1f-e7b1-4f1c-a364-997fdbb6bea5",
     "color": "black",
     "dash": [
       3,
@@ -247,7 +273,7 @@
     "toText": ""
   },
   {
-    "from": "049aa0fd-671d-4a02-87f0-cdc292c43721",
+    "from": "732f750e-cb0e-4396-b3ff-6bb958500483",
     "to": "/Users/tahsin/Documents/Python_programs/u_05.csv",
     "color": "black",
     "dash": [
@@ -260,8 +286,8 @@
     "toText": ""
   },
   {
-    "from": "8741bd60-6643-416b-8ecc-d8da7dc415ac",
-    "to": "049aa0fd-671d-4a02-87f0-cdc292c43721",
+    "from": "1b623037-9cac-45fa-9e2a-cb63561340a3",
+    "to": "732f750e-cb0e-4396-b3ff-6bb958500483",
     "color": "black",
     "dash": [
       3,
@@ -273,8 +299,8 @@
     "toText": ""
   },
   {
-    "from": "d170a440-8d5e-43eb-96aa-e19f5ec2fb27",
-    "to": "8741bd60-6643-416b-8ecc-d8da7dc415ac",
+    "from": "17f7e986-1699-4773-bb16-8d4fc9ee5475",
+    "to": "1b623037-9cac-45fa-9e2a-cb63561340a3",
     "color": "black",
     "dash": [
       3,
@@ -286,8 +312,8 @@
     "toText": ""
   },
   {
-    "from": "d170a440-8d5e-43eb-96aa-e19f5ec2fb27",
-    "to": "07264e03-f43c-46bc-83cd-999de136fbbd",
+    "from": "17f7e986-1699-4773-bb16-8d4fc9ee5475",
+    "to": "916e983b-95ef-4e78-b4f0-4e08f366d985",
     "color": "black",
     "dash": [
       3,
@@ -299,8 +325,8 @@
     "toText": ""
   },
   {
-    "from": "d170a440-8d5e-43eb-96aa-e19f5ec2fb27",
-    "to": "ecadccc0-ec17-4445-adef-c5bc388adebf",
+    "from": "17f7e986-1699-4773-bb16-8d4fc9ee5475",
+    "to": "9a0cce3a-0695-4a95-ab4b-b4c5c2114c07",
     "color": "black",
     "dash": [
       3,
@@ -312,8 +338,8 @@
     "toText": ""
   },
   {
-    "from": "fa3511c3-0d9c-4a45-b84f-632a9c5e2b38",
-    "to": "d170a440-8d5e-43eb-96aa-e19f5ec2fb27",
+    "from": "5d241aec-c3ec-4398-a0dc-7613914c8d76",
+    "to": "17f7e986-1699-4773-bb16-8d4fc9ee5475",
     "color": "black",
     "dash": [
       3,
@@ -325,8 +351,8 @@
     "toText": ""
   },
   {
-    "from": "fa3511c3-0d9c-4a45-b84f-632a9c5e2b38",
-    "to": "82539804-7480-4483-b85e-1c6afa29c49a",
+    "from": "5d241aec-c3ec-4398-a0dc-7613914c8d76",
+    "to": "a6afbf2a-e1f6-4aa2-8f57-8eb6a845881c",
     "color": "black",
     "dash": [
       3,
@@ -338,8 +364,8 @@
     "toText": ""
   },
   {
-    "from": "4b5c970b-5786-40bb-9faf-5ed876902760",
-    "to": "fa3511c3-0d9c-4a45-b84f-632a9c5e2b38",
+    "from": "87c1ece0-66ba-47f9-98c7-08be1ebfbcdd",
+    "to": "5d241aec-c3ec-4398-a0dc-7613914c8d76",
     "color": "black",
     "dash": [
       3,
@@ -351,8 +377,8 @@
     "toText": ""
   },
   {
-    "from": "cd54b6dd-0419-4e26-8eb6-253a2b82d662",
-    "to": "7f3efe27-d4c4-4707-bd58-7f0231ca571a",
+    "from": "96cefba1-1349-4f85-8478-34549771a9ee",
+    "to": "6d368f7d-0c77-4dc5-b72b-4967062d1a9f",
     "color": "black",
     "dash": [
       3,
@@ -364,8 +390,8 @@
     "toText": ""
   },
   {
-    "from": "cd54b6dd-0419-4e26-8eb6-253a2b82d662",
-    "to": "4b5c970b-5786-40bb-9faf-5ed876902760",
+    "from": "96cefba1-1349-4f85-8478-34549771a9ee",
+    "to": "87c1ece0-66ba-47f9-98c7-08be1ebfbcdd",
     "color": "black",
     "dash": [
       3,
@@ -377,8 +403,8 @@
     "toText": ""
   },
   {
-    "from": "cd54b6dd-0419-4e26-8eb6-253a2b82d662",
-    "to": "11c5b56f-86cf-41d2-aca8-8680ec3b0b7a",
+    "from": "96cefba1-1349-4f85-8478-34549771a9ee",
+    "to": "63463ae5-d039-4279-96cf-481cced2f5e8",
     "color": "black",
     "dash": [
       3,
@@ -390,8 +416,8 @@
     "toText": ""
   },
   {
-    "from": "cd54b6dd-0419-4e26-8eb6-253a2b82d662",
-    "to": "bcf7eea7-8850-4990-8937-7155b9847d68",
+    "from": "96cefba1-1349-4f85-8478-34549771a9ee",
+    "to": "0a8f86bc-8fc7-48a4-8736-8b4a1d678997",
     "color": "black",
     "dash": [
       3,
@@ -403,8 +429,8 @@
     "toText": ""
   },
   {
-    "from": "cd54b6dd-0419-4e26-8eb6-253a2b82d662",
-    "to": "6879e728-825b-450b-914c-0a8294cadad8",
+    "from": "96cefba1-1349-4f85-8478-34549771a9ee",
+    "to": "38c63e36-cc38-48be-89d8-5f24ed7c5eca",
     "color": "black",
     "dash": [
       3,
@@ -416,8 +442,8 @@
     "toText": ""
   },
   {
-    "from": "cd54b6dd-0419-4e26-8eb6-253a2b82d662",
-    "to": "44b63e6f-260e-4e08-ae3e-2f50225120c0",
+    "from": "96cefba1-1349-4f85-8478-34549771a9ee",
+    "to": "a89f4b17-9417-4137-98cb-ba2a285ea8e3",
     "color": "black",
     "dash": [
       3,
@@ -429,8 +455,8 @@
     "toText": ""
   },
   {
-    "from": "cd54b6dd-0419-4e26-8eb6-253a2b82d662",
-    "to": "fcc54b87-410e-4ff6-aaf2-87b02b13abff",
+    "from": "96cefba1-1349-4f85-8478-34549771a9ee",
+    "to": "4794611f-09ff-4913-931e-ed82918108de",
     "color": "black",
     "dash": [
       3,
@@ -442,8 +468,8 @@
     "toText": ""
   },
   {
-    "from": "cd54b6dd-0419-4e26-8eb6-253a2b82d662",
-    "to": "9190bfec-e9d3-40af-969e-5aedefc31822",
+    "from": "96cefba1-1349-4f85-8478-34549771a9ee",
+    "to": "30ceb9ce-5bfc-4054-9378-7fb1ef3d6d48",
     "color": "black",
     "dash": [
       3,
@@ -455,8 +481,8 @@
     "toText": ""
   },
   {
-    "from": "f20d6cf2-f2dc-4400-90af-cce088578ffa",
-    "to": "cd54b6dd-0419-4e26-8eb6-253a2b82d662",
+    "from": "64e9646f-0efc-4231-a674-da238a23a294",
+    "to": "96cefba1-1349-4f85-8478-34549771a9ee",
     "color": "black",
     "dash": [
       3,
@@ -468,8 +494,8 @@
     "toText": ""
   },
   {
-    "from": "16cb5030-d2a9-4652-af8d-37ef591ca485",
-    "to": "f9cb1ef9-d209-436f-823d-ae80c603d3f6",
+    "from": "26285cdc-fbd2-4ac2-b8af-c48e0b6d5f95",
+    "to": "79425b9d-1be9-4dad-ad2a-89b77cca5878",
     "color": "black",
     "dash": [
       3,
@@ -481,7 +507,7 @@
     "toText": ""
   },
   {
-    "from": "16cb5030-d2a9-4652-af8d-37ef591ca485",
+    "from": "26285cdc-fbd2-4ac2-b8af-c48e0b6d5f95",
     "to": "/Users/tahsin/Documents/Python_programs/Phe2_02_values_spikes_windowsresults_reducted.csv",
     "color": "black",
     "dash": [
@@ -494,8 +520,8 @@
     "toText": ""
   },
   {
-    "from": "a7f449d0-a603-4e95-a91c-ebee7702d3d7",
-    "to": "16cb5030-d2a9-4652-af8d-37ef591ca485",
+    "from": "ccd31f02-4924-4fcb-95a8-2dcd13747ff9",
+    "to": "26285cdc-fbd2-4ac2-b8af-c48e0b6d5f95",
     "color": "black",
     "dash": [
       3,
@@ -507,8 +533,8 @@
     "toText": ""
   },
   {
-    "from": "e126bc19-48de-499d-9049-7b87b4f972b8",
-    "to": "a7f449d0-a603-4e95-a91c-ebee7702d3d7",
+    "from": "ac531d5a-98e0-4767-9556-90efbd392d86",
+    "to": "ccd31f02-4924-4fcb-95a8-2dcd13747ff9",
     "color": "black",
     "dash": [
       3,
@@ -520,8 +546,8 @@
     "toText": ""
   },
   {
-    "from": "ecadccc0-ec17-4445-adef-c5bc388adebf",
-    "to": "e126bc19-48de-499d-9049-7b87b4f972b8",
+    "from": "9a0cce3a-0695-4a95-ab4b-b4c5c2114c07",
+    "to": "ac531d5a-98e0-4767-9556-90efbd392d86",
     "color": "black",
     "dash": [
       3,
@@ -533,8 +559,489 @@
     "toText": ""
   },
   {
-    "from": "c75c6eab-1d9a-44eb-af16-44f1b5f6372a",
-    "to": "a7f449d0-a603-4e95-a91c-ebee7702d3d7",
+    "from": "92629c96-9089-4ab1-ab35-6b9219b0fe9e",
+    "to": "ac531d5a-98e0-4767-9556-90efbd392d86",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "92629c96-9089-4ab1-ab35-6b9219b0fe9e",
+    "to": "bb2d9c70-e0c3-4013-9c55-638263b50f91",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "92629c96-9089-4ab1-ab35-6b9219b0fe9e",
+    "to": "5a7fbe40-288f-4f2a-82ce-903422904c64",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "92629c96-9089-4ab1-ab35-6b9219b0fe9e",
+    "to": "0e0655bb-bff1-4740-a409-19f369778a4d",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "92629c96-9089-4ab1-ab35-6b9219b0fe9e",
+    "to": "b049d417-8420-4e98-bd10-4f7c6dc708ef",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "92629c96-9089-4ab1-ab35-6b9219b0fe9e",
+    "to": "5de518c4-20d6-4f04-82cc-1095ad5a4915",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "92629c96-9089-4ab1-ab35-6b9219b0fe9e",
+    "to": "2967491b-3d5c-4d0c-90ce-216cd2a42b15",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "92629c96-9089-4ab1-ab35-6b9219b0fe9e",
+    "to": "f25a810f-a2d1-4144-9f78-160ea7e0aabf",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "92629c96-9089-4ab1-ab35-6b9219b0fe9e",
+    "to": "e316f8a4-2cb1-41d0-a086-65abf36938b1",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "92629c96-9089-4ab1-ab35-6b9219b0fe9e",
+    "to": "baf40d9c-3882-45e6-96b9-eb3c458d7621",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "92629c96-9089-4ab1-ab35-6b9219b0fe9e",
+    "to": "6642443b-3804-4698-a398-dac0ecb72f7e",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "92629c96-9089-4ab1-ab35-6b9219b0fe9e",
+    "to": "d8463662-e7f2-42f7-9910-8d7d42ab063c",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "8d55a72c-a23c-4b6f-b1ad-8ef611680fac",
+    "to": "92629c96-9089-4ab1-ab35-6b9219b0fe9e",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "8d55a72c-a23c-4b6f-b1ad-8ef611680fac",
+    "to": "976b2033-8fb4-4d74-9ae2-c8f1cebb06db",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "916e983b-95ef-4e78-b4f0-4e08f366d985",
+    "to": "8d55a72c-a23c-4b6f-b1ad-8ef611680fac",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "bb73f3d9-6380-448c-bf7e-5aa2c6cd98cf",
+    "to": "ccd31f02-4924-4fcb-95a8-2dcd13747ff9",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "410148aa-8e32-41a4-b9a3-709e57345f51",
+    "to": "gammasgdresults_3.csv",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "ab82153f-c7c2-499f-9e1f-b7ccbabe2a2a",
+    "to": "410148aa-8e32-41a4-b9a3-709e57345f51",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "2eef94c6-63b6-4977-a5c8-b9f839bc6363",
+    "to": "410148aa-8e32-41a4-b9a3-709e57345f51",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "f44b30f2-e796-43c5-a662-7eead17806e6",
+    "to": "2eef94c6-63b6-4977-a5c8-b9f839bc6363",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "395eb62e-f449-406b-8886-46817d04bca1",
+    "to": "f44b30f2-e796-43c5-a662-7eead17806e6",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "e407d711-aad1-49c9-b633-686ff08aae59",
+    "to": "291765a9-61a0-4d45-84f4-3355ed3ccaf0",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "e407d711-aad1-49c9-b633-686ff08aae59",
+    "to": "395eb62e-f449-406b-8886-46817d04bca1",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "e407d711-aad1-49c9-b633-686ff08aae59",
+    "to": "e42e433d-e603-44b9-b10e-4f60850fc968",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "858c669a-f92e-4ec8-8eda-60cc3dc792b2",
+    "to": "e407d711-aad1-49c9-b633-686ff08aae59",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "858c669a-f92e-4ec8-8eda-60cc3dc792b2",
+    "to": "13e0ca67-ec66-4d09-8190-89deac48d8a1",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "13e0ca67-ec66-4d09-8190-89deac48d8a1",
+    "to": "395eb62e-f449-406b-8886-46817d04bca1",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "13e0ca67-ec66-4d09-8190-89deac48d8a1",
+    "to": "e42e433d-e603-44b9-b10e-4f60850fc968",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "13e0ca67-ec66-4d09-8190-89deac48d8a1",
+    "to": "41e22c3d-398a-4462-9051-b48f1336e04c",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "291765a9-61a0-4d45-84f4-3355ed3ccaf0",
+    "to": "395eb62e-f449-406b-8886-46817d04bca1",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "291765a9-61a0-4d45-84f4-3355ed3ccaf0",
+    "to": "e42e433d-e603-44b9-b10e-4f60850fc968",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "291765a9-61a0-4d45-84f4-3355ed3ccaf0",
+    "to": "41e22c3d-398a-4462-9051-b48f1336e04c",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "314821a4-fac8-4e8c-8617-7983fc5eed8d",
+    "to": "2eef94c6-63b6-4977-a5c8-b9f839bc6363",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "e42e433d-e603-44b9-b10e-4f60850fc968",
+    "to": "314821a4-fac8-4e8c-8617-7983fc5eed8d",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "a24ec3af-92fd-4306-a53c-f92cfdb5852e",
+    "to": "2eef94c6-63b6-4977-a5c8-b9f839bc6363",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "dddf9d46-28ce-4ce9-af4c-e0bb9bc75898",
+    "to": "a24ec3af-92fd-4306-a53c-f92cfdb5852e",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "dddf9d46-28ce-4ce9-af4c-e0bb9bc75898",
+    "to": "62d12c44-7502-422c-afde-d416fdec6bbf",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "62d12c44-7502-422c-afde-d416fdec6bbf",
+    "to": "2eef94c6-63b6-4977-a5c8-b9f839bc6363",
     "color": "black",
     "dash": [
       3,
@@ -547,7 +1054,7 @@
   },
   {
     "from": "t1.csv",
-    "to": "1baa1e29-f5da-42c0-8ad3-092b102cb217",
+    "to": "53f24833-4106-4788-8617-a76e369f123e",
     "color": "black",
     "dash": [
       3,
@@ -560,7 +1067,7 @@
   },
   {
     "from": "t2.csv",
-    "to": "0fe0ee33-b839-4d60-ac06-e55ab09c0f53",
+    "to": "3dc97a6a-5942-401d-8756-06a59a8fc18d",
     "color": "black",
     "dash": [
       3,
@@ -573,7 +1080,7 @@
   },
   {
     "from": "/Users/tahsin/Documents/Python_programs/Phe2_05_values_spikes.csv",
-    "to": "f20d6cf2-f2dc-4400-90af-cce088578ffa",
+    "to": "64e9646f-0efc-4231-a674-da238a23a294",
     "color": "black",
     "dash": [
       3,
@@ -586,7 +1093,33 @@
   },
   {
     "from": "/Users/tahsin/Documents/Python_programs/Phe2_02_values_spikes_windowsresults_tranposed.csv",
-    "to": "c75c6eab-1d9a-44eb-af16-44f1b5f6372a",
+    "to": "bb73f3d9-6380-448c-bf7e-5aa2c6cd98cf",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "variable: ds",
+    "to": "858c669a-f92e-4ec8-8eda-60cc3dc792b2",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "variable: ds",
+    "to": "dddf9d46-28ce-4ce9-af4c-e0bb9bc75898",
     "color": "black",
     "dash": [
       3,

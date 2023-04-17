@@ -17,7 +17,7 @@ an analysis of the inputs, outputs and relationships between these through the p
 This project uses python 3.10 -- no external libraries are required.
 
 ```
-usage: flower.py [-h] [-v] [-o OUTPUT] [-e ERDIAG] [-d] filename
+usage: __init__.py [-h] [-v] [-o OUTPUT] [-e ERDIAG] [-d] filename
 
 positional arguments:
   filename              Relative or absolute path to file(s) to parse. Supports glob.

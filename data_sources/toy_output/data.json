@@ -1,25 +1,25 @@
 {
   "data_sources/toy/cat_costs.py": {
     "inputs": [
-      "product_types.csv",
+      "products.csv",
       "product_categories.csv",
-      "products.csv"
+      "product_types.csv"
     ],
     "outputs": [
       "processed__product_info.csv",
       "processed__category_inventory.csv"
     ],
     "nodes": {
-      "5a53f7c6-1d2c-4516-b391-21922785089b": {
-        "id": "5a53f7c6-1d2c-4516-b391-21922785089b",
+      "485f350f-f6f9-4ee5-8f8d-b46d39fb7512": {
+        "id": "485f350f-f6f9-4ee5-8f8d-b46d39fb7512",
         "name": "prods_with_cats",
         "ancestors": [
-          "57bed712-a15a-4f1c-83cf-8f2ba1dd79c0",
-          "7af6daac-41de-4176-981f-05567e665a94"
+          "8361bfc5-00f6-49e2-9746-4fc75ebd7e71",
+          "6d9b580e-0ab2-43e8-b93f-e97843f6ad6f"
         ],
         "descendants": [
-          "8cd0d260-ff85-43b5-a247-d1fe379e0901",
-          "a52612fb-c776-47c5-90d5-5169b61c8dc2"
+          "b19cd7f4-3af9-43cd-96ff-6f15fb35fe5a",
+          "c5274427-a0a5-494c-ac11-95b32fce8dc2"
         ],
         "ops": [
           "transform: [merge]"
@@ -29,12 +29,12 @@
         ],
         "reads": []
       },
-      "57bed712-a15a-4f1c-83cf-8f2ba1dd79c0": {
-        "id": "57bed712-a15a-4f1c-83cf-8f2ba1dd79c0",
+      "8361bfc5-00f6-49e2-9746-4fc75ebd7e71": {
+        "id": "8361bfc5-00f6-49e2-9746-4fc75ebd7e71",
         "name": "cats",
         "ancestors": [],
         "descendants": [
-          "5a53f7c6-1d2c-4516-b391-21922785089b"
+          "485f350f-f6f9-4ee5-8f8d-b46d39fb7512"
         ],
         "ops": [
           "read: [product_categories.csv]"
@@ -44,15 +44,15 @@
           "product_categories.csv"
         ]
       },
-      "7af6daac-41de-4176-981f-05567e665a94": {
-        "id": "7af6daac-41de-4176-981f-05567e665a94",
+      "6d9b580e-0ab2-43e8-b93f-e97843f6ad6f": {
+        "id": "6d9b580e-0ab2-43e8-b93f-e97843f6ad6f",
         "name": "prods_with_type_info",
         "ancestors": [
-          "e51e4891-e01d-475d-8b02-13bad606c998",
-          "b9edacfa-95fc-473f-b7af-17b72f631bf9"
+          "114cfd7c-b800-4bfa-b991-1d7fec453038",
+          "1b4de335-b765-42d2-b9fe-e8d23dc8a066"
         ],
         "descendants": [
-          "5a53f7c6-1d2c-4516-b391-21922785089b"
+          "485f350f-f6f9-4ee5-8f8d-b46d39fb7512"
         ],
         "ops": [
           "transform: [merge]"
@@ -60,12 +60,12 @@
         "writes": [],
         "reads": []
       },
-      "e51e4891-e01d-475d-8b02-13bad606c998": {
-        "id": "e51e4891-e01d-475d-8b02-13bad606c998",
+      "114cfd7c-b800-4bfa-b991-1d7fec453038": {
+        "id": "114cfd7c-b800-4bfa-b991-1d7fec453038",
         "name": "product_types",
         "ancestors": [],
         "descendants": [
-          "7af6daac-41de-4176-981f-05567e665a94"
+          "6d9b580e-0ab2-43e8-b93f-e97843f6ad6f"
         ],
         "ops": [
           "read: [product_types.csv]"
@@ -75,12 +75,12 @@
           "product_types.csv"
         ]
       },
-      "b9edacfa-95fc-473f-b7af-17b72f631bf9": {
-        "id": "b9edacfa-95fc-473f-b7af-17b72f631bf9",
+      "1b4de335-b765-42d2-b9fe-e8d23dc8a066": {
+        "id": "1b4de335-b765-42d2-b9fe-e8d23dc8a066",
         "name": "products",
         "ancestors": [],
         "descendants": [
-          "7af6daac-41de-4176-981f-05567e665a94"
+          "6d9b580e-0ab2-43e8-b93f-e97843f6ad6f"
         ],
         "ops": [
           "read: [products.csv]"
@@ -90,11 +90,11 @@
           "products.csv"
         ]
       },
-      "8cd0d260-ff85-43b5-a247-d1fe379e0901": {
-        "id": "8cd0d260-ff85-43b5-a247-d1fe379e0901",
+      "b19cd7f4-3af9-43cd-96ff-6f15fb35fe5a": {
+        "id": "b19cd7f4-3af9-43cd-96ff-6f15fb35fe5a",
         "name": "cat_costs",
         "ancestors": [
-          "5a53f7c6-1d2c-4516-b391-21922785089b"
+          "485f350f-f6f9-4ee5-8f8d-b46d39fb7512"
         ],
         "descendants": [],
         "ops": [
@@ -104,6 +104,182 @@
           "processed__category_inventory.csv"
         ],
         "reads": []
+      }
+    }
+  },
+  "data_sources/toy/cat_sales.py": {
+    "inputs": [
+      "sales.csv",
+      "processed__product_info.csv"
+    ],
+    "outputs": [
+      "processed__category_sales.csv"
+    ],
+    "nodes": {
+      "947a8410-42fb-4867-aace-c81334fdb7cb": {
+        "id": "947a8410-42fb-4867-aace-c81334fdb7cb",
+        "name": "cat_sums",
+        "ancestors": [
+          "9fc02fab-cce1-4d03-bb5e-576c22620ca1"
+        ],
+        "descendants": [],
+        "ops": [
+          "transform: [Mult]",
+          "transform: [reset_index]"
+        ],
+        "writes": [
+          "processed__category_sales.csv"
+        ],
+        "reads": []
+      },
+      "844e7dc1-9c7a-4561-a8b0-6774c4b06db6": {
+        "id": "844e7dc1-9c7a-4561-a8b0-6774c4b06db6",
+        "name": "customer_categories",
+        "ancestors": [
+          "9fc02fab-cce1-4d03-bb5e-576c22620ca1"
+        ],
+        "descendants": [
+          "947a8410-42fb-4867-aace-c81334fdb7cb"
+        ],
+        "ops": [
+          "transform: [Mult]"
+        ],
+        "writes": [],
+        "reads": []
+      },
+      "9fc02fab-cce1-4d03-bb5e-576c22620ca1": {
+        "id": "9fc02fab-cce1-4d03-bb5e-576c22620ca1",
+        "name": "customer_categories",
+        "ancestors": [
+          "6784457e-8a22-4e6a-b7f4-6c87eac64895",
+          "f8d04e96-ac70-4006-a14d-9e01a6b84039"
+        ],
+        "descendants": [
+          "947a8410-42fb-4867-aace-c81334fdb7cb"
+        ],
+        "ops": [
+          "transform: [merge]"
+        ],
+        "writes": [],
+        "reads": []
+      },
+      "6784457e-8a22-4e6a-b7f4-6c87eac64895": {
+        "id": "6784457e-8a22-4e6a-b7f4-6c87eac64895",
+        "name": "sales",
+        "ancestors": [],
+        "descendants": [
+          "9fc02fab-cce1-4d03-bb5e-576c22620ca1"
+        ],
+        "ops": [
+          "read: [sales.csv]"
+        ],
+        "writes": [],
+        "reads": [
+          "sales.csv"
+        ]
+      },
+      "f8d04e96-ac70-4006-a14d-9e01a6b84039": {
+        "id": "f8d04e96-ac70-4006-a14d-9e01a6b84039",
+        "name": "product_info",
+        "ancestors": [],
+        "descendants": [
+          "9fc02fab-cce1-4d03-bb5e-576c22620ca1"
+        ],
+        "ops": [
+          "read: [processed__product_info.csv]"
+        ],
+        "writes": [],
+        "reads": [
+          "processed__product_info.csv"
+        ]
+      }
+    }
+  },
+  "data_sources/toy/recommend_categories.py": {
+    "inputs": [
+      "processed__category_inventory.csv",
+      "processed__category_sales.csv"
+    ],
+    "outputs": [
+      "processed__category_recs.csv"
+    ],
+    "nodes": {
+      "ca38bf6f-8688-494d-82f6-4cea6bf3eab8": {
+        "id": "ca38bf6f-8688-494d-82f6-4cea6bf3eab8",
+        "name": "recommended",
+        "ancestors": [
+          "59c6bda8-ec4b-4ac7-b444-7e13db2f46ce"
+        ],
+        "descendants": [],
+        "ops": [
+          "transform: [Mult]",
+          "transform: [cat_summary[]]"
+        ],
+        "writes": [
+          "processed__category_recs.csv"
+        ],
+        "reads": []
+      },
+      "64620f79-63a4-4e7f-94a8-673e5c7e4bc4": {
+        "id": "64620f79-63a4-4e7f-94a8-673e5c7e4bc4",
+        "name": "cat_summary",
+        "ancestors": [
+          "59c6bda8-ec4b-4ac7-b444-7e13db2f46ce"
+        ],
+        "descendants": [
+          "ca38bf6f-8688-494d-82f6-4cea6bf3eab8"
+        ],
+        "ops": [
+          "transform: [Mult]"
+        ],
+        "writes": [],
+        "reads": []
+      },
+      "59c6bda8-ec4b-4ac7-b444-7e13db2f46ce": {
+        "id": "59c6bda8-ec4b-4ac7-b444-7e13db2f46ce",
+        "name": "cat_summary",
+        "ancestors": [
+          "efb48e20-2c4d-4d3c-b35b-3d8bc5ee85d4",
+          "1cd71692-d713-46da-9e7f-099cbc4b2c35"
+        ],
+        "descendants": [
+          "ca38bf6f-8688-494d-82f6-4cea6bf3eab8"
+        ],
+        "ops": [
+          "transform: [merge]"
+        ],
+        "writes": [],
+        "reads": []
+      },
+      "efb48e20-2c4d-4d3c-b35b-3d8bc5ee85d4": {
+        "id": "efb48e20-2c4d-4d3c-b35b-3d8bc5ee85d4",
+        "name": "cat_sales",
+        "ancestors": [],
+        "descendants": [
+          "59c6bda8-ec4b-4ac7-b444-7e13db2f46ce"
+        ],
+        "ops": [
+          "read: [processed__category_sales.csv]"
+        ],
+        "writes": [],
+        "reads": [
+          "processed__category_sales.csv"
+        ]
+      },
+      "1cd71692-d713-46da-9e7f-099cbc4b2c35": {
+        "id": "1cd71692-d713-46da-9e7f-099cbc4b2c35",
+        "name": "cat_inv",
+        "ancestors": [],
+        "descendants": [
+          "59c6bda8-ec4b-4ac7-b444-7e13db2f46ce"
+        ],
+        "ops": [
+          "read: [processed__category_inventory.csv]"
+        ],
+        "writes": [],
+        "reads": [
+          "processed__category_inventory.csv"
+        ]
       }
     }
   }
