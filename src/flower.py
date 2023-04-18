@@ -108,7 +108,7 @@ def make_ent(
 
 
 def gen_ents(flows: dict, detailed=False) -> list[dict]:
-    ents = [make_ent(name) for name in flows] + [
+    ents = [make_ent(name, derived=True) for name in flows] + [
         make_ent(resource)
         for resource in {
             r for node in flows.values() for k in ("inputs", "outputs") for r in node[k]

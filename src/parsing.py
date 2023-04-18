@@ -252,7 +252,7 @@ def interpret_v(node: ast.AST):
         case ast.Constant(value=v):
             return str(v)
         case ast.Name(id=v):
-            return f"variable: {v}"
+            return f"variable[{v}]"
     return node
 
 
