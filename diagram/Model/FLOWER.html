@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>FLOWER: Data Flow in ER Diagrams</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <script src="../release/go.js"></script>
+  <script src="../extensions/BalloonLink.js"></script>
+  <script src="../assets/js/goSamples.js"></script>  <!-- this is only for the GoJS Samples framework -->  
+  <script id="code">
+
+var linkDataArray =[];
+var nodeDataArray = [];
+var strlinkData= "";
+var strnodeData= "";
+var itemss=[];
+var tables=[];
+var comments=[];
+var strItem="";
+var typeTrans="";
+var cl=[];
+var clsteam=[];
+
+
+/*Text Areas for keys & columns*/
+function getText() {
+  var lineskey = document.getElementById("myTextareaKeys").value.split('\n');
+  /*Extract Primary keys*/
+  for(var j = 0;j < lineskey.length-1;j++){  	
+    itemss.push({ name: "PK- "+lineskey[j], iskey: true, figure: "Cube1", color: "red" });    
+    //strItem=strItem+"{name: \""+"PK: "+lineskey[j]+"\", iskey: true, figure: \"Cube1\", color: \"red\"},"+"\n";
+    cl.push("\""+lineskey[j]+"\"");
+    clsteam.push("{name: \""+"PK- "+lineskey[j]+"\", iskey: true, figure: \"Cube1\", color: \"red\"},"+"\n");
+}
+/*Extract Foreign keys*/
+  var linesFK = document.getElementById("myTextareaFK").value.split('\n');
+
+  for(var k = 0;k < linesFK.length-1;k++){
+  	
+  	if (cl.indexOf("\""+linesFK[k]+"\"")===-1){
+  	
+    itemss.push({ name: "FK- "+linesFK[k], iskey: true, figure: "Cube1", color: "blue" });
+   // strItem=strItem+"{name: \""+"FK: "+linesFK[k]+"\", iskey: true, figure: \"Cube1\", color: \"blue\"},"+"\n";
+    cl.push("\""+linesFK[k]+"\"");
+    clsteam.push("{name: \""+"FK- "+linesFK[k]+"\", iskey: true, figure: \"Cube1\", color: \"blue\"},"+"\n");
+}
+else{
+	var pos=cl.indexOf("\""+linesFK[k]+"\"");
+	itemss[pos]={ name: "FK-PK- "+linesFK[k], iskey: true, figure: "Cube1", color: "green" };
+	clsteam[pos]="{name: \""+"FK-PK- "+linesFK[k]+"\", iskey: true, figure: \"Cube1\", color: \"green\"},"+"\n";
+    //strItem=strItem+"{name: \""+"FK-PK: "+linesFK[k]+"\", iskey: true, figure: \"Cube1\", color: \"green\"},"+"\n";
+}
+}
+
+  for(var ii = 0;ii < clsteam.length;ii++){
+     strItem=strItem+clsteam[ii];
+  }
+ /* Non-key columns*/ 
+  var lines = document.getElementById("myTextarea").value.split('\n');
+  for(var i = 0;i < lines.length;i++){
+  	if(typeTrans==="Aggregation"){
+    itemss.push({ name: lines[i], iskey: false, figure: "Cube1", color: "#f9b3c6" });
+    strItem=strItem+"{name: \""+lines[i]+"\", iskey: false, figure: \"Cube1\", color: \"#f9b3c6\"},"+"\n";}
+    else if(typeTrans==="Denormalization"){
+    	itemss.push({ name: lines[i], iskey: false, figure: "Cube1", color: "#A3B989" });
+    	strItem=strItem+"{name: \""+lines[i]+"\", iskey: false, figure: \"Cube1\", color: \"#A3B989\"},"+"\n";
+    }
+    else if(typeTrans==="Dataset"){
+    	itemss.push({ name: lines[i], iskey: false, figure: "Cube1", color: "#7087D2" });
+    	strItem=strItem+"{name: \""+lines[i]+"\", iskey: false, figure: \"Cube1\", color: \"#7087D2\"},"+"\n";
+    }
+} 
+}
+
+/* Get comment from text area*/
+function getComment() {   
+  var comm = document.getElementById("myQuery").value;
+  return comm;
+}
+
+/*Automatic creation of comboBox of tables*/
+function createCambo(){
+	for (var i=0;i<tables.length;i++){
+if(i%2 ===0)document.getElementById('cmb').innerHTML +=''+(tables[i].split('"'))[1]+  '\ ';
+else if(i%2 != 0)	document.getElementById('cmb').innerHTML +=''+(tables[i].split('"'))[1]+  '<br>\ ';
+}
+}
+
+/* Get value of Radio button: type of transformation*/
+function clickradio() { 
+  var oRadio = document.forms[0].elements["rad"];  
+  for(var i = 0; i < oRadio.length; i++) 
+  {    
+    if (oRadio[i].checked) return oRadio[i].value;     
+  }  
+
+}
+/*Get the select values*/
+function clickExecute() {
+  document.getElementById('myDiagramDiv').innerHTML = "";
+  var radiotext=clickradio();
+  typeTrans=radiotext;
+  getText();
+  var oRadio = document.forms[1].elements["cambo"];     
+  var s=0;
+  
+   
+  var nomTable=tables[(tables.length)-1];   
+  var inde=(nomTable.split(' T'));
+    
+  if(inde.length>1) {var name=(inde[1].split('"'))[0];
+    name=parseInt(name)+1;
+  }
+  else var name=1;
+
+  var comment=getComment();
+  nodeDataArray.push({key: "comment"+name, text: comment, category: "Comment"});
+  strnodeData=strnodeData+"{key: \"comment"+name+"\", text: \""+comment+"\" ,category:\"Comment\"},\n";
+
+  linkDataArray.push({from:"comment"+name , to:radiotext+" T"+name ,category:"Comment"}); 
+  strlinkData=strlinkData+"{from:\"comment"+name+"\", to:\""+radiotext+" T"+name+"\", category:\"Comment\"}},"+"\n";
+
+  if(radiotext==="Aggregation") {	
+  nodeDataArray.push({key: radiotext+" T"+name, items: itemss,colorate: "#f9b3c6"});  
+  strnodeData=strnodeData+"{key: \""+radiotext+" T"+name+"\","+"\n"+"items: ["+strItem+"],"+"\n"+"colorate: \"#f9b3c6\"},\n";
+  for(var i = 0; i <oRadio.length; i++) 
+  {    
+    if (oRadio[i].checked) {
+    var oRadio2 = document.getElementById("sel"+s).value; 
+    var oRadio55 = document.getElementById("cardFrom"+s).value; 
+    var oRadio66 = document.getElementById("cardTo"+s).value; 
+    var oRadio3 = document.getElementById("span"+s).innerText;        
+    s=s+1;  
+
+    if(oRadio2==="Derivation") {
+     linkDataArray.push({ from: oRadio3, to:radiotext+" T"+name ,color: "#910824", dash: [5,2], arr:"LineFork", width:"3", text:oRadio55, toText:oRadio66});
+     strlinkData=strlinkData+"{from:\""+oRadio3+"\", to:\""+radiotext+" T"+name+"\", color: \"#910824\", dash: [5, 2], arr:\"LineFork\", width:\"3\", text:\""+oRadio55+"\", toText:\""+oRadio66+"\" }},"+"\n";      
+    }
+    else if (oRadio2==="Relation") {      	
+    linkDataArray.push({ from: oRadio3, to: radiotext+" T"+name ,color: "#910824", dash: [5,2], arr:"Standard", width:"3", text:"", toText:""});
+    strlinkData=strlinkData+"{from:\""+oRadio3+",\" to:\""+radiotext+" T"+name+"\", color: \"#910824\", dash: [5, 2], arr:\"Standard\", width:\"3\", text:\""+""+"\", toText:\""+""+"\" }},"+"\n";
+    }    
+  }
+  }
+}
+  else if(radiotext==="Denormalization"){
+  	nodeDataArray.push({key: radiotext+" T"+name, items: itemss,colorate: "#A3B989"});  
+  strnodeData=strnodeData+"{key: \""+radiotext+" T"+name+"\","+"\n"+"items: ["+strItem+"],"+"\n"+"colorate: \"#A3B989\"},\n";
+  for(var i = 0; i <oRadio.length; i++) 
+  {    
+    if (oRadio[i].checked) {
+    var oRadio2 = document.getElementById("sel"+s).value; 
+    var oRadio55 = document.getElementById("cardFrom"+s).value; 
+    var oRadio66 = document.getElementById("cardTo"+s).value; 
+    var oRadio3 = document.getElementById("span"+s).innerText;        
+    s=s+1;     
+    if(oRadio2==="Derivation") {
+     linkDataArray.push({ from: oRadio3, to:radiotext+" T"+name ,color: "#447E46", dash: [5,2], arr:"LineFork", width:"3", text:oRadio55, toText:oRadio66});
+     strlinkData=strlinkData+"{from:\""+oRadio3+"\", to:\""+radiotext+" T"+name+"\", color: \"#447E46\", dash: [5, 2], arr:\"LineFork\", width:\"3\", text:\""+oRadio55+"\", toText:\""+oRadio66+"\" }},"+"\n";      
+    }
+    else if (oRadio2==="Relation") {      	
+    linkDataArray.push({ from: oRadio3, to: radiotext+" T"+name ,color: "#447E46", dash: [5,2], arr:"Standard", width:"3", text:"", toText:""});
+    strlinkData=strlinkData+"{from:\""+oRadio3+",\" to:\""+radiotext+" T"+name+"\", color: \"#447E46\", dash: [5, 2], arr:\"Standard\", width:\"3\", text:\""+""+"\", toText:\""+""+"\" }},"+"\n";     
+    }
+  }
+  }   
+  } 
+
+  else if(radiotext==="Dataset"){
+  	nodeDataArray.push({key: radiotext+" T"+name, items: itemss,colorate: "#7087D2"});  
+  strnodeData=strnodeData+"{key: \""+radiotext+" T"+name+"\","+"\n"+"items: ["+strItem+"],"+"\n"+"colorate: \"#7087D2\"},\n";
+  for(var i = 0; i <oRadio.length; i++) 
+  {    
+    if (oRadio[i].checked) {
+    var oRadio2 = document.getElementById("sel"+s).value; 
+    var oRadio55 = document.getElementById("cardFrom"+s).value; 
+    var oRadio66 = document.getElementById("cardTo"+s).value; 
+    var oRadio3 = document.getElementById("span"+s).innerText;        
+    s=s+1;     
+    if(oRadio2==="Derivation") {
+     linkDataArray.push({ from: oRadio3, to:radiotext+" T"+name ,color: "#1841C8", dash: [5,2], arr:"LineFork", width:"3", text:oRadio55, toText:oRadio66});
+     strlinkData=strlinkData+"{from:\""+oRadio3+"\", to:\""+radiotext+" T"+name+"\", color: \"#1841C8\", dash: [5, 2], arr:\"LineFork\", width:\"3\", text:\""+oRadio55+"\", toText:\""+oRadio66+"\" }},"+"\n";      
+    }
+    else if (oRadio2==="Relation") {      	
+    linkDataArray.push({ from: oRadio3, to: radiotext+" T"+name ,color: "#1841C8", dash: [5,2], arr:"Standard", width:"3", text:"", toText:""});
+    strlinkData=strlinkData+"{from:\""+oRadio3+",\" to:\""+radiotext+" T"+name+"\", color: \"#1841C8\", dash: [5, 2], arr:\"Standard\", width:\"3\", text:\""+""+"\", toText:\""+""+"\" }},"+"\n";     
+    }
+  }
+  }   
+  }   
+  initier();
+}
+
+/* Define the relation types between tables*/
+function clickcambo() {
+  document.getElementById('div1').innerHTML = ""; //vider le liv
+  var oRadio = document.forms[1].elements["cambo"]; 
+  var s=0;
+  for(var i = 0; i < oRadio.length; i++) 
+  {    
+    if (oRadio[i].checked) {
+    document.getElementById('div1').innerHTML += "<span id=span"+s+"><b>"+oRadio[i].value+"</b></span>";
+    document.getElementById('div1').innerHTML += "<select id=sel"+s+" style=font-family:cambria; font-size:12px;>\
+    <option id=der  value=From--To>Link is</option>\
+    <option id=der value=Relation>Relation</option>\
+    <option id=der value=Derivation>Derivation</option>\
+    </select>";
+    document.getElementById('div1').innerHTML += "<select id=cardFrom"+s+" style=font-family:cambria; font-size:12px;>\
+    <option id=der  value=From>From</option>\
+    <option id=der value=n..1>n..1</option>\
+    \
+    <option id=der value=1..n>1..n</option>\
+    </select>";
+    document.getElementById('div1').innerHTML += "<select id=cardTo"+s+" style=font-family:cambria; font-size:12px;>\
+    <option id=der  value=To>To</option>\
+    <option id=der value=n..1>n..1</option>\
+    \
+    <option id=der value=1..n>1..n</option>\
+    </select><br>";
+    s=s+1;
+  }
+  } 
+  
+}
+
+/*Read links from texte file*/
+function downloadlink() {	
+	var strFileName="filename.json";
+	var strMimeType="text/plain";
+
+    var D = document,
+        A = arguments,
+        a = D.createElement("a"),
+        d = A[0],
+        n = A[1],
+        t = A[2] || "text/plain";
+
+    //build download link:
+    a.href = "data:" + strMimeType + "charset=utf-8," + escape(strlinkData);
+
+    if (window.MSBlobBuilder) { // IE10
+        var bb = new MSBlobBuilder();
+        bb.append(strlinkData);
+        return navigator.msSaveBlob(bb, strFileName);
+    } 
+
+    if ('download' in a) { 
+        a.setAttribute("download", n);
+        a.innerHTML = "downloading...";
+        D.body.appendChild(a);
+        setTimeout(function() {
+            var e = D.createEvent("MouseEvents");
+            e.initMouseEvent("click", true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+            a.dispatchEvent(e);
+            D.body.removeChild(a);
+        }, 66);
+        return true;
+    }; 
+
+    var f = D.createElement("iframe");
+    D.body.appendChild(f);
+    f.src = "data:" + (A[2] ? A[2] : "application/octet-stream") + (window.btoa ? ";base64" : "") + "," + (window.btoa ? window.btoa :escape)(strlinkData);
+    setTimeout(function() {
+        D.body.removeChild(f);
+    }, 333);
+    
+    return true;
+}
+
+/*Read Nodes (Relations) from text file*/
+function downloadnode() {	
+	var strFileName="filename.json";
+	var strMimeType="text/plain";
+
+    var D = document,
+        A = arguments,
+        a = D.createElement("a"),
+        d = A[0],
+        n = A[1],
+        t = A[2] || "text/plain";
+
+    //build download link:
+    a.href = "data:" + strMimeType + "charset=utf-8," + escape(strnodeData);
+
+    if (window.MSBlobBuilder) { // IE10
+        var bb = new MSBlobBuilder();
+        bb.append(strnodeData);
+        return navigator.msSaveBlob(bb, strnodeData);
+    } 
+
+    if ('download' in a) { 
+        a.setAttribute("download", n);
+        a.innerHTML = "downloading...";
+        D.body.appendChild(a);
+        setTimeout(function() {
+            var e = D.createEvent("MouseEvents");
+            e.initMouseEvent("click", true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+            a.dispatchEvent(e);
+            D.body.removeChild(a);
+        }, 66);
+        return true;
+    }; 
+
+    var f = D.createElement("iframe");
+    D.body.appendChild(f);
+    f.src = "data:" + (A[2] ? A[2] : "application/octet-stream") + (window.btoa ? ";base64" : "") + "," + (window.btoa ? window.btoa :escape)(strnodeData);
+    setTimeout(function() {
+        D.body.removeChild(f);
+    }, 333);
+
+    return true;
+}
+
+
+/*Initialize the display page*/
+    function init() { 
+      document.getElementById("myDiagramDiv").remove();
+      document.getElementById('sample').innerHTML +="<div id=myDiagramDiv \
+      style='background-color: white; border: solid 2px black; width: 95%; height: 590px; position: fixed;left: 30px;top:60px;'></div>\
+  ";
+      goSamples();  // init for these samples -- you don't need to call this
+      createCambo();
+      var $ = go.GraphObject.make;  // for conciseness in defining templates
+
+      myDiagram =
+        $(go.Diagram, "myDiagramDiv",  // must name or refer to the DIV HTML element
+          {
+            allowDelete: false,
+            allowCopy: false,
+            layout: $(go.ForceDirectedLayout),
+            "undoManager.isEnabled": true
+          });
+               
+      // the template for each attribute in a node's array of item data
+      var itemTempl =
+        $(go.Panel, "Horizontal",
+          $(go.Shape,
+            { desiredSize: new go.Size(5, 5), strokeWidth:0 },
+            new go.Binding("figure", "figure"),
+            new go.Binding("fill", "color")),
+          	//new go.Binding("strokeWidth", "thick"),
+          $(go.TextBlock,
+            {
+              stroke: "#333333",
+              font: "10px cambria"
+            },
+            new go.Binding("text", "name"))
+        );
+
+      // define the Node template, representing an entity
+      myDiagram.nodeTemplate =
+        $(go.Node, "Auto",  // the whole node panel
+          {
+            selectionAdorned: true,
+            resizable: true,
+            layoutConditions: go.Part.LayoutStandard & ~go.Part.LayoutNodeSized,
+            fromSpot: go.Spot.AllSides,
+            toSpot: go.Spot.AllSides,
+            isShadowed: false,            
+          },
+          new go.Binding("location", "location").makeTwoWay(),
+          // whenever the PanelExpanderButton changes the visible property of the "LIST" panel,
+          // clear out any desiredSize set by the ResizingTool.
+          new go.Binding("desiredSize", "visible", function(v) { return new go.Size(NaN, NaN); }).ofObject("LIST"),
+          // define the node's outer shape, which will surround the Table
+          $(go.Shape, "Rectangle",
+            { fill: "white", stroke: "#4f464f", strokeWidth: 3 },
+            new go.Binding("fill", "colorate")
+            ),
+           //Shape.fill is bound to Node.data.color
+          
+          $(go.Panel, "Table",
+            { margin: 8, stretch: go.GraphObject.Fill },
+            $(go.RowColumnDefinition, { row: 0, sizing: go.RowColumnDefinition.None }),
+            // the table header
+            $(go.TextBlock,
+              {
+                row: 0, alignment: go.Spot.Center,
+                margin: new go.Margin(0, 14, 0, 2),  // leave room for Button
+                font: "bold 12px cambria",
+                
+              },
+              new go.Binding("text", "key")),
+            // the collapse/expand button
+            $("PanelExpanderButton", "LIST",  // the name of the element whose visibility this button toggles
+              { row: 0, alignment: go.Spot.TopRight }),
+            // the list of Panels, each showing an attribute
+            $(go.Panel, "Vertical",
+              {
+                name: "LIST",
+                row: 1,
+                padding: 3,
+                alignment: go.Spot.TopLeft,
+                defaultAlignment: go.Spot.Left,
+                stretch: go.GraphObject.Horizontal,
+                itemTemplate: itemTempl
+              },
+              new go.Binding("itemArray", "items"))
+          )  // end Table Panel
+        );  // end Node
+
+      // define the Link template, representing a relationship
+      myDiagram.linkTemplate =  
+      $(go.Link,
+      	 {routing: go.Link.AvoidsNodes,  
+          curve: go.Link.JumpOver },         
+      	  $(go.Shape,
+      	  	new go.Binding("stroke", "color"),
+            new go.Binding("strokeWidth", "width"),
+            new go.Binding("strokeDashArray", "dash"),            
+      	  	),      	   
+      	   $(go.Shape, { toArrow: "Standard",scale: 1 },new go.Binding("toArrow", "arr")),
+      	   $(go.TextBlock,  // the "from" label
+            {
+              textAlign: "center",
+              font: "italic bold 12px cambria",
+              stroke: "black",
+              segmentIndex: 0,
+              segmentOffset: new go.Point(NaN, NaN),
+              segmentOrientation: go.Link.OrientUpright
+            },
+            new go.Binding("text", "text")),
+          $(go.TextBlock,  // the "to" label
+            {
+              textAlign: "center",
+              font: "italic bold 12px cambria",
+              stroke: "black",
+              segmentIndex: -1,
+              segmentOffset: new go.Point(NaN, NaN),
+              segmentOrientation: go.Link.OrientUpright
+            },
+            new go.Binding("text", "toText"))      	 
+    );    
+
+    myDiagram.nodeTemplateMap.add("Comment",
+        $(go.Node,  // this needs to act as a rectangular shape for BalloonLink,
+          { background: "transparent" },  // which can be accomplished by setting the background.
+          $(go.TextBlock,
+            { stroke: "brown", margin: 1 },
+            new go.Binding("text"))
+        ));
+      myDiagram.linkTemplateMap.add("Comment",
+        // if the BalloonLink class has been loaded from the Extensions directory, use it
+        $((typeof BalloonLink === "function" ? BalloonLink : go.Link),
+          $(go.Shape,  // the Shape.geometry will be computed to surround the comment node and
+            // point all the way to the commented node
+            { stroke: "brown", strokeWidth: 1, fill: "lightyellow" })
+        )); 
+     	
+
+      // create the model for the E-R diagram      
+      myDiagram.model = $(go.GraphLinksModel,
+        {
+          copiesArrays: true,
+          copiesArrayObjects: true,
+          nodeDataArray: nodeDataArray,
+          linkDataArray: linkDataArray
+        });
+      
+    }
+
+/*Initialize after transformation */
+    function initier() {
+      //goSamples();  // init for these samples -- you don't need to call this
+
+      document.getElementById("myDiagramDiv").remove();
+      document.getElementById('sample').innerHTML +="<div id=myDiagramDiv \
+      style='background-color: white; border: solid 2px black; width: 95%; height: 580px; position: absolute;left: 50px;top: 0px;'></div>\
+  ";
+
+      var $ = go.GraphObject.make;  // for conciseness in defining templates
+
+      myDiagram =
+        $(go.Diagram, "myDiagramDiv",  // must name or refer to the DIV HTML element
+          {
+            allowDelete: false,
+            allowCopy: false,
+            layout: $(go.ForceDirectedLayout),
+            "undoManager.isEnabled": true
+          });
+               
+      // the template for each attribute in a node's array of item data
+      var itemTempl =
+        $(go.Panel, "Horizontal",
+          $(go.Shape,
+            { desiredSize: new go.Size(5, 5), strokeWidth:0},
+            new go.Binding("figure", "figure"),
+            new go.Binding("fill", "color")),
+          $(go.TextBlock,
+            {
+              stroke: "#333333",
+              font: "10px cambria"
+            },
+            new go.Binding("text", "name"))
+        );
+
+      // define the Node template, representing an entity
+      myDiagram.nodeTemplate =
+        $(go.Node, "Auto",  // the whole node panel
+          {
+            selectionAdorned: true,
+            resizable: true,
+            layoutConditions: go.Part.LayoutStandard & ~go.Part.LayoutNodeSized,
+            fromSpot: go.Spot.AllSides,
+            toSpot: go.Spot.AllSides,
+            isShadowed: false,            
+          },
+          new go.Binding("location", "location").makeTwoWay(),
+          new go.Binding("desiredSize", "visible", function(v) { return new go.Size(NaN, NaN); }).ofObject("LIST"),
+          $(go.Shape, "Rectangle",
+            { fill: "white", stroke: "#4f464f", strokeWidth: 3 },
+            new go.Binding("fill", "colorate")
+            ),           
+          
+          $(go.Panel, "Table",
+            { margin: 8, stretch: go.GraphObject.Fill },
+            $(go.RowColumnDefinition, { row: 0, sizing: go.RowColumnDefinition.None }),
+            // the table header
+            $(go.TextBlock,
+              {
+                row: 0, alignment: go.Spot.Center,
+                margin: new go.Margin(0, 14, 0, 2),  // leave room for Button
+                font: "bold 12px cambria",
+                
+              },
+              new go.Binding("text", "key")),
+            // the collapse/expand button
+            $("PanelExpanderButton", "LIST",  // the name of the element whose visibility this button toggles
+              { row: 0, alignment: go.Spot.TopRight }),
+            // the list of Panels, each showing an attribute
+            $(go.Panel, "Vertical",
+              {
+                name: "LIST",
+                row: 1,
+                padding: 3,
+                alignment: go.Spot.TopLeft,
+                defaultAlignment: go.Spot.Left,
+                stretch: go.GraphObject.Horizontal,
+                itemTemplate: itemTempl
+              },
+              new go.Binding("itemArray", "items"))
+          )  // end Table Panel
+        );  // end Node
+
+      // define the Link template, representing a relationship
+      myDiagram.linkTemplate =  
+      $(go.Link,
+      	 {routing: go.Link.AvoidsNodes,  
+          curve: go.Link.JumpOver },         
+      	  $(go.Shape,
+      	  	new go.Binding("stroke", "color"),
+            new go.Binding("strokeWidth", "width"),
+            new go.Binding("strokeDashArray", "dash"),            
+      	  	),      	   
+      	   $(go.Shape, { toArrow: "Standard",scale: 1 },new go.Binding("toArrow", "arr")),
+      	    $(go.TextBlock,  // the "from" label
+            {
+              textAlign: "center",
+              font: "italic bold 12px cambria",
+              stroke: "black",
+              segmentIndex: 0,
+              segmentOffset: new go.Point(NaN, NaN),
+              segmentOrientation: go.Link.OrientUpright
+            },
+            new go.Binding("text", "text")),
+          $(go.TextBlock,  // the "to" label
+            {
+              textAlign: "center",
+              font: "italic bold 12px cambria",
+              stroke: "black",
+              segmentIndex: -1,
+              segmentOffset: new go.Point(NaN, NaN),
+              segmentOrientation: go.Link.OrientUpright
+            },
+            new go.Binding("text", "toText"))
+
+    ); 
+
+     myDiagram.nodeTemplateMap.add("Comment",
+        $(go.Node,  // this needs to act as a rectangular shape for BalloonLink,
+          { background: "transparent" },  // which can be accomplished by setting the background.
+          $(go.TextBlock,
+            { stroke: "brown", margin: 1 },
+            new go.Binding("text"))
+        ));
+      myDiagram.linkTemplateMap.add("Comment",
+        // if the BalloonLink class has been loaded from the Extensions directory, use it
+        $((typeof BalloonLink === "function" ? BalloonLink : go.Link),
+          $(go.Shape,  // the Shape.geometry will be computed to surround the comment node and
+            // point all the way to the commented node
+            { stroke: "brown", strokeWidth: 1, fill: "lightyellow" })
+        ));  
+      myDiagram.model = $(go.GraphLinksModel,
+        {
+          copiesArrays: true,
+          copiesArrayObjects: true,
+          nodeDataArray: nodeDataArray,
+          linkDataArray: linkDataArray
+        });
+
+      
+    }
+  </script>
+</head>
+<!--<body onload="init()">-->
+<body>
+
+<div id="sample">
+  <div id="myDiagramDiv" style="background-color: white; border: solid 2px black; width: 85%; height: 600px; position: fixed;
+  left: 100px; top: 50px;">
+
+<span style="font-family:cambria;"> <b><center><h1>FLOWER: Data Flow in ER Diagrams </h1> </center><b></span> <br> 
+<span style="font-family:cambria;"> <b>Select file of Entities:<b></span> 
+<input type="file" id="openFile2" style="font-family:cambria;"/> <br> <br>
+
+ <pre id="fileContents2"></pre>   
+ 
+
+<script>
+	document.getElementById('openFile2').addEventListener('change',function(){
+	var fr=new FileReader();
+	fr.readAsText(this.files[0]);	
+	fr.onload= function(){		
+		var t=this.result;
+		var object=t.split('"key"');	
+		
+		for(var index=1; index<object.length;index++ ) {
+
+			if(object[index].includes("category:\"Comment\"")){
+
+			var object2=object[index].split(':');			
+			var t1=object2[1].split('"');					
+			var t2=object2[2].split('"');
+							
+			var tt=t1[1];
+			var ss=t2[1];
+						
+			nodeDataArray.push({key: tt,text: ss,category: "Comment"});
+			strnodeData=strnodeData+"{key: \""+tt+"\", text: \""+ss+"\", category:\"Comment\"},\n";
+			comments.push('"'+tt[1]+'"');
+			
+			}
+			else{
+				var v1=object[index];
+				var itemstring="";	
+				var object2=v1.split('"items":');
+				var key=(object2[0].split('"'))[1];
+				var v2=object2[1];
+				var obj=v2.split('"colorate":');
+				var item=(((obj[0].split(']'))[0]).split("["))[1];
+				var color=(obj[1].split('"'))[1];
+
+				var DataNode=[];
+
+				var objectss=item.split('}');		
+				for(var indexss=0; indexss<objectss.length-1;indexss++ ) { 									
+					var objectss2=objectss[indexss].split(':');						
+					
+					var t1=objectss2[1].split(',');					
+					var t2=objectss2[2].split(',');	
+					var t33=objectss2[4].split('"');						
+								
+					var tt=t1[0].split('"');
+					var ss=t2[0];	
+
+					DataNode.push({"name": tt[1], "iskey": ss, "figure": "Cube1", "color": t33[1]});
+		       		itemstring=itemstring+"{name: \""+tt[1]+"\", iskey: "+ss+", figure: \"Cube1\", color: \""+t33[1]+"\"},"+"\n";	
+		       		
+	}
+							
+				nodeDataArray.push({key: key,items: DataNode,colorate: color});
+				strnodeData=strnodeData+"{key: \""+key+"\","+"\n"+"items: ["+itemstring+"],"+"\n"+"colorate: \""+color+"\"},"+"\n";
+				tables.push('"'+key+'"');
+				 		
+	}	
+
+}
+	
+	}
+
+});    
+</script>
+
+  
+  
+  
+<span style="font-family:cambria;"><b>Select file of Relationships:</b></span> 
+<input type="file" id="openFile" style="font-family:cambria;"/> <br> <br>
+
+
+    <pre id="fileContents"></pre>  
+<script>
+	//{from:"comment1", to:"players", category:"Comment"}
+	 document.getElementById('openFile').addEventListener('change',function(){
+	var fr=new FileReader();
+	fr.readAsText(this.files[0]);	
+	fr.onload= function(){		
+		var t=this.result;		
+		var object=t.split('}');				
+		for(var index=0; index<object.length-1;index++ ) { 	
+		if (object[index].includes("category:\"Comment\"")) {
+			var object2=object[index].split(':');			
+			var t1=object2[1].split(',');					
+			var t2=object2[2].split(',');
+			var tt=t1[0].split('"');
+			var ss=t2[0].split('"');
+			
+       		linkDataArray.push({from:tt[1] , to:ss[1] ,category:"Comment"}); 
+       		strlinkData=strlinkData+"{from:\""+tt[1]+"\", to:\""+ss[1]+"\", category:\"Comment\"}},"+"\n";
+
+		}	
+		else{			
+			var object2=object[index].split(':');			
+			var t1=object2[1].split(',');					
+			var t2=object2[2].split(',');
+			var t3=object2[3].split(',');					
+			var t5=object2[5].split(',');
+			var t8=object2[6].split(',');
+			var t11=object2[7].split(',');
+			var t12=object2[8].split(',');			
+			var t6=t5[0].split('}');			
+
+			var tt=t1[0].split('"');
+			var ss=t2[0].split('"');
+			var xx=t3[0].split('"');
+			var zz=t6[0].split('"');
+			var yy=t8[0].split('"');
+			var mm=t11[0].split('"');
+			var nn=t12[0].split('"');	
+
+       		linkDataArray.push({from:tt[1] , to:ss[1] ,color: xx[1], dash: [5, 2], arr:zz[1], width:yy[1], text:mm[1], toText:nn[1]}); 
+       		strlinkData=strlinkData+"{from:\""+tt[1]+"\", to:\""+ss[1]+"\", color: \""+xx[1]+"\", dash: [5, 2], arr:\""+zz[1]+"\", width:\""+yy[1]+"\", text:\""+mm[1]+"\", toText:\""+nn[1]+"\" }},"+"\n";
+
+       		     		    		
+	}	}
+	
+	}
+
+});    
+</script>
+
+
+
+
+
+<button type="button" onclick="init();" style="font-family:cambria; ">Display FLOWER Model</button>
+</div>  
+</div>
+</body>
+</html>

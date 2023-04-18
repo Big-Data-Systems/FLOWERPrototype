@@ -1,0 +1,35 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,900,700);
+
+body {
+  font-family: 'Lato', cambria;
+}
+.navbar-inverse .navbar-nav > li > a {
+  color: white;
+  font-weight: bold;
+}
+.samplespan {
+  position: absolute;
+  z-index: 99;
+  display: none;
+  left: 135px;
+  margin-top: -80px;  
+  height: 204px;
+}
+ul hr {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+@media (min-width: 768px) {
+  a:not(.selected):hover .samplespan {
+    display: block; /* Only make screenshots visible when not collapsed and not selected */
+  }
+  .sidebar-nav .navbar li {
+    float: none;
+    display: block;
+  }
+  .sidebar-nav .navbar li a {
+    padding-top: 1px;
+    padding-bottom: 1px;
+  }
+}
+
