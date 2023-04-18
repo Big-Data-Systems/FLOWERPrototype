@@ -2,12 +2,14 @@ import argparse
 import glob
 import ast
 import json
+import time
 
 from src.flower import gen_ents, gen_rels
 from src.parsing import Flow
 
 
 if __name__ == "__main__":
+    time_start = time.time()
     parser = argparse.ArgumentParser()
     parser.add_argument("-v", "--verbose", action="store_true")
     parser.add_argument(
@@ -59,3 +61,6 @@ if __name__ == "__main__":
             print(f"writing FLOWER info to {fname}")
             with open(fname, "w") as f:
                 json.dump(func(flows, args.derived), f, indent=2)
+    
+    if args.verbose:
+        print(f"Done in {time.time() - time_start} seconds.")
