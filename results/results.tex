@@ -1,0 +1,186 @@
+%\documentclass[conference]{IEEEtran}
+% \documentclass[sigconf,edbt]{acmart-edbt-workshops}
+\documentclass{llncs}
+ %\usepackage[compact]{titlesec}
+
+\usepackage{ifpdf}
+
+
+\usepackage{verbatim,latexsym} % ,psfig} % latexsym has \Join
+\usepackage{array,graphicx} %,multicol} %,comath}
+\usepackage{longtable}% for long tables
+\usepackage{latexsym}
+\usepackage{verbatim,amsmath}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{fancyvrb}
+\usepackage{graphicx}
+\usepackage{color}
+\definecolor{mygray}{rgb}{0.95,0.95,0.95}
+\usepackage{listings}
+\usepackage{wrapfig}
+\usepackage{hyperref}
+\lstset{
+backgroundcolor=\color{mygray},
+basicstyle=\footnotesize\ttfamily,
+%frame=L,
+}
+\usepackage{microtype}
+\newcommand{\+}{\discretionary{\mbox{${\bm\cdot}\mkern-1mu$}}{}{}}
+\def \hfillx {\hspace*{-\textwidth} \hfill}
+\setlength{\belowcaptionskip}{-1pt}
+\setlength{\textfloatsep}{5pt}
+\captionsetup{belowskip=0pt}
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+\pagestyle{plain}
+
+\lstset{
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+  frame=single,
+  breaklines=true,
+  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+}
+
+\begin{document}
+
+\title{Supplement to ``FLOWER: Data Flow in ER Diagrams": Experiment Results}
+\author{}
+\institute{}
+\maketitle
+
+
+\section{Results}
+This document acts as supplementary material to ``FLOWER: Data Flow in ER
+Diagrams." We share the below information as a document, while the actual data is present in the repository it is contained in. For verification purposes, the code may be run to check results.
+
+
+  \textbf{basic data set:}
+
+  This code was run in the main directory with the command 
+  
+  \begin{lstlisting}
+  python -m __init__.py "data_sources/basic/*.py" -v -o "data_sources/basic_output/data.json -e "data_sources/basic_output/diagram"
+\end{lstlisting}
+
+\begin{description}
+   \item \textit{agg.py}
+   \item[Description:] A simple aggregation script, reading in "r.csv", "t1.csv" and "t2.csv". It outputs to "t\_ka.csv" and "tjp\_out.csv" after performing dataframe operations. Notably, r.csv is not used in any State operations leading to outputs, so it should be dropped from consideration in the description.
+   \item[Results:] 
+\end{description}
+\begin{lstlisting}
+   "inputs": [
+      "t2.csv",
+      "t1.csv"
+    ],
+    "outputs": [
+      "t_ka.csv",
+      "tjp_out.csv"
+    ]
+\end{lstlisting}
+
+\begin{description}
+   \item \textit{gamma.py}
+   \item[Description:] A script used in researching medical data. A number of files are input and output, but only two inputs act as ancestors for outputs, so they are the only resources listed for this Entity. This script is a complex pipeline with many transformations and aggregations performed on each state.
+    \item[Results:]
+\end{description}
+
+
+\begin{lstlisting}
+"data_sources/basic/gamma.py": {
+    "inputs": [
+      "/Users/tahsin/Documents/Python_programs/Phe2_05_values_spikes.csv",
+      "/Users/tahsin/Documents/Python_programs/Phe2_02_values_spikes_windowsresults_tranposed.csv"
+    ],
+    "outputs": [
+      "/Users/tahsin/Documents/Python_programs/Phe2_02_values_spikes_windowsresults_reducted.csv",
+      "/Users/tahsin/Documents/Python_programs/u_05.csv"
+    ]
+}
+\end{lstlisting}
+
+
+\begin{description}
+   \item \textit{mini\_gradient.py}
+   \item[Description:] A script used in experimenting with batch gradient descent. Notably, the script takes as input a string passed from the command line arguments as the resource string to use. This highlights the difficulty in determining certain aspects of a pipeline.
+   \item[Results:] 
+\end{description}
+\begin{lstlisting}
+"data_sources/basic/mini_gradient.py": {
+    "inputs": [
+      "variable[ds]"
+    ],
+    "outputs": [
+      "gammasgdresults_3.csv"
+    ]
+}
+   \end{lstlisting}
+   
+\textbf{toy data set:}
+
+  This code was run in the main directory with the command 
+  
+  \begin{lstlisting}
+  python -m __init__.py "data_sources/toy/*.py" -v -o "data_sources/toy_output/data.json -e "data_sources/toy_output/diagram"
+\end{lstlisting}
+
+\begin{description}
+   \item \textit{cat\_costs.py}
+   \item[Description:] Summarizes product info and aggregates category inventory and total costs.
+   \item[Results:] 
+\end{description}
+\begin{lstlisting}
+"data_sources/toy/cat_costs.py": {
+    "inputs": [
+      "products.csv",
+      "product_categories.csv",
+      "product_types.csv"
+    ],
+    "outputs": [
+      "processed__product_info.csv",
+      "processed__category_inventory.csv"
+    ]
+}
+   \end{lstlisting}
+
+\begin{description}
+   \item \textit{cat\_sales.py}
+   \item[Description:] Takes sale information and determines sales by customer and category.
+   \item[Results:] 
+\end{description}
+\begin{lstlisting}
+"data_sources/toy/cat_sales.py": {
+    "inputs": [
+      "sales.csv",
+      "processed__product_info.csv"
+    ],
+    "outputs": [
+      "processed__category_sales.csv"
+    ]
+}
+   \end{lstlisting}
+
+\begin{description}
+   \item \textit{recommend\_categories.py}
+   \item[Description:] Recommends categories for customers based on transaction history and profit potential.
+   \item[Results:] 
+\end{description}
+\begin{lstlisting}
+"data_sources/toy/recommend_categories.py": {
+    "inputs": [
+      "processed__category_inventory.csv",
+      "processed__category_sales.csv"
+    ],
+    "outputs": [
+      "processed__category_recs.csv"
+    ]
+}
+   \end{lstlisting}
+
+
+
+\end{document}
+
+
+

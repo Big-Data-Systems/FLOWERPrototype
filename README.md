@@ -14,7 +14,7 @@ an analysis of the inputs, outputs and relationships between these through the p
 
 ### Usage
 
-This project uses python 3.10 -- no external libraries are required.
+The analysis portion of this project uses python 3.10 -- no external libraries are required.
 
 ```
 usage: __init__.py [-h] [-v] [-o OUTPUT] [-e ERDIAG] [-d] filename
@@ -31,3 +31,5 @@ options:
                         Output FLOWER diagram json files. Will be appended with _ents.json and _rels.json.
   -d, --derived         Also include derived entities (internal state nodes like dataframes) in ER output.
 ```
+
+The diagram generator uses node.js. View the README in `diagram/` for instructions on how to run it.
