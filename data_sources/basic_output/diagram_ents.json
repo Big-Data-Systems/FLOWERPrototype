@@ -2,20 +2,20 @@
   {
     "key": "data_sources/basic/agg.py",
     "items": [],
-    "colorate": "#fff9ff"
+    "colorate": "#82E0AA"
   },
   {
     "key": "data_sources/basic/gamma.py",
     "items": [],
-    "colorate": "#fff9ff"
+    "colorate": "#82E0AA"
   },
   {
     "key": "data_sources/basic/mini_gradient.py",
     "items": [],
-    "colorate": "#fff9ff"
+    "colorate": "#82E0AA"
   },
   {
-    "key": "t_ka.csv",
+    "key": "/Users/tahsin/Documents/Python_programs/Phe2_05_values_spikes.csv",
     "items": [],
     "colorate": "#fff9ff"
   },
@@ -25,17 +25,27 @@
     "colorate": "#fff9ff"
   },
   {
+    "key": "/Users/tahsin/Documents/Python_programs/Phe2_02_values_spikes_windowsresults_tranposed.csv",
+    "items": [],
+    "colorate": "#fff9ff"
+  },
+  {
     "key": "tjp_out.csv",
     "items": [],
     "colorate": "#fff9ff"
   },
   {
-    "key": "t2.csv",
+    "key": "variable[ds]",
     "items": [],
     "colorate": "#fff9ff"
   },
   {
-    "key": "/Users/tahsin/Documents/Python_programs/Phe2_02_values_spikes_windowsresults_reducted.csv",
+    "key": "t1.csv",
+    "items": [],
+    "colorate": "#fff9ff"
+  },
+  {
+    "key": "t_ka.csv",
     "items": [],
     "colorate": "#fff9ff"
   },
@@ -45,22 +55,12 @@
     "colorate": "#fff9ff"
   },
   {
-    "key": "/Users/tahsin/Documents/Python_programs/Phe2_02_values_spikes_windowsresults_tranposed.csv",
+    "key": "/Users/tahsin/Documents/Python_programs/Phe2_02_values_spikes_windowsresults_reducted.csv",
     "items": [],
     "colorate": "#fff9ff"
   },
   {
-    "key": "variable: ds",
-    "items": [],
-    "colorate": "#fff9ff"
-  },
-  {
-    "key": "/Users/tahsin/Documents/Python_programs/Phe2_05_values_spikes.csv",
-    "items": [],
-    "colorate": "#fff9ff"
-  },
-  {
-    "key": "t1.csv",
+    "key": "t2.csv",
     "items": [],
     "colorate": "#fff9ff"
   }

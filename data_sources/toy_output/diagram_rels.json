@@ -1,6 +1,6 @@
 [
   {
-    "from": "product_categories.csv",
+    "from": "product_types.csv",
     "to": "data_sources/toy/cat_costs.py",
     "color": "black",
     "dash": [
@@ -26,7 +26,7 @@
     "toText": ""
   },
   {
-    "from": "product_types.csv",
+    "from": "product_categories.csv",
     "to": "data_sources/toy/cat_costs.py",
     "color": "black",
     "dash": [
@@ -39,7 +39,7 @@
     "toText": ""
   },
   {
-    "from": "processed__product_info.csv",
+    "from": "sales.csv",
     "to": "data_sources/toy/cat_sales.py",
     "color": "black",
     "dash": [
@@ -52,7 +52,7 @@
     "toText": ""
   },
   {
-    "from": "sales.csv",
+    "from": "processed__product_info.csv",
     "to": "data_sources/toy/cat_sales.py",
     "color": "black",
     "dash": [
@@ -92,7 +92,7 @@
   },
   {
     "from": "data_sources/toy/cat_costs.py",
-    "to": "processed__product_info.csv",
+    "to": "processed__category_inventory.csv",
     "color": "black",
     "dash": [
       3,
@@ -105,7 +105,7 @@
   },
   {
     "from": "data_sources/toy/cat_costs.py",
-    "to": "processed__category_inventory.csv",
+    "to": "processed__product_info.csv",
     "color": "black",
     "dash": [
       3,

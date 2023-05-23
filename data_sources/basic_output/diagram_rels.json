@@ -26,19 +26,6 @@
     "toText": ""
   },
   {
-    "from": "/Users/tahsin/Documents/Python_programs/Phe2_02_values_spikes_windowsresults_tranposed.csv",
-    "to": "data_sources/basic/gamma.py",
-    "color": "black",
-    "dash": [
-      3,
-      2
-    ],
-    "arr": "Standard",
-    "width": "1",
-    "text": "",
-    "toText": ""
-  },
-  {
     "from": "/Users/tahsin/Documents/Python_programs/Phe2_05_values_spikes.csv",
     "to": "data_sources/basic/gamma.py",
     "color": "black",
@@ -52,7 +39,20 @@
     "toText": ""
   },
   {
-    "from": "variable: ds",
+    "from": "/Users/tahsin/Documents/Python_programs/Phe2_02_values_spikes_windowsresults_tranposed.csv",
+    "to": "data_sources/basic/gamma.py",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "variable[ds]",
     "to": "data_sources/basic/mini_gradient.py",
     "color": "black",
     "dash": [
@@ -92,7 +92,7 @@
   },
   {
     "from": "data_sources/basic/gamma.py",
-    "to": "/Users/tahsin/Documents/Python_programs/Phe2_02_values_spikes_windowsresults_reducted.csv",
+    "to": "/Users/tahsin/Documents/Python_programs/u_05.csv",
     "color": "black",
     "dash": [
       3,
@@ -105,7 +105,7 @@
   },
   {
     "from": "data_sources/basic/gamma.py",
-    "to": "/Users/tahsin/Documents/Python_programs/u_05.csv",
+    "to": "/Users/tahsin/Documents/Python_programs/Phe2_02_values_spikes_windowsresults_reducted.csv",
     "color": "black",
     "dash": [
       3,

@@ -2,42 +2,17 @@
   {
     "key": "data_sources/toy/cat_costs.py",
     "items": [],
-    "colorate": "#fff9ff"
+    "colorate": "#82E0AA"
   },
   {
     "key": "data_sources/toy/cat_sales.py",
     "items": [],
-    "colorate": "#fff9ff"
+    "colorate": "#82E0AA"
   },
   {
     "key": "data_sources/toy/recommend_categories.py",
     "items": [],
-    "colorate": "#fff9ff"
-  },
-  {
-    "key": "sales.csv",
-    "items": [],
-    "colorate": "#fff9ff"
-  },
-  {
-    "key": "processed__category_inventory.csv",
-    "items": [],
-    "colorate": "#fff9ff"
-  },
-  {
-    "key": "product_types.csv",
-    "items": [],
-    "colorate": "#fff9ff"
-  },
-  {
-    "key": "processed__category_sales.csv",
-    "items": [],
-    "colorate": "#fff9ff"
-  },
-  {
-    "key": "product_categories.csv",
-    "items": [],
-    "colorate": "#fff9ff"
+    "colorate": "#82E0AA"
   },
   {
     "key": "processed__category_recs.csv",
@@ -50,12 +25,37 @@
     "colorate": "#fff9ff"
   },
   {
+    "key": "product_categories.csv",
+    "items": [],
+    "colorate": "#fff9ff"
+  },
+  {
+    "key": "sales.csv",
+    "items": [],
+    "colorate": "#fff9ff"
+  },
+  {
+    "key": "processed__category_sales.csv",
+    "items": [],
+    "colorate": "#fff9ff"
+  },
+  {
     "key": "products.csv",
     "items": [],
     "colorate": "#fff9ff"
   },
   {
-    "key": "485f350f-f6f9-4ee5-8f8d-b46d39fb7512",
+    "key": "product_types.csv",
+    "items": [],
+    "colorate": "#fff9ff"
+  },
+  {
+    "key": "processed__category_inventory.csv",
+    "items": [],
+    "colorate": "#fff9ff"
+  },
+  {
+    "key": "0cbfb663-ea7d-45e7-85f2-7504fb5a0edb",
     "items": [],
     "colorate": "#82E0AA",
     "ops": [
@@ -65,7 +65,7 @@
     "node_name": "prods_with_cats"
   },
   {
-    "key": "8361bfc5-00f6-49e2-9746-4fc75ebd7e71",
+    "key": "6324d091-add8-4071-a8b6-33498f2f744d",
     "items": [],
     "colorate": "#82E0AA",
     "ops": [
@@ -75,7 +75,7 @@
     "node_name": "cats"
   },
   {
-    "key": "6d9b580e-0ab2-43e8-b93f-e97843f6ad6f",
+    "key": "b27f1ef2-1ab2-4625-9cd1-52a458089431",
     "items": [],
     "colorate": "#82E0AA",
     "ops": [
@@ -85,7 +85,7 @@
     "node_name": "prods_with_type_info"
   },
   {
-    "key": "114cfd7c-b800-4bfa-b991-1d7fec453038",
+    "key": "c4d24e42-4d52-43f2-91c4-f053b800addd",
     "items": [],
     "colorate": "#82E0AA",
     "ops": [
@@ -95,7 +95,7 @@
     "node_name": "product_types"
   },
   {
-    "key": "1b4de335-b765-42d2-b9fe-e8d23dc8a066",
+    "key": "9249e252-6e1e-433b-b27f-2d997b2245eb",
     "items": [],
     "colorate": "#82E0AA",
     "ops": [
@@ -105,7 +105,7 @@
     "node_name": "products"
   },
   {
-    "key": "b19cd7f4-3af9-43cd-96ff-6f15fb35fe5a",
+    "key": "59da547f-2095-429a-9033-1a7141451b2e",
     "items": [],
     "colorate": "#82E0AA",
     "ops": [
@@ -115,7 +115,7 @@
     "node_name": "cat_costs"
   },
   {
-    "key": "947a8410-42fb-4867-aace-c81334fdb7cb",
+    "key": "afd62ca2-31c1-4f9b-842f-7c76910b8307",
     "items": [],
     "colorate": "#82E0AA",
     "ops": [
@@ -126,7 +126,7 @@
     "node_name": "cat_sums"
   },
   {
-    "key": "844e7dc1-9c7a-4561-a8b0-6774c4b06db6",
+    "key": "14804d77-0edb-4fb0-882e-7c4608e39740",
     "items": [],
     "colorate": "#82E0AA",
     "ops": [
@@ -136,7 +136,7 @@
     "node_name": "customer_categories"
   },
   {
-    "key": "9fc02fab-cce1-4d03-bb5e-576c22620ca1",
+    "key": "f2cc1388-202e-4147-8e8e-75f07a31588b",
     "items": [],
     "colorate": "#82E0AA",
     "ops": [
@@ -146,7 +146,7 @@
     "node_name": "customer_categories"
   },
   {
-    "key": "6784457e-8a22-4e6a-b7f4-6c87eac64895",
+    "key": "e1cf93f0-4a2f-4b8c-98b6-54e549d203f3",
     "items": [],
     "colorate": "#82E0AA",
     "ops": [
@@ -156,7 +156,7 @@
     "node_name": "sales"
   },
   {
-    "key": "f8d04e96-ac70-4006-a14d-9e01a6b84039",
+    "key": "53030f3b-a121-444b-82c7-7929c64e87db",
     "items": [],
     "colorate": "#82E0AA",
     "ops": [
@@ -166,7 +166,7 @@
     "node_name": "product_info"
   },
   {
-    "key": "ca38bf6f-8688-494d-82f6-4cea6bf3eab8",
+    "key": "ae98da0b-f4a1-4c7f-9492-3b5ada7cf39a",
     "items": [],
     "colorate": "#82E0AA",
     "ops": [
@@ -177,7 +177,7 @@
     "node_name": "recommended"
   },
   {
-    "key": "64620f79-63a4-4e7f-94a8-673e5c7e4bc4",
+    "key": "d516019b-6b17-445d-b939-38b61c0c5949",
     "items": [],
     "colorate": "#82E0AA",
     "ops": [
@@ -187,7 +187,7 @@
     "node_name": "cat_summary"
   },
   {
-    "key": "59c6bda8-ec4b-4ac7-b444-7e13db2f46ce",
+    "key": "f989fbeb-719e-47a1-b7e6-7d0230bfb151",
     "items": [],
     "colorate": "#82E0AA",
     "ops": [
@@ -197,7 +197,7 @@
     "node_name": "cat_summary"
   },
   {
-    "key": "efb48e20-2c4d-4d3c-b35b-3d8bc5ee85d4",
+    "key": "3fa23271-324b-4830-adf8-2d03cf478003",
     "items": [],
     "colorate": "#82E0AA",
     "ops": [
@@ -207,7 +207,7 @@
     "node_name": "cat_sales"
   },
   {
-    "key": "1cd71692-d713-46da-9e7f-099cbc4b2c35",
+    "key": "bffdee4a-94b6-485e-adda-b8046e4fc659",
     "items": [],
     "colorate": "#82E0AA",
     "ops": [

@@ -1,18 +1,5 @@
 [
   {
-    "from": "t1.csv",
-    "to": "data_sources/basic/agg.py",
-    "color": "black",
-    "dash": [
-      3,
-      2
-    ],
-    "arr": "Standard",
-    "width": "1",
-    "text": "",
-    "toText": ""
-  },
-  {
     "from": "t2.csv",
     "to": "data_sources/basic/agg.py",
     "color": "black",
@@ -26,8 +13,8 @@
     "toText": ""
   },
   {
-    "from": "/Users/tahsin/Documents/Python_programs/Phe2_05_values_spikes.csv",
-    "to": "data_sources/basic/gamma.py",
+    "from": "t1.csv",
+    "to": "data_sources/basic/agg.py",
     "color": "black",
     "dash": [
       3,
@@ -52,8 +39,8 @@
     "toText": ""
   },
   {
-    "from": "variable: ds",
-    "to": "data_sources/basic/mini_gradient.py",
+    "from": "/Users/tahsin/Documents/Python_programs/Phe2_05_values_spikes.csv",
+    "to": "data_sources/basic/gamma.py",
     "color": "black",
     "dash": [
       3,
@@ -65,8 +52,8 @@
     "toText": ""
   },
   {
-    "from": "data_sources/basic/agg.py",
-    "to": "tjp_out.csv",
+    "from": "variable[ds]",
+    "to": "data_sources/basic/mini_gradient.py",
     "color": "black",
     "dash": [
       3,
@@ -91,8 +78,8 @@
     "toText": ""
   },
   {
-    "from": "data_sources/basic/gamma.py",
-    "to": "/Users/tahsin/Documents/Python_programs/Phe2_02_values_spikes_windowsresults_reducted.csv",
+    "from": "data_sources/basic/agg.py",
+    "to": "tjp_out.csv",
     "color": "black",
     "dash": [
       3,
@@ -106,6 +93,19 @@
   {
     "from": "data_sources/basic/gamma.py",
     "to": "/Users/tahsin/Documents/Python_programs/u_05.csv",
+    "color": "black",
+    "dash": [
+      3,
+      2
+    ],
+    "arr": "Standard",
+    "width": "1",
+    "text": "",
+    "toText": ""
+  },
+  {
+    "from": "data_sources/basic/gamma.py",
+    "to": "/Users/tahsin/Documents/Python_programs/Phe2_02_values_spikes_windowsresults_reducted.csv",
     "color": "black",
     "dash": [
       3,
@@ -130,7 +130,7 @@
     "toText": ""
   },
   {
-    "from": "96d8ed43-50e7-4784-aefa-5cedb4ed0a1f",
+    "from": "dcdf09e3-6354-477e-a9b1-a8109baec8fe",
     "to": "t_ka.csv",
     "color": "black",
     "dash": [
@@ -143,8 +143,8 @@
     "toText": ""
   },
   {
-    "from": "53f24833-4106-4788-8617-a76e369f123e",
-    "to": "96d8ed43-50e7-4784-aefa-5cedb4ed0a1f",
+    "from": "d15dfde6-a90d-454d-a2ef-c0862ed96304",
+    "to": "dcdf09e3-6354-477e-a9b1-a8109baec8fe",
     "color": "black",
     "dash": [
       3,
@@ -156,8 +156,8 @@
     "toText": ""
   },
   {
-    "from": "53f24833-4106-4788-8617-a76e369f123e",
-    "to": "92b68d29-1b28-4174-a769-64469c4614ab",
+    "from": "d15dfde6-a90d-454d-a2ef-c0862ed96304",
+    "to": "85d8d6e4-f0aa-43c0-8b0a-97f86cba6429",
     "color": "black",
     "dash": [
       3,
@@ -169,8 +169,8 @@
     "toText": ""
   },
   {
-    "from": "53f24833-4106-4788-8617-a76e369f123e",
-    "to": "03c543e8-03e0-478d-8ea7-f417658c91cc",
+    "from": "d15dfde6-a90d-454d-a2ef-c0862ed96304",
+    "to": "92911caa-8821-49d1-b9f9-f4a43fea14a2",
     "color": "black",
     "dash": [
       3,
@@ -182,8 +182,8 @@
     "toText": ""
   },
   {
-    "from": "53f24833-4106-4788-8617-a76e369f123e",
-    "to": "e3b15c98-1785-443b-af8d-481122997253",
+    "from": "d15dfde6-a90d-454d-a2ef-c0862ed96304",
+    "to": "7dd52145-b235-44ec-8af6-8280379bdc51",
     "color": "black",
     "dash": [
       3,
@@ -195,8 +195,8 @@
     "toText": ""
   },
   {
-    "from": "53f24833-4106-4788-8617-a76e369f123e",
-    "to": "c868cc1f-e7b1-4f1c-a364-997fdbb6bea5",
+    "from": "d15dfde6-a90d-454d-a2ef-c0862ed96304",
+    "to": "3cb17366-464f-4607-b9cb-ca7f59b7f4fa",
     "color": "black",
     "dash": [
       3,
@@ -208,7 +208,7 @@
     "toText": ""
   },
   {
-    "from": "c868cc1f-e7b1-4f1c-a364-997fdbb6bea5",
+    "from": "3cb17366-464f-4607-b9cb-ca7f59b7f4fa",
     "to": "tjp_out.csv",
     "color": "black",
     "dash": [
@@ -221,8 +221,8 @@
     "toText": ""
   },
   {
-    "from": "3dc97a6a-5942-401d-8756-06a59a8fc18d",
-    "to": "92b68d29-1b28-4174-a769-64469c4614ab",
+    "from": "6a7ff1e4-08ca-423e-8dd9-72f99d1b63e8",
+    "to": "85d8d6e4-f0aa-43c0-8b0a-97f86cba6429",
     "color": "black",
     "dash": [
       3,
@@ -234,8 +234,8 @@
     "toText": ""
   },
   {
-    "from": "3dc97a6a-5942-401d-8756-06a59a8fc18d",
-    "to": "03c543e8-03e0-478d-8ea7-f417658c91cc",
+    "from": "6a7ff1e4-08ca-423e-8dd9-72f99d1b63e8",
+    "to": "92911caa-8821-49d1-b9f9-f4a43fea14a2",
     "color": "black",
     "dash": [
       3,
@@ -247,8 +247,8 @@
     "toText": ""
   },
   {
-    "from": "3dc97a6a-5942-401d-8756-06a59a8fc18d",
-    "to": "e3b15c98-1785-443b-af8d-481122997253",
+    "from": "6a7ff1e4-08ca-423e-8dd9-72f99d1b63e8",
+    "to": "7dd52145-b235-44ec-8af6-8280379bdc51",
     "color": "black",
     "dash": [
       3,
@@ -260,8 +260,8 @@
     "toText": ""
   },
   {
-    "from": "3dc97a6a-5942-401d-8756-06a59a8fc18d",
-    "to": "c868cc1f-e7b1-4f1c-a364-997fdbb6bea5",
+    "from": "6a7ff1e4-08ca-423e-8dd9-72f99d1b63e8",
+    "to": "3cb17366-464f-4607-b9cb-ca7f59b7f4fa",
     "color": "black",
     "dash": [
       3,
@@ -273,7 +273,7 @@
     "toText": ""
   },
   {
-    "from": "732f750e-cb0e-4396-b3ff-6bb958500483",
+    "from": "e940fe48-63b2-4892-af41-02a34e6e8deb",
     "to": "/Users/tahsin/Documents/Python_programs/u_05.csv",
     "color": "black",
     "dash": [
@@ -286,8 +286,8 @@
     "toText": ""
   },
   {
-    "from": "1b623037-9cac-45fa-9e2a-cb63561340a3",
-    "to": "732f750e-cb0e-4396-b3ff-6bb958500483",
+    "from": "4790e7f5-42ae-4550-bd69-4ff2afde321f",
+    "to": "e940fe48-63b2-4892-af41-02a34e6e8deb",
     "color": "black",
     "dash": [
       3,
@@ -299,8 +299,8 @@
     "toText": ""
   },
   {
-    "from": "17f7e986-1699-4773-bb16-8d4fc9ee5475",
-    "to": "1b623037-9cac-45fa-9e2a-cb63561340a3",
+    "from": "9e339045-06be-4608-86c1-6b0aa94e11ec",
+    "to": "4790e7f5-42ae-4550-bd69-4ff2afde321f",
     "color": "black",
     "dash": [
       3,
@@ -312,8 +312,8 @@
     "toText": ""
   },
   {
-    "from": "17f7e986-1699-4773-bb16-8d4fc9ee5475",
-    "to": "916e983b-95ef-4e78-b4f0-4e08f366d985",
+    "from": "9e339045-06be-4608-86c1-6b0aa94e11ec",
+    "to": "85d5053b-e4bc-49da-bffd-5f0e231948ea",
     "color": "black",
     "dash": [
       3,
@@ -325,8 +325,8 @@
     "toText": ""
   },
   {
-    "from": "17f7e986-1699-4773-bb16-8d4fc9ee5475",
-    "to": "9a0cce3a-0695-4a95-ab4b-b4c5c2114c07",
+    "from": "9e339045-06be-4608-86c1-6b0aa94e11ec",
+    "to": "8da75e04-f158-400f-8274-ba9f27f6e990",
     "color": "black",
     "dash": [
       3,
@@ -338,8 +338,8 @@
     "toText": ""
   },
   {
-    "from": "5d241aec-c3ec-4398-a0dc-7613914c8d76",
-    "to": "17f7e986-1699-4773-bb16-8d4fc9ee5475",
+    "from": "81fb5063-da89-4d6c-b2fc-a24691ec7bbb",
+    "to": "9e339045-06be-4608-86c1-6b0aa94e11ec",
     "color": "black",
     "dash": [
       3,
@@ -351,8 +351,8 @@
     "toText": ""
   },
   {
-    "from": "5d241aec-c3ec-4398-a0dc-7613914c8d76",
-    "to": "a6afbf2a-e1f6-4aa2-8f57-8eb6a845881c",
+    "from": "81fb5063-da89-4d6c-b2fc-a24691ec7bbb",
+    "to": "2f41cf01-9d8d-4677-9f9c-cee2e36c4595",
     "color": "black",
     "dash": [
       3,
@@ -364,8 +364,8 @@
     "toText": ""
   },
   {
-    "from": "87c1ece0-66ba-47f9-98c7-08be1ebfbcdd",
-    "to": "5d241aec-c3ec-4398-a0dc-7613914c8d76",
+    "from": "cf23b769-74d0-4d5a-88e2-2b1b6d1e33c2",
+    "to": "81fb5063-da89-4d6c-b2fc-a24691ec7bbb",
     "color": "black",
     "dash": [
       3,
@@ -377,8 +377,8 @@
     "toText": ""
   },
   {
-    "from": "96cefba1-1349-4f85-8478-34549771a9ee",
-    "to": "6d368f7d-0c77-4dc5-b72b-4967062d1a9f",
+    "from": "d97742d0-fa2d-4368-86b6-4da0c43dea63",
+    "to": "a31e1907-39d9-49b3-9fab-5598b3d29ea1",
     "color": "black",
     "dash": [
       3,
@@ -390,8 +390,8 @@
     "toText": ""
   },
   {
-    "from": "96cefba1-1349-4f85-8478-34549771a9ee",
-    "to": "87c1ece0-66ba-47f9-98c7-08be1ebfbcdd",
+    "from": "d97742d0-fa2d-4368-86b6-4da0c43dea63",
+    "to": "cf23b769-74d0-4d5a-88e2-2b1b6d1e33c2",
     "color": "black",
     "dash": [
       3,
@@ -403,8 +403,8 @@
     "toText": ""
   },
   {
-    "from": "96cefba1-1349-4f85-8478-34549771a9ee",
-    "to": "63463ae5-d039-4279-96cf-481cced2f5e8",
+    "from": "d97742d0-fa2d-4368-86b6-4da0c43dea63",
+    "to": "aca33786-a165-49ea-a226-35ad29816dd4",
     "color": "black",
     "dash": [
       3,
@@ -416,8 +416,8 @@
     "toText": ""
   },
   {
-    "from": "96cefba1-1349-4f85-8478-34549771a9ee",
-    "to": "0a8f86bc-8fc7-48a4-8736-8b4a1d678997",
+    "from": "d97742d0-fa2d-4368-86b6-4da0c43dea63",
+    "to": "a5c2c685-0fb9-46d8-bbb0-53fba7a35e23",
     "color": "black",
     "dash": [
       3,
@@ -429,8 +429,8 @@
     "toText": ""
   },
   {
-    "from": "96cefba1-1349-4f85-8478-34549771a9ee",
-    "to": "38c63e36-cc38-48be-89d8-5f24ed7c5eca",
+    "from": "d97742d0-fa2d-4368-86b6-4da0c43dea63",
+    "to": "c4f72fa3-74ce-455e-9570-04ed4e32e915",
     "color": "black",
     "dash": [
       3,
@@ -442,8 +442,8 @@
     "toText": ""
   },
   {
-    "from": "96cefba1-1349-4f85-8478-34549771a9ee",
-    "to": "a89f4b17-9417-4137-98cb-ba2a285ea8e3",
+    "from": "d97742d0-fa2d-4368-86b6-4da0c43dea63",
+    "to": "76a29d1d-15be-4271-a693-e0ab0724f4e2",
     "color": "black",
     "dash": [
       3,
@@ -455,8 +455,8 @@
     "toText": ""
   },
   {
-    "from": "96cefba1-1349-4f85-8478-34549771a9ee",
-    "to": "4794611f-09ff-4913-931e-ed82918108de",
+    "from": "d97742d0-fa2d-4368-86b6-4da0c43dea63",
+    "to": "4c72e235-2533-4f33-8f58-7c2893f1baf2",
     "color": "black",
     "dash": [
       3,
@@ -468,8 +468,8 @@
     "toText": ""
   },
   {
-    "from": "96cefba1-1349-4f85-8478-34549771a9ee",
-    "to": "30ceb9ce-5bfc-4054-9378-7fb1ef3d6d48",
+    "from": "d97742d0-fa2d-4368-86b6-4da0c43dea63",
+    "to": "ab6660be-075d-4610-b19f-a090898dd1fd",
     "color": "black",
     "dash": [
       3,
@@ -481,8 +481,8 @@
     "toText": ""
   },
   {
-    "from": "64e9646f-0efc-4231-a674-da238a23a294",
-    "to": "96cefba1-1349-4f85-8478-34549771a9ee",
+    "from": "ba252368-e50f-4277-bc31-6983b951be57",
+    "to": "d97742d0-fa2d-4368-86b6-4da0c43dea63",
     "color": "black",
     "dash": [
       3,
@@ -494,8 +494,8 @@
     "toText": ""
   },
   {
-    "from": "26285cdc-fbd2-4ac2-b8af-c48e0b6d5f95",
-    "to": "79425b9d-1be9-4dad-ad2a-89b77cca5878",
+    "from": "afd388ee-5f08-4aaa-99f7-8422e6782b75",
+    "to": "935b0315-1bbe-4e26-a6dc-fdb4df51c89f",
     "color": "black",
     "dash": [
       3,
@@ -507,7 +507,7 @@
     "toText": ""
   },
   {
-    "from": "26285cdc-fbd2-4ac2-b8af-c48e0b6d5f95",
+    "from": "afd388ee-5f08-4aaa-99f7-8422e6782b75",
     "to": "/Users/tahsin/Documents/Python_programs/Phe2_02_values_spikes_windowsresults_reducted.csv",
     "color": "black",
     "dash": [
@@ -520,8 +520,8 @@
     "toText": ""
   },
   {
-    "from": "ccd31f02-4924-4fcb-95a8-2dcd13747ff9",
-    "to": "26285cdc-fbd2-4ac2-b8af-c48e0b6d5f95",
+    "from": "0f6a8c7a-cb70-496b-9eb9-7581c9aec6f7",
+    "to": "afd388ee-5f08-4aaa-99f7-8422e6782b75",
     "color": "black",
     "dash": [
       3,
@@ -533,8 +533,8 @@
     "toText": ""
   },
   {
-    "from": "ac531d5a-98e0-4767-9556-90efbd392d86",
-    "to": "ccd31f02-4924-4fcb-95a8-2dcd13747ff9",
+    "from": "57b3ae81-2f93-4719-a120-4268a467e5a0",
+    "to": "0f6a8c7a-cb70-496b-9eb9-7581c9aec6f7",
     "color": "black",
     "dash": [
       3,
@@ -546,8 +546,8 @@
     "toText": ""
   },
   {
-    "from": "9a0cce3a-0695-4a95-ab4b-b4c5c2114c07",
-    "to": "ac531d5a-98e0-4767-9556-90efbd392d86",
+    "from": "8da75e04-f158-400f-8274-ba9f27f6e990",
+    "to": "57b3ae81-2f93-4719-a120-4268a467e5a0",
     "color": "black",
     "dash": [
       3,
@@ -559,8 +559,8 @@
     "toText": ""
   },
   {
-    "from": "92629c96-9089-4ab1-ab35-6b9219b0fe9e",
-    "to": "ac531d5a-98e0-4767-9556-90efbd392d86",
+    "from": "21f33aae-93e4-4c89-bf7b-84b06d452422",
+    "to": "57b3ae81-2f93-4719-a120-4268a467e5a0",
     "color": "black",
     "dash": [
       3,
@@ -572,8 +572,8 @@
     "toText": ""
   },
   {
-    "from": "92629c96-9089-4ab1-ab35-6b9219b0fe9e",
-    "to": "bb2d9c70-e0c3-4013-9c55-638263b50f91",
+    "from": "21f33aae-93e4-4c89-bf7b-84b06d452422",
+    "to": "e1d12a21-67d7-4402-9ba7-c33feb9274e6",
     "color": "black",
     "dash": [
       3,
@@ -585,8 +585,8 @@
     "toText": ""
   },
   {
-    "from": "92629c96-9089-4ab1-ab35-6b9219b0fe9e",
-    "to": "5a7fbe40-288f-4f2a-82ce-903422904c64",
+    "from": "21f33aae-93e4-4c89-bf7b-84b06d452422",
+    "to": "420c9db6-c9c4-4cf2-bd29-9f1c2180c364",
     "color": "black",
     "dash": [
       3,
@@ -598,8 +598,8 @@
     "toText": ""
   },
   {
-    "from": "92629c96-9089-4ab1-ab35-6b9219b0fe9e",
-    "to": "0e0655bb-bff1-4740-a409-19f369778a4d",
+    "from": "21f33aae-93e4-4c89-bf7b-84b06d452422",
+    "to": "306f2657-6129-4ae9-afd1-be8714b7875a",
     "color": "black",
     "dash": [
       3,
@@ -611,8 +611,8 @@
     "toText": ""
   },
   {
-    "from": "92629c96-9089-4ab1-ab35-6b9219b0fe9e",
-    "to": "b049d417-8420-4e98-bd10-4f7c6dc708ef",
+    "from": "21f33aae-93e4-4c89-bf7b-84b06d452422",
+    "to": "5e391414-9647-4b19-b30f-a16818ce5635",
     "color": "black",
     "dash": [
       3,
@@ -624,8 +624,8 @@
     "toText": ""
   },
   {
-    "from": "92629c96-9089-4ab1-ab35-6b9219b0fe9e",
-    "to": "5de518c4-20d6-4f04-82cc-1095ad5a4915",
+    "from": "21f33aae-93e4-4c89-bf7b-84b06d452422",
+    "to": "7bff563d-9bdc-46f2-872e-f72a0b03f01a",
     "color": "black",
     "dash": [
       3,
@@ -637,8 +637,8 @@
     "toText": ""
   },
   {
-    "from": "92629c96-9089-4ab1-ab35-6b9219b0fe9e",
-    "to": "2967491b-3d5c-4d0c-90ce-216cd2a42b15",
+    "from": "21f33aae-93e4-4c89-bf7b-84b06d452422",
+    "to": "f0de6345-771f-4967-9db9-8cda75a2ba77",
     "color": "black",
     "dash": [
       3,
@@ -650,8 +650,8 @@
     "toText": ""
   },
   {
-    "from": "92629c96-9089-4ab1-ab35-6b9219b0fe9e",
-    "to": "f25a810f-a2d1-4144-9f78-160ea7e0aabf",
+    "from": "21f33aae-93e4-4c89-bf7b-84b06d452422",
+    "to": "d5a329a2-9b3b-4265-9fc2-e6fb4f607460",
     "color": "black",
     "dash": [
       3,
@@ -663,8 +663,8 @@
     "toText": ""
   },
   {
-    "from": "92629c96-9089-4ab1-ab35-6b9219b0fe9e",
-    "to": "e316f8a4-2cb1-41d0-a086-65abf36938b1",
+    "from": "21f33aae-93e4-4c89-bf7b-84b06d452422",
+    "to": "f09a7694-2648-49d9-8dcc-01193b438736",
     "color": "black",
     "dash": [
       3,
@@ -676,8 +676,8 @@
     "toText": ""
   },
   {
-    "from": "92629c96-9089-4ab1-ab35-6b9219b0fe9e",
-    "to": "baf40d9c-3882-45e6-96b9-eb3c458d7621",
+    "from": "21f33aae-93e4-4c89-bf7b-84b06d452422",
+    "to": "cb7c1465-42ee-4feb-9a9f-b69aec2368f4",
     "color": "black",
     "dash": [
       3,
@@ -689,8 +689,8 @@
     "toText": ""
   },
   {
-    "from": "92629c96-9089-4ab1-ab35-6b9219b0fe9e",
-    "to": "6642443b-3804-4698-a398-dac0ecb72f7e",
+    "from": "21f33aae-93e4-4c89-bf7b-84b06d452422",
+    "to": "7946b580-477c-4157-8030-011df7e877f8",
     "color": "black",
     "dash": [
       3,
@@ -702,8 +702,8 @@
     "toText": ""
   },
   {
-    "from": "92629c96-9089-4ab1-ab35-6b9219b0fe9e",
-    "to": "d8463662-e7f2-42f7-9910-8d7d42ab063c",
+    "from": "21f33aae-93e4-4c89-bf7b-84b06d452422",
+    "to": "7a9f46db-63d9-4f13-8db4-ed02fc6b3763",
     "color": "black",
     "dash": [
       3,
@@ -715,8 +715,8 @@
     "toText": ""
   },
   {
-    "from": "8d55a72c-a23c-4b6f-b1ad-8ef611680fac",
-    "to": "92629c96-9089-4ab1-ab35-6b9219b0fe9e",
+    "from": "c87df589-a968-4713-85d0-106afd3f8fa9",
+    "to": "21f33aae-93e4-4c89-bf7b-84b06d452422",
     "color": "black",
     "dash": [
       3,
@@ -728,8 +728,8 @@
     "toText": ""
   },
   {
-    "from": "8d55a72c-a23c-4b6f-b1ad-8ef611680fac",
-    "to": "976b2033-8fb4-4d74-9ae2-c8f1cebb06db",
+    "from": "c87df589-a968-4713-85d0-106afd3f8fa9",
+    "to": "f4c25772-d2f0-4706-99f5-b703ba06cf4a",
     "color": "black",
     "dash": [
       3,
@@ -741,8 +741,8 @@
     "toText": ""
   },
   {
-    "from": "916e983b-95ef-4e78-b4f0-4e08f366d985",
-    "to": "8d55a72c-a23c-4b6f-b1ad-8ef611680fac",
+    "from": "85d5053b-e4bc-49da-bffd-5f0e231948ea",
+    "to": "c87df589-a968-4713-85d0-106afd3f8fa9",
     "color": "black",
     "dash": [
       3,
@@ -754,8 +754,8 @@
     "toText": ""
   },
   {
-    "from": "bb73f3d9-6380-448c-bf7e-5aa2c6cd98cf",
-    "to": "ccd31f02-4924-4fcb-95a8-2dcd13747ff9",
+    "from": "89f54b95-1ee0-4a21-b14e-fdaa8839de27",
+    "to": "0f6a8c7a-cb70-496b-9eb9-7581c9aec6f7",
     "color": "black",
     "dash": [
       3,
@@ -767,7 +767,7 @@
     "toText": ""
   },
   {
-    "from": "410148aa-8e32-41a4-b9a3-709e57345f51",
+    "from": "6077f404-eb63-49f0-b6d8-82e9298e2589",
     "to": "gammasgdresults_3.csv",
     "color": "black",
     "dash": [
@@ -780,8 +780,8 @@
     "toText": ""
   },
   {
-    "from": "ab82153f-c7c2-499f-9e1f-b7ccbabe2a2a",
-    "to": "410148aa-8e32-41a4-b9a3-709e57345f51",
+    "from": "443c2f83-7963-4532-b068-73ebea235be6",
+    "to": "6077f404-eb63-49f0-b6d8-82e9298e2589",
     "color": "black",
     "dash": [
       3,
@@ -793,8 +793,8 @@
     "toText": ""
   },
   {
-    "from": "2eef94c6-63b6-4977-a5c8-b9f839bc6363",
-    "to": "410148aa-8e32-41a4-b9a3-709e57345f51",
+    "from": "94e0c440-2ee4-401a-ba23-8643b1abeb12",
+    "to": "6077f404-eb63-49f0-b6d8-82e9298e2589",
     "color": "black",
     "dash": [
       3,
@@ -806,8 +806,8 @@
     "toText": ""
   },
   {
-    "from": "f44b30f2-e796-43c5-a662-7eead17806e6",
-    "to": "2eef94c6-63b6-4977-a5c8-b9f839bc6363",
+    "from": "ac608f25-0ab0-4162-a3a6-199202e435e0",
+    "to": "94e0c440-2ee4-401a-ba23-8643b1abeb12",
     "color": "black",
     "dash": [
       3,
@@ -819,8 +819,8 @@
     "toText": ""
   },
   {
-    "from": "395eb62e-f449-406b-8886-46817d04bca1",
-    "to": "f44b30f2-e796-43c5-a662-7eead17806e6",
+    "from": "028312c6-48c9-4bcc-a33e-fc4c0dfd5084",
+    "to": "ac608f25-0ab0-4162-a3a6-199202e435e0",
     "color": "black",
     "dash": [
       3,
@@ -832,8 +832,8 @@
     "toText": ""
   },
   {
-    "from": "e407d711-aad1-49c9-b633-686ff08aae59",
-    "to": "291765a9-61a0-4d45-84f4-3355ed3ccaf0",
+    "from": "fb5e4a2d-5e6e-4c94-a1d0-ab259685ab6c",
+    "to": "b179f7ad-c491-426f-a0df-179c6dcabae0",
     "color": "black",
     "dash": [
       3,
@@ -845,8 +845,8 @@
     "toText": ""
   },
   {
-    "from": "e407d711-aad1-49c9-b633-686ff08aae59",
-    "to": "395eb62e-f449-406b-8886-46817d04bca1",
+    "from": "fb5e4a2d-5e6e-4c94-a1d0-ab259685ab6c",
+    "to": "028312c6-48c9-4bcc-a33e-fc4c0dfd5084",
     "color": "black",
     "dash": [
       3,
@@ -858,8 +858,8 @@
     "toText": ""
   },
   {
-    "from": "e407d711-aad1-49c9-b633-686ff08aae59",
-    "to": "e42e433d-e603-44b9-b10e-4f60850fc968",
+    "from": "fb5e4a2d-5e6e-4c94-a1d0-ab259685ab6c",
+    "to": "3e173e4b-1638-4900-8b36-0cfd6a30114a",
     "color": "black",
     "dash": [
       3,
@@ -871,8 +871,8 @@
     "toText": ""
   },
   {
-    "from": "858c669a-f92e-4ec8-8eda-60cc3dc792b2",
-    "to": "e407d711-aad1-49c9-b633-686ff08aae59",
+    "from": "cfdce2eb-c56b-4253-bb65-9c54234097f2",
+    "to": "fb5e4a2d-5e6e-4c94-a1d0-ab259685ab6c",
     "color": "black",
     "dash": [
       3,
@@ -884,8 +884,8 @@
     "toText": ""
   },
   {
-    "from": "858c669a-f92e-4ec8-8eda-60cc3dc792b2",
-    "to": "13e0ca67-ec66-4d09-8190-89deac48d8a1",
+    "from": "cfdce2eb-c56b-4253-bb65-9c54234097f2",
+    "to": "306d7819-abaa-4627-87ad-57a6f25d4cd0",
     "color": "black",
     "dash": [
       3,
@@ -897,8 +897,8 @@
     "toText": ""
   },
   {
-    "from": "13e0ca67-ec66-4d09-8190-89deac48d8a1",
-    "to": "395eb62e-f449-406b-8886-46817d04bca1",
+    "from": "306d7819-abaa-4627-87ad-57a6f25d4cd0",
+    "to": "028312c6-48c9-4bcc-a33e-fc4c0dfd5084",
     "color": "black",
     "dash": [
       3,
@@ -910,8 +910,8 @@
     "toText": ""
   },
   {
-    "from": "13e0ca67-ec66-4d09-8190-89deac48d8a1",
-    "to": "e42e433d-e603-44b9-b10e-4f60850fc968",
+    "from": "306d7819-abaa-4627-87ad-57a6f25d4cd0",
+    "to": "3e173e4b-1638-4900-8b36-0cfd6a30114a",
     "color": "black",
     "dash": [
       3,
@@ -923,8 +923,8 @@
     "toText": ""
   },
   {
-    "from": "13e0ca67-ec66-4d09-8190-89deac48d8a1",
-    "to": "41e22c3d-398a-4462-9051-b48f1336e04c",
+    "from": "306d7819-abaa-4627-87ad-57a6f25d4cd0",
+    "to": "b1da62b1-cec5-4377-9e7c-75bfd26cd1ca",
     "color": "black",
     "dash": [
       3,
@@ -936,8 +936,8 @@
     "toText": ""
   },
   {
-    "from": "291765a9-61a0-4d45-84f4-3355ed3ccaf0",
-    "to": "395eb62e-f449-406b-8886-46817d04bca1",
+    "from": "b179f7ad-c491-426f-a0df-179c6dcabae0",
+    "to": "028312c6-48c9-4bcc-a33e-fc4c0dfd5084",
     "color": "black",
     "dash": [
       3,
@@ -949,8 +949,8 @@
     "toText": ""
   },
   {
-    "from": "291765a9-61a0-4d45-84f4-3355ed3ccaf0",
-    "to": "e42e433d-e603-44b9-b10e-4f60850fc968",
+    "from": "b179f7ad-c491-426f-a0df-179c6dcabae0",
+    "to": "3e173e4b-1638-4900-8b36-0cfd6a30114a",
     "color": "black",
     "dash": [
       3,
@@ -962,8 +962,8 @@
     "toText": ""
   },
   {
-    "from": "291765a9-61a0-4d45-84f4-3355ed3ccaf0",
-    "to": "41e22c3d-398a-4462-9051-b48f1336e04c",
+    "from": "b179f7ad-c491-426f-a0df-179c6dcabae0",
+    "to": "b1da62b1-cec5-4377-9e7c-75bfd26cd1ca",
     "color": "black",
     "dash": [
       3,
@@ -975,8 +975,8 @@
     "toText": ""
   },
   {
-    "from": "314821a4-fac8-4e8c-8617-7983fc5eed8d",
-    "to": "2eef94c6-63b6-4977-a5c8-b9f839bc6363",
+    "from": "682bee8c-537b-4110-a3e4-e14516e7e52d",
+    "to": "94e0c440-2ee4-401a-ba23-8643b1abeb12",
     "color": "black",
     "dash": [
       3,
@@ -988,8 +988,8 @@
     "toText": ""
   },
   {
-    "from": "e42e433d-e603-44b9-b10e-4f60850fc968",
-    "to": "314821a4-fac8-4e8c-8617-7983fc5eed8d",
+    "from": "3e173e4b-1638-4900-8b36-0cfd6a30114a",
+    "to": "682bee8c-537b-4110-a3e4-e14516e7e52d",
     "color": "black",
     "dash": [
       3,
@@ -1001,8 +1001,8 @@
     "toText": ""
   },
   {
-    "from": "a24ec3af-92fd-4306-a53c-f92cfdb5852e",
-    "to": "2eef94c6-63b6-4977-a5c8-b9f839bc6363",
+    "from": "1030734a-bcb9-40ba-93ab-797e9a858998",
+    "to": "94e0c440-2ee4-401a-ba23-8643b1abeb12",
     "color": "black",
     "dash": [
       3,
@@ -1014,8 +1014,8 @@
     "toText": ""
   },
   {
-    "from": "dddf9d46-28ce-4ce9-af4c-e0bb9bc75898",
-    "to": "a24ec3af-92fd-4306-a53c-f92cfdb5852e",
+    "from": "ef97ede8-628b-407c-9d1d-bf81a0396dff",
+    "to": "1030734a-bcb9-40ba-93ab-797e9a858998",
     "color": "black",
     "dash": [
       3,
@@ -1027,8 +1027,8 @@
     "toText": ""
   },
   {
-    "from": "dddf9d46-28ce-4ce9-af4c-e0bb9bc75898",
-    "to": "62d12c44-7502-422c-afde-d416fdec6bbf",
+    "from": "ef97ede8-628b-407c-9d1d-bf81a0396dff",
+    "to": "80f27499-035d-4fb2-8515-0b446c193ef2",
     "color": "black",
     "dash": [
       3,
@@ -1040,8 +1040,8 @@
     "toText": ""
   },
   {
-    "from": "62d12c44-7502-422c-afde-d416fdec6bbf",
-    "to": "2eef94c6-63b6-4977-a5c8-b9f839bc6363",
+    "from": "80f27499-035d-4fb2-8515-0b446c193ef2",
+    "to": "94e0c440-2ee4-401a-ba23-8643b1abeb12",
     "color": "black",
     "dash": [
       3,
@@ -1054,7 +1054,7 @@
   },
   {
     "from": "t1.csv",
-    "to": "53f24833-4106-4788-8617-a76e369f123e",
+    "to": "d15dfde6-a90d-454d-a2ef-c0862ed96304",
     "color": "black",
     "dash": [
       3,
@@ -1067,7 +1067,7 @@
   },
   {
     "from": "t2.csv",
-    "to": "3dc97a6a-5942-401d-8756-06a59a8fc18d",
+    "to": "6a7ff1e4-08ca-423e-8dd9-72f99d1b63e8",
     "color": "black",
     "dash": [
       3,
@@ -1080,7 +1080,7 @@
   },
   {
     "from": "/Users/tahsin/Documents/Python_programs/Phe2_05_values_spikes.csv",
-    "to": "64e9646f-0efc-4231-a674-da238a23a294",
+    "to": "ba252368-e50f-4277-bc31-6983b951be57",
     "color": "black",
     "dash": [
       3,
@@ -1093,7 +1093,7 @@
   },
   {
     "from": "/Users/tahsin/Documents/Python_programs/Phe2_02_values_spikes_windowsresults_tranposed.csv",
-    "to": "bb73f3d9-6380-448c-bf7e-5aa2c6cd98cf",
+    "to": "89f54b95-1ee0-4a21-b14e-fdaa8839de27",
     "color": "black",
     "dash": [
       3,
@@ -1105,8 +1105,8 @@
     "toText": ""
   },
   {
-    "from": "variable: ds",
-    "to": "858c669a-f92e-4ec8-8eda-60cc3dc792b2",
+    "from": "variable[ds]",
+    "to": "cfdce2eb-c56b-4253-bb65-9c54234097f2",
     "color": "black",
     "dash": [
       3,
@@ -1118,8 +1118,8 @@
     "toText": ""
   },
   {
-    "from": "variable: ds",
-    "to": "dddf9d46-28ce-4ce9-af4c-e0bb9bc75898",
+    "from": "variable[ds]",
+    "to": "ef97ede8-628b-407c-9d1d-bf81a0396dff",
     "color": "black",
     "dash": [
       3,

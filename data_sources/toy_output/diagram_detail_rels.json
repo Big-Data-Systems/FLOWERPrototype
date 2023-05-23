@@ -1,6 +1,6 @@
 [
   {
-    "from": "products.csv",
+    "from": "product_categories.csv",
     "to": "data_sources/toy/cat_costs.py",
     "color": "black",
     "dash": [
@@ -13,7 +13,7 @@
     "toText": ""
   },
   {
-    "from": "product_categories.csv",
+    "from": "products.csv",
     "to": "data_sources/toy/cat_costs.py",
     "color": "black",
     "dash": [
@@ -39,7 +39,7 @@
     "toText": ""
   },
   {
-    "from": "sales.csv",
+    "from": "processed__product_info.csv",
     "to": "data_sources/toy/cat_sales.py",
     "color": "black",
     "dash": [
@@ -52,7 +52,7 @@
     "toText": ""
   },
   {
-    "from": "processed__product_info.csv",
+    "from": "sales.csv",
     "to": "data_sources/toy/cat_sales.py",
     "color": "black",
     "dash": [
@@ -143,8 +143,8 @@
     "toText": ""
   },
   {
-    "from": "485f350f-f6f9-4ee5-8f8d-b46d39fb7512",
-    "to": "b19cd7f4-3af9-43cd-96ff-6f15fb35fe5a",
+    "from": "0cbfb663-ea7d-45e7-85f2-7504fb5a0edb",
+    "to": "59da547f-2095-429a-9033-1a7141451b2e",
     "color": "black",
     "dash": [
       3,
@@ -156,8 +156,8 @@
     "toText": ""
   },
   {
-    "from": "485f350f-f6f9-4ee5-8f8d-b46d39fb7512",
-    "to": "c5274427-a0a5-494c-ac11-95b32fce8dc2",
+    "from": "0cbfb663-ea7d-45e7-85f2-7504fb5a0edb",
+    "to": "1cb67757-3f30-4e8c-aaee-4c34ba1571aa",
     "color": "black",
     "dash": [
       3,
@@ -169,7 +169,7 @@
     "toText": ""
   },
   {
-    "from": "485f350f-f6f9-4ee5-8f8d-b46d39fb7512",
+    "from": "0cbfb663-ea7d-45e7-85f2-7504fb5a0edb",
     "to": "processed__product_info.csv",
     "color": "black",
     "dash": [
@@ -182,8 +182,8 @@
     "toText": ""
   },
   {
-    "from": "8361bfc5-00f6-49e2-9746-4fc75ebd7e71",
-    "to": "485f350f-f6f9-4ee5-8f8d-b46d39fb7512",
+    "from": "6324d091-add8-4071-a8b6-33498f2f744d",
+    "to": "0cbfb663-ea7d-45e7-85f2-7504fb5a0edb",
     "color": "black",
     "dash": [
       3,
@@ -195,8 +195,8 @@
     "toText": ""
   },
   {
-    "from": "6d9b580e-0ab2-43e8-b93f-e97843f6ad6f",
-    "to": "485f350f-f6f9-4ee5-8f8d-b46d39fb7512",
+    "from": "b27f1ef2-1ab2-4625-9cd1-52a458089431",
+    "to": "0cbfb663-ea7d-45e7-85f2-7504fb5a0edb",
     "color": "black",
     "dash": [
       3,
@@ -208,8 +208,8 @@
     "toText": ""
   },
   {
-    "from": "114cfd7c-b800-4bfa-b991-1d7fec453038",
-    "to": "6d9b580e-0ab2-43e8-b93f-e97843f6ad6f",
+    "from": "c4d24e42-4d52-43f2-91c4-f053b800addd",
+    "to": "b27f1ef2-1ab2-4625-9cd1-52a458089431",
     "color": "black",
     "dash": [
       3,
@@ -221,8 +221,8 @@
     "toText": ""
   },
   {
-    "from": "1b4de335-b765-42d2-b9fe-e8d23dc8a066",
-    "to": "6d9b580e-0ab2-43e8-b93f-e97843f6ad6f",
+    "from": "9249e252-6e1e-433b-b27f-2d997b2245eb",
+    "to": "b27f1ef2-1ab2-4625-9cd1-52a458089431",
     "color": "black",
     "dash": [
       3,
@@ -234,7 +234,7 @@
     "toText": ""
   },
   {
-    "from": "b19cd7f4-3af9-43cd-96ff-6f15fb35fe5a",
+    "from": "59da547f-2095-429a-9033-1a7141451b2e",
     "to": "processed__category_inventory.csv",
     "color": "black",
     "dash": [
@@ -247,7 +247,7 @@
     "toText": ""
   },
   {
-    "from": "947a8410-42fb-4867-aace-c81334fdb7cb",
+    "from": "afd62ca2-31c1-4f9b-842f-7c76910b8307",
     "to": "processed__category_sales.csv",
     "color": "black",
     "dash": [
@@ -260,8 +260,8 @@
     "toText": ""
   },
   {
-    "from": "844e7dc1-9c7a-4561-a8b0-6774c4b06db6",
-    "to": "947a8410-42fb-4867-aace-c81334fdb7cb",
+    "from": "14804d77-0edb-4fb0-882e-7c4608e39740",
+    "to": "afd62ca2-31c1-4f9b-842f-7c76910b8307",
     "color": "black",
     "dash": [
       3,
@@ -273,8 +273,8 @@
     "toText": ""
   },
   {
-    "from": "9fc02fab-cce1-4d03-bb5e-576c22620ca1",
-    "to": "947a8410-42fb-4867-aace-c81334fdb7cb",
+    "from": "f2cc1388-202e-4147-8e8e-75f07a31588b",
+    "to": "afd62ca2-31c1-4f9b-842f-7c76910b8307",
     "color": "black",
     "dash": [
       3,
@@ -286,8 +286,8 @@
     "toText": ""
   },
   {
-    "from": "6784457e-8a22-4e6a-b7f4-6c87eac64895",
-    "to": "9fc02fab-cce1-4d03-bb5e-576c22620ca1",
+    "from": "e1cf93f0-4a2f-4b8c-98b6-54e549d203f3",
+    "to": "f2cc1388-202e-4147-8e8e-75f07a31588b",
     "color": "black",
     "dash": [
       3,
@@ -299,8 +299,8 @@
     "toText": ""
   },
   {
-    "from": "f8d04e96-ac70-4006-a14d-9e01a6b84039",
-    "to": "9fc02fab-cce1-4d03-bb5e-576c22620ca1",
+    "from": "53030f3b-a121-444b-82c7-7929c64e87db",
+    "to": "f2cc1388-202e-4147-8e8e-75f07a31588b",
     "color": "black",
     "dash": [
       3,
@@ -312,7 +312,7 @@
     "toText": ""
   },
   {
-    "from": "ca38bf6f-8688-494d-82f6-4cea6bf3eab8",
+    "from": "ae98da0b-f4a1-4c7f-9492-3b5ada7cf39a",
     "to": "processed__category_recs.csv",
     "color": "black",
     "dash": [
@@ -325,8 +325,8 @@
     "toText": ""
   },
   {
-    "from": "64620f79-63a4-4e7f-94a8-673e5c7e4bc4",
-    "to": "ca38bf6f-8688-494d-82f6-4cea6bf3eab8",
+    "from": "d516019b-6b17-445d-b939-38b61c0c5949",
+    "to": "ae98da0b-f4a1-4c7f-9492-3b5ada7cf39a",
     "color": "black",
     "dash": [
       3,
@@ -338,8 +338,8 @@
     "toText": ""
   },
   {
-    "from": "59c6bda8-ec4b-4ac7-b444-7e13db2f46ce",
-    "to": "ca38bf6f-8688-494d-82f6-4cea6bf3eab8",
+    "from": "f989fbeb-719e-47a1-b7e6-7d0230bfb151",
+    "to": "ae98da0b-f4a1-4c7f-9492-3b5ada7cf39a",
     "color": "black",
     "dash": [
       3,
@@ -351,8 +351,8 @@
     "toText": ""
   },
   {
-    "from": "efb48e20-2c4d-4d3c-b35b-3d8bc5ee85d4",
-    "to": "59c6bda8-ec4b-4ac7-b444-7e13db2f46ce",
+    "from": "3fa23271-324b-4830-adf8-2d03cf478003",
+    "to": "f989fbeb-719e-47a1-b7e6-7d0230bfb151",
     "color": "black",
     "dash": [
       3,
@@ -364,8 +364,8 @@
     "toText": ""
   },
   {
-    "from": "1cd71692-d713-46da-9e7f-099cbc4b2c35",
-    "to": "59c6bda8-ec4b-4ac7-b444-7e13db2f46ce",
+    "from": "bffdee4a-94b6-485e-adda-b8046e4fc659",
+    "to": "f989fbeb-719e-47a1-b7e6-7d0230bfb151",
     "color": "black",
     "dash": [
       3,
@@ -378,7 +378,7 @@
   },
   {
     "from": "product_categories.csv",
-    "to": "8361bfc5-00f6-49e2-9746-4fc75ebd7e71",
+    "to": "6324d091-add8-4071-a8b6-33498f2f744d",
     "color": "black",
     "dash": [
       3,
@@ -391,7 +391,7 @@
   },
   {
     "from": "product_types.csv",
-    "to": "114cfd7c-b800-4bfa-b991-1d7fec453038",
+    "to": "c4d24e42-4d52-43f2-91c4-f053b800addd",
     "color": "black",
     "dash": [
       3,
@@ -404,7 +404,7 @@
   },
   {
     "from": "products.csv",
-    "to": "1b4de335-b765-42d2-b9fe-e8d23dc8a066",
+    "to": "9249e252-6e1e-433b-b27f-2d997b2245eb",
     "color": "black",
     "dash": [
       3,
@@ -417,7 +417,7 @@
   },
   {
     "from": "sales.csv",
-    "to": "6784457e-8a22-4e6a-b7f4-6c87eac64895",
+    "to": "e1cf93f0-4a2f-4b8c-98b6-54e549d203f3",
     "color": "black",
     "dash": [
       3,
@@ -430,7 +430,7 @@
   },
   {
     "from": "processed__product_info.csv",
-    "to": "f8d04e96-ac70-4006-a14d-9e01a6b84039",
+    "to": "53030f3b-a121-444b-82c7-7929c64e87db",
     "color": "black",
     "dash": [
       3,
@@ -443,7 +443,7 @@
   },
   {
     "from": "processed__category_sales.csv",
-    "to": "efb48e20-2c4d-4d3c-b35b-3d8bc5ee85d4",
+    "to": "3fa23271-324b-4830-adf8-2d03cf478003",
     "color": "black",
     "dash": [
       3,
@@ -456,7 +456,7 @@
   },
   {
     "from": "processed__category_inventory.csv",
-    "to": "1cd71692-d713-46da-9e7f-099cbc4b2c35",
+    "to": "bffdee4a-94b6-485e-adda-b8046e4fc659",
     "color": "black",
     "dash": [
       3,
