@@ -1,7 +1,27 @@
 ### FLOWER: A prototype
 
-This is a prototype for the upcoming paper on FLOWER (FLOW + ER): A technique for extending
-Entity-Relationship diagrams. 
+This is a prototype for the paper on FLOWER (FLOW + ER): A technique for extending
+Entity-Relationship diagrams. This paper is published in the proceedings of DaWaK 2023.
+
+### Research
+
+Authors: Elijah Mitchell, Nabila Berkani, Carlos Ordonez, Ladjel Bellatreche
+
+Paper citation:
+E. Mitchell, N. Berkani, L. Bellatreche, C. Ordonez 'FLOWER: Viewing Data Flow in ER Diagrams', DAWAK Conference 2023
+
+```
+@InProceedings{Mitchell2023,
+  author    = {Elijah Mitchell, Nabila Berkani, Ladjel Bellatreche, Carlos Ordonez},
+  booktitle = {DaWaK Conference},
+  title     = {FLOWER: Viewing Data Flow in ER Diagrams},
+  year      = {2023},
+}
+```
+
+Paper hosted at https://www2.cs.uh.edu/~ordonez/co_research_proceedings.html :: [pdf](https://www2.cs.uh.edu/~ordonez/pdfwww/w-2023-DAWAK-flower.pdf) :: [powerpoint](https://www2.cs.uh.edu/~ordonez/ppt/flower.ppt)
+
+### Overview
 
 ER is useful but limited to static relationships: We cannot see how data moves or their
 relationship with other data. By extending our view of ER to include the concept of "Flows"
